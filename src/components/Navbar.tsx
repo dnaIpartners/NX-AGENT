@@ -11,7 +11,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1100px] mx-auto">
         <div className="flex items-center gap-1">
           <Link to="/">
-            <img src="public/asset/ipartners_black.png" alt="IPARTNERS NX" className="h-6 w-auto" referrerPolicy="no-referrer" />
+            <img src="/asset/ipartners_black.png" alt="IPARTNERS NX" className="h-6 w-auto" referrerPolicy="no-referrer" />
           </Link>
         </div>
         
