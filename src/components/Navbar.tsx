@@ -18,7 +18,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-10 text-[13px] text-gray-500 font-medium">
           <Link to="/content/recipe" className="hover:text-black transition-colors">RECIPE</Link>
           <Link to="/content/how-it-works" className="hover:text-black transition-colors">How it works</Link>
-          <Link to="/content/insights-news" className="hover:text-black transition-colors">INSIGHTS NEWS</Link>
+          <Link to="/insights-news" className="hover:text-black transition-colors">INSIGHTS NEWS</Link>
           <button 
             onClick={() => setIsKnowledgeOpen(!isKnowledgeOpen)}
             className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? 'text-black' : 'hover:text-black'}`}
@@ -108,7 +108,7 @@ export default function Navbar() {
         <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4">
           <Link to="/content/recipe" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">RECIPE</Link>
           <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">How it works</Link>
-          <Link to="/content/insights-news" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">INSIGHTS NEWS</Link>
+          <Link to="/insights-news" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">INSIGHTS NEWS</Link>
           
           {/* Mobile Knowledge Accordion */}
           <div className="flex flex-col">

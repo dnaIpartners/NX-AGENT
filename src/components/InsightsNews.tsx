@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function InsightsNews() {
   return (
@@ -14,7 +15,7 @@ export default function InsightsNews() {
       </div>
       <div className="flex flex-col border-t border-gray-900">
         {/* Board Item 01 */}
-        <a href="#" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
+        <Link to="/insights-news" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 w-full">
             <span className="text-sm font-mono text-gray-400 w-32 shrink-0">2026.03.19</span>
             <span className="text-xs font-medium px-3 py-1 bg-gray-100 rounded-full text-gray-600 shrink-0 text-center w-28">Press Release</span>
@@ -23,9 +24,9 @@ export default function InsightsNews() {
             </h3>
           </div>
           <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </a>
+        </Link>
         {/* Board Item 02 */}
-        <a href="#" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
+        <Link to="/insights-news" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 w-full">
             <span className="text-sm font-mono text-gray-400 w-32 shrink-0">2026.03.15</span>
             <span className="text-xs font-medium px-3 py-1 bg-gray-100 rounded-full text-gray-600 shrink-0 text-center w-28">Tech Blog</span>
@@ -34,9 +35,9 @@ export default function InsightsNews() {
             </h3>
           </div>
           <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </a>
+        </Link>
         {/* Board Item 03 */}
-        <a href="#" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
+        <Link to="/insights-news" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 w-full">
             <span className="text-sm font-mono text-gray-400 w-32 shrink-0">2026.03.10</span>
             <span className="text-xs font-medium px-3 py-1 bg-gray-100 rounded-full text-gray-600 shrink-0 text-center w-28">Case Study</span>
@@ -45,7 +46,7 @@ export default function InsightsNews() {
             </h3>
           </div>
           <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">&rarr;</span>
-        </a>
+        </Link>
       </div>
     </section>
   );
