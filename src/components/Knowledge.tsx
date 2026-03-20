@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Knowledge() {
   return (
@@ -15,38 +16,38 @@ export default function Knowledge() {
       </div>
       <div className="flex flex-col border-t border-gray-900">
         {/* Board Item 01 */}
-        <a href="#" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
+        <Link to="/knowledge/contextual-prompt-engineering" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 w-full">
             <span className="text-sm font-mono text-gray-400 w-32 shrink-0">Whitepaper</span>
             <span className="text-xs font-medium px-3 py-1 bg-gray-100 rounded-full text-gray-600 shrink-0 text-center w-20">PDF</span>
             <h3 className="text-lg font-display font-medium text-[#0a0a0a] group-hover:text-blue-600 transition-colors line-clamp-1">
-              Security best practices for distributed systems
+              Contextual Prompt Engineering
             </h3>
           </div>
-          <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">Download &darr;</span>
-        </a>
+          <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">Read &rarr;</span>
+        </Link>
         {/* Board Item 02 */}
-        <a href="#" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
+        <Link to="/knowledge/ai-ux-heuristic-evaluation" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 w-full">
             <span className="text-sm font-mono text-gray-400 w-32 shrink-0">Documentation</span>
             <span className="text-xs font-medium px-3 py-1 bg-gray-100 rounded-full text-gray-600 shrink-0 text-center w-20">Guide</span>
             <h3 className="text-lg font-display font-medium text-[#0a0a0a] group-hover:text-blue-600 transition-colors line-clamp-1">
-              API Reference and Integration Guide v2.0
+              AI-UX Heuristic Evaluation
             </h3>
           </div>
           <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">Read &rarr;</span>
-        </a>
+        </Link>
         {/* Board Item 03 */}
-        <a href="#" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
+        <Link to="/knowledge/glossary-of-ai-ux-interaction" className="flex flex-col md:flex-row items-start md:items-center justify-between py-8 border-b border-gray-200 hover:bg-gray-50 transition-colors group px-4 -mx-4">
           <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12 w-full">
             <span className="text-sm font-mono text-gray-400 w-32 shrink-0">Webinar</span>
             <span className="text-xs font-medium px-3 py-1 bg-gray-100 rounded-full text-gray-600 shrink-0 text-center w-20">Video</span>
             <h3 className="text-lg font-display font-medium text-[#0a0a0a] group-hover:text-blue-600 transition-colors line-clamp-1">
-              Mastering the NX Agent ecosystem
+              Glossary of AI-UX Interaction
             </h3>
           </div>
-          <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">Watch &rarr;</span>
-        </a>
+          <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">Read &rarr;</span>
+        </Link>
       </div>
     </section>
   );
