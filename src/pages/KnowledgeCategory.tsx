@@ -128,30 +128,30 @@ export default function KnowledgeCategory() {
   const Icon = data.icon;
 
   return (
-    <div className="min-h-screen bg-white pt-24 pb-32">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="max-w-[900px] mx-auto px-8 mb-24">
-        <Link to="/" className="inline-flex items-center gap-2 text-xs font-medium text-gray-400 hover:text-black transition-colors mb-12 uppercase tracking-widest">
-          <ArrowLeft size={14} /> Back
-        </Link>
-        
-        <div className="flex items-center gap-4 mb-8">
-          <div className="w-16 h-16 bg-[#F5F5F7] rounded-2xl flex items-center justify-center text-blue-600 shadow-sm">
-            <Icon size={28} strokeWidth={1.5} />
+      <div className="w-full bg-[#F5F5F7] pt-40 pb-24 border-b border-gray-200 mb-16 text-center">
+        <div className="max-w-3xl mx-auto px-8">
+          <Link to="/" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-xs font-semibold tracking-widest uppercase mb-10 text-gray-500 hover:text-black hover:border-gray-300 hover:shadow-sm transition-all">
+            <ArrowLeft size={14} /> Back
+          </Link>
+          
+          <div className="flex flex-col items-center">
+            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm border border-gray-100 mb-8">
+              <Icon size={28} strokeWidth={1.5} />
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 tracking-tight mb-6">
+              {data.title}
+            </h1>
+            <p className="text-lg md:text-xl text-gray-500 font-sans leading-relaxed">
+              {data.description}
+            </p>
           </div>
-          <div className="h-[1px] flex-1 bg-gray-100"></div>
         </div>
-        
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-gray-900 leading-[1.1] tracking-tight mb-6">
-          {data.title}
-        </h1>
-        <p className="text-lg md:text-xl text-gray-500 font-sans leading-relaxed max-w-[700px]">
-          {data.description}
-        </p>
       </div>
 
       {/* Content List Section */}
-      <div className="max-w-[900px] mx-auto px-8">
+      <div className="max-w-[900px] mx-auto px-8 pb-32">
         <div className="flex items-center justify-between mb-12 border-b border-gray-100 pb-4">
           <h2 className="text-sm font-bold text-gray-400 uppercase tracking-widest">Latest Articles</h2>
           <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1 rounded-full">{data.articles.length} Items</span>
