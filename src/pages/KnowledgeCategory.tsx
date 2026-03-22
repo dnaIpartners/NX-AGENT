@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search } from 'lucide-react';
 
 const categoryData: Record<string, any> = {
   'contextual-prompt-engineering': {
@@ -130,22 +130,23 @@ export default function KnowledgeCategory() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="w-full bg-[#F5F5F7] pt-40 pb-24 border-b border-gray-200 mb-16 text-center">
-        <div className="max-w-3xl mx-auto px-8">
-          <Link to="/" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-xs font-semibold tracking-widest uppercase mb-10 text-gray-500 hover:text-black hover:border-gray-300 hover:shadow-sm transition-all">
-            <ArrowLeft size={14} /> Back
-          </Link>
-          
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm border border-gray-100 mb-8">
-              <Icon size={28} strokeWidth={1.5} />
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 tracking-tight mb-6">
-              {data.title}
-            </h1>
-            <p className="text-lg md:text-xl text-gray-500 font-sans leading-relaxed">
-              {data.description}
-            </p>
+      <div className="bg-[#F5F5F7] pt-40 pb-24 px-8 text-center mb-16">
+        <div className="max-w-3xl mx-auto">     
+          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
+            {data.title}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
+            {data.description}
+          </p>
+
+          {/* Search Input */}
+          <div className="max-w-md mx-auto flex items-center border-b border-gray-300 pb-3 px-2 group focus-within:border-black transition-colors">
+            <Search size={16} className="text-gray-400 group-focus-within:text-black transition-colors mr-3" />
+            <input 
+              type="text" 
+              placeholder={`Search ${data.title}`} 
+              className="w-full outline-none text-sm bg-transparent placeholder:text-gray-400 text-gray-900" 
+            />
           </div>
         </div>
       </div>
@@ -194,6 +195,13 @@ export default function KnowledgeCategory() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Read More Button */}
+        <div className="mt-16 flex justify-center">
+          <button className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
+            Read More
+          </button>
         </div>
       </div>
     </div>

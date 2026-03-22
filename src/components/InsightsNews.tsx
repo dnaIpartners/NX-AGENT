@@ -48,6 +48,13 @@ export default function InsightsNews() {
           <span className="hidden md:block text-gray-400 group-hover:translate-x-1 transition-transform">&rarr;</span>
         </Link>
       </div>
+      
+      {/* Read More Button */}
+      <div className="mt-16 flex justify-center">
+        <Link to="/insights-news" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
+          Read More
+        </Link>
+      </div>
     </section>
   );
 }
