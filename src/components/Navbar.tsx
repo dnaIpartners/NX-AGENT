@@ -58,7 +58,6 @@ export default function Navbar() {
         </div>
         
         <div className="hidden md:flex items-center gap-10 text-[13px] text-gray-500 font-medium">
-          <Link to="/content/recipe" className="hover:text-black transition-colors">RECIPE</Link>
           <Link to="/content/how-it-works" className="hover:text-black transition-colors">How it works</Link>
           <Link to="/insights-news" className="hover:text-black transition-colors">INSIGHTS NEWS</Link>
           <button 
@@ -88,9 +87,6 @@ export default function Navbar() {
             {/* Left Column */}
             <div className="w-1/4 flex flex-col justify-center">
               <h2 className="text-3xl font-display font-medium text-gray-900 mb-4">Knowledge</h2>
-              <Link to="/content/recipe" onClick={() => setIsKnowledgeOpen(false)} className="text-sm text-gray-500 hover:text-black flex items-center gap-1 transition-colors w-fit">
-                All Services <ChevronRight size={14} />
-              </Link>
             </div>
             
             {/* Divider */}
@@ -145,7 +141,6 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4">
-          <Link to="/content/recipe" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">RECIPE</Link>
           <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">How it works</Link>
           <Link to="/insights-news" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">INSIGHTS NEWS</Link>
           

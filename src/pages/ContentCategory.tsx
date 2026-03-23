@@ -3,37 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Clock, FileText, Settings, Newspaper, Info } from 'lucide-react';
 
 const categoryData: Record<string, any> = {
-  'recipe': {
-    title: 'Recipe',
-    description: 'Explore our curated collection of AI-UX design recipes. Step-by-step guides to building intuitive, intelligent, and user-centric interfaces.',
-    icon: FileText,
-    articles: [
-      {
-        id: 1,
-        title: 'Designing Conversational Interfaces',
-        excerpt: 'A comprehensive recipe for building chatbots that feel natural, helpful, and aligned with your brand voice.',
-        date: 'Apr 02, 2026',
-        readTime: '8 min read',
-        tag: 'UX Recipe'
-      },
-      {
-        id: 2,
-        title: 'Integrating Generative AI in E-commerce',
-        excerpt: 'How to use AI to personalize product recommendations and streamline the checkout process.',
-        date: 'Mar 28, 2026',
-        readTime: '6 min read',
-        tag: 'Case Study'
-      },
-      {
-        id: 3,
-        title: 'Predictive Search Patterns',
-        excerpt: 'Implementing search experiences that anticipate user needs before they finish typing.',
-        date: 'Mar 15, 2026',
-        readTime: '5 min read',
-        tag: 'Pattern'
-      }
-    ]
-  },
   'how-it-works': {
     title: 'How It Works',
     description: 'Dive deep into the mechanics of our AI Strategy Lab. Understand our methodology, processes, and the technology powering our solutions.',

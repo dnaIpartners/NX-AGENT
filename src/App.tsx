@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Capabilities from './components/Capabilities';
-import Recipe from './components/Recipe';
 import HowItWorks from './components/HowItWorks';
 import InsightsNews from './components/InsightsNews';
 import Knowledge from './components/Knowledge';
@@ -19,7 +18,6 @@ function Home() {
     <>
       <Hero />
       <Capabilities />
-      <Recipe />
       <HowItWorks />
       <InsightsNews />
       <Knowledge />
