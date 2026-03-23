@@ -147,10 +147,11 @@ export default function InsightsNewsPage() {
           <div className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-[#FF5722] mb-8 ring-4 ring-[#FF5722]/20"></div>
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 tracking-tight">
             We transform brands.<br />
-            <span className="text-[#FF5722]">Your success is next.</span>
+            <span className="text-[#FFFFFF]">The Road to</span>
+            <span className="bg-gradient-to-r from-[#0033FF] to-[#00A3FF] bg-clip-text text-transparent"> 'Next X'</span>
           </h2>
           <p className="text-gray-400 text-sm md:text-base mb-12 max-w-xl mx-auto">
-            Start your project now by booking a one-on-one consultation with our expert.
+          디지털, 그 다음을 향합니다.아이파트너즈의 AI 플랫폼을 경험하세요.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white font-medium">
             <Link to="http://prdipa.ipartners.co.kr/contact" className="hover:text-[#FF5722] transition-colors border-b border-white/30 hover:border-[#FF5722] pb-1">CONTACT</Link>

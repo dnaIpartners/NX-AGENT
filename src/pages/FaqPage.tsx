@@ -66,7 +66,7 @@ export default function FaqPage() {
                 }}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category
-                    ? 'bg-[#2962FF] text-white shadow-[0_8px_16px_rgba(41,98,255,0.2)]'
+                    ? 'bg-[#0033FF] text-white shadow-[0_8px_16px_rgba(41,98,255,0.2)]'
                     : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 hover:text-gray-900'
                 }`}
               >
