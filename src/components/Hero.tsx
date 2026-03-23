@@ -44,9 +44,8 @@ export default function Hero() {
           </span>
         </h1>
         
-        <p className="text-lg lg:text-[21px] text-gray-500 leading-[1.6] mb-12 max-w-[500px] font-normal">
-          IPARNERS, our NX AGENT breaks the linear boundaries of planning, design, and development to perfectly integrate the intelligent workflow
-. Fragmented individual know-how is no longer lost; it is permanently systemized into our organizational intelligence through the Platform
+        <p className="text-lg lg:text-[21px] text-gray-500 leading-[1.6] mb-12 max-w-[600px] font-normal">
+          아이파트너즈의 NX AGENT는 기획, 디자인, 개발의 선형적 경계를 허물고 지능형 워크플로우를 완벽하게 통합합니다. 파편화되어 사라지던 개인의 노하우는 더 이상 유실되지 않으며, 플랫폼을 통해 조직의 영구적인 지능(경험 자산)으로 시스템화(내재화)됩니다.
         </p>
         
         <div className="flex flex-wrap items-center gap-4">

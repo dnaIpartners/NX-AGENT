@@ -8,15 +8,15 @@ const categoryData: Record<string, any> = {
     description: 'Master the art of crafting precise AI prompts for optimal UX outcomes. Learn how to structure context, define constraints, and guide AI models to generate user-centric interfaces and content.',
     icon: Sparkles,
     articles: [
-      { id: 1, title: 'The Anatomy of a Perfect UX Prompt', excerpt: 'Discover the core components that make up an effective prompt for generating UI layouts and user flows.', date: 'Mar 15, 2026', readTime: '5 min read', tag: 'Guide' },
+      { id: 1, title: 'The Anatomy of a Perfect UX Prompt', excerpt: 'Discover the core components that make up an effective prompt for generating UI layouts and user flows.', date: 'Mar 15, 2026', readTime: '5 min read', tag: 'Analytics' },
       { id: 2, title: 'Context Windows and Memory Management', excerpt: 'How to effectively utilize large context windows to maintain design consistency across complex AI interactions.', date: 'Mar 10, 2026', readTime: '8 min read', tag: 'Technical' },
       { id: 3, title: 'Zero-shot vs Few-shot Prompting in UX Design', excerpt: 'Comparing different prompting strategies and when to use them for generating design systems and components.', date: 'Mar 02, 2026', readTime: '6 min read', tag: 'Research' },
       { id: 4, title: 'Handling Hallucinations in UI Generation', excerpt: 'Strategies to prevent and mitigate AI hallucinations when generating structural UI code and layouts.', date: 'Feb 24, 2026', readTime: '7 min read', tag: 'Best Practices' },
-      { id: 5, title: 'Prompt Chaining for Complex User Flows', excerpt: 'Learn how to link multiple prompts together to handle multi-step user journeys and complex logic.', date: 'Feb 18, 2026', readTime: '9 min read', tag: 'Advanced' },
-      { id: 6, title: 'System Prompts: Setting the AI Persona', excerpt: 'Best practices for defining the core behavior, tone, and constraints of your AI agent through system prompts.', date: 'Feb 10, 2026', readTime: '6 min read', tag: 'Guide' },
+      { id: 5, title: 'Prompt Chaining for Complex User Flows', excerpt: 'Learn how to link multiple prompts together to handle multi-step user journeys and complex logic.', date: 'Feb 18, 2026', readTime: '9 min read', tag: 'Analytics' },
+      { id: 6, title: 'System Prompts: Setting the AI Persona', excerpt: 'Best practices for defining the core behavior, tone, and constraints of your AI agent through system prompts.', date: 'Feb 10, 2026', readTime: '6 min read', tag: 'Analytics' },
       { id: 7, title: 'Evaluating Prompt Effectiveness in UX', excerpt: 'Metrics and frameworks for measuring how well your prompts are performing in real-world user scenarios.', date: 'Feb 05, 2026', readTime: '7 min read', tag: 'Analytics' },
-      { id: 8, title: 'The Role of Temperature in Creative UI Generation', excerpt: 'Understanding how the temperature parameter affects the creativity and reliability of generated interfaces.', date: 'Jan 28, 2026', readTime: '5 min read', tag: 'Technical' },
-      { id: 9, title: 'Security and Safety in Prompt Engineering', excerpt: 'Protecting your AI interfaces from prompt injection attacks and ensuring safe, predictable outputs.', date: 'Jan 20, 2026', readTime: '8 min read', tag: 'Security' }
+      { id: 8, title: 'The Role of Temperature in Creative UI Generation', excerpt: 'Understanding how the temperature parameter affects the creativity and reliability of generated interfaces.', date: 'Jan 28, 2026', readTime: '5 min read', tag: 'Analytics' },
+      { id: 9, title: 'Security and Safety in Prompt Engineering', excerpt: 'Protecting your AI interfaces from prompt injection attacks and ensuring safe, predictable outputs.', date: 'Jan 20, 2026', readTime: '8 min read', tag: 'Analytics' }
     ]
   },
   'ai-ux-heuristic-evaluation': {
@@ -24,13 +24,13 @@ const categoryData: Record<string, any> = {
     description: 'Evaluate AI interfaces using specialized usability heuristics. A framework for assessing the usability, transparency, and trustworthiness of AI-powered products.',
     icon: Layout,
     articles: [
-      { id: 1, title: 'Nielsen\'s Heuristics Adapted for AI', excerpt: 'How the classic 10 usability heuristics apply to modern generative AI interfaces and conversational agents.', date: 'Mar 18, 2026', readTime: '10 min read', tag: 'Framework' },
-      { id: 2, title: 'Evaluating AI Transparency and Explainability', excerpt: 'Methods for assessing how well an AI system communicates its capabilities, limitations, and reasoning to users.', date: 'Mar 12, 2026', readTime: '7 min read', tag: 'Methodology' },
+      { id: 1, title: 'Nielsen\'s Heuristics Adapted for AI', excerpt: 'How the classic 10 usability heuristics apply to modern generative AI interfaces and conversational agents.', date: 'Mar 18, 2026', readTime: '10 min read', tag: 'Analytics' },
+      { id: 2, title: 'Evaluating AI Transparency and Explainability', excerpt: 'Methods for assessing how well an AI system communicates its capabilities, limitations, and reasoning to users.', date: 'Mar 12, 2026', readTime: '7 min read', tag: 'Analytics' },
       { id: 3, title: 'The Trust Heuristic: Designing for Confidence', excerpt: 'Measuring and improving user trust in AI systems through interface cues and feedback loops.', date: 'Feb 28, 2026', readTime: '6 min read', tag: 'Research' },
       { id: 4, title: 'Measuring Cognitive Load in AI Interactions', excerpt: 'Techniques to ensure your AI features reduce, rather than increase, the user\'s cognitive burden.', date: 'Feb 20, 2026', readTime: '8 min read', tag: 'UX Research' },
-      { id: 5, title: 'Heuristics for Voice and Multimodal Interfaces', excerpt: 'Expanding evaluation criteria beyond screens to include voice, gesture, and spatial AI interactions.', date: 'Feb 14, 2026', readTime: '9 min read', tag: 'Multimodal' },
-      { id: 6, title: 'Error Recovery in Generative AI Systems', excerpt: 'Evaluating how gracefully an AI system handles misunderstandings, bad outputs, and user corrections.', date: 'Feb 05, 2026', readTime: '7 min read', tag: 'Best Practices' },
-      { id: 7, title: 'Assessing Bias and Fairness in UX', excerpt: 'A heuristic approach to identifying and mitigating algorithmic bias within the user interface.', date: 'Jan 29, 2026', readTime: '11 min read', tag: 'Ethics' },
+      { id: 5, title: 'Heuristics for Voice and Multimodal Interfaces', excerpt: 'Expanding evaluation criteria beyond screens to include voice, gesture, and spatial AI interactions.', date: 'Feb 14, 2026', readTime: '9 min read', tag: 'Analytics' },
+      { id: 6, title: 'Error Recovery in Generative AI Systems', excerpt: 'Evaluating how gracefully an AI system handles misunderstandings, bad outputs, and user corrections.', date: 'Feb 05, 2026', readTime: '7 min read', tag: 'Analytics' },
+      { id: 7, title: 'Assessing Bias and Fairness in UX', excerpt: 'A heuristic approach to identifying and mitigating algorithmic bias within the user interface.', date: 'Jan 29, 2026', readTime: '11 min read', tag: 'Analytics' },
       { id: 8, title: 'The Control Heuristic: User Override in AI', excerpt: 'Why users need the ability to override AI decisions, and how to evaluate the effectiveness of these controls.', date: 'Jan 22, 2026', readTime: '6 min read', tag: 'Framework' },
       { id: 9, title: 'Evaluating the "Magic" vs. "Utility" Balance', excerpt: 'Finding the sweet spot between impressive generative capabilities and practical, predictable utility.', date: 'Jan 15, 2026', readTime: '5 min read', tag: 'Strategy' }
     ]
@@ -95,8 +95,8 @@ export default function KnowledgeCategory() {
           const articlesWithMeta = data.articles.map((article: any) => ({
             ...article,
             image: `https://picsum.photos/seed/${category}-${article.id}/800/400`,
-            author: 'Sarah Wolff',
-            authorRole: 'Head of Growth',
+            author: 'Yun Geun Sik',
+            authorRole: 'AI ORCHESTRATOR',
             authorAvatar: `https://i.pravatar.cc/150?u=${category}-${article.id}`,
           }));
 
