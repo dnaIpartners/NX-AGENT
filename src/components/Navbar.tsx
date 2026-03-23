@@ -58,8 +58,9 @@ export default function Navbar() {
         </div>
         
         <div className="hidden md:flex items-center gap-10 text-[13px] text-gray-500 font-medium">
-          <Link to="/content/how-it-works" className="hover:text-black transition-colors">How it works</Link>
+          <Link to="/content/how-it-works" className="hover:text-black transition-colors">HOW IT WORKS</Link>
           <Link to="/insights-news" className="hover:text-black transition-colors">INSIGHTS NEWS</Link>
+          <Link to="/case-studies" className="hover:text-black transition-colors">CASE STUDIES</Link>
           <button 
             onClick={() => setIsKnowledgeOpen(!isKnowledgeOpen)}
             className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? 'text-black' : 'hover:text-black'}`}
@@ -69,7 +70,10 @@ export default function Navbar() {
           <Link to="/faq" className="hover:text-black transition-colors">FAQ</Link>
         </div>
         
-        <div className="flex items-center gap-4 md:gap-6 text-[13px] font-medium">          
+        <div className="flex items-center gap-4 md:gap-6">
+          <span className="font-display font-bold text-base md:text-lg tracking-tight text-gray-900">
+            AI Partners
+          </span>
           <button 
             className="md:hidden p-2 -mr-2 text-gray-600 hover:text-black transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

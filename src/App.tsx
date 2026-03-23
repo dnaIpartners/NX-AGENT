@@ -12,6 +12,7 @@ import KnowledgeCategory from './pages/KnowledgeCategory';
 import ContentCategory from './pages/ContentCategory';
 import InsightsNewsPage from './pages/InsightsNewsPage';
 import FaqPage from './pages/FaqPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
 
 function Home() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/content/:category" element={<ContentCategory />} />
           <Route path="/insights-news" element={<InsightsNewsPage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
         </Routes>
         <Footer />
       </div>
