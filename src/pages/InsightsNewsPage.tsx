@@ -134,6 +134,32 @@ export default function InsightsNewsPage() {
         </div>
       </div>
 
+      {/* Newsletter Section */}
+      <div className="bg-[#E2E2E2] py-24 px-8 text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-black">Sign Up for Email Updates</h2>
+        <div className="max-w-xl mx-auto">
+          <div className="relative flex items-center mb-6 bg-transparent border border-black rounded-full p-1.5">
+            <input 
+              type="email" 
+              placeholder="your email" 
+              className="w-full bg-transparent outline-none py-3 px-6 text-black placeholder-black/50 font-medium" 
+            />
+            <button className="bg-black text-white px-8 py-3 rounded-full text-sm font-bold hover:bg-gray-800 transition-colors shrink-0">
+              SUBSCRIBE
+            </button>
+          </div>
+          <div className="flex items-start gap-3 text-left px-4">
+            <input 
+              type="checkbox" 
+              id="subscribe-consent" 
+              className="mt-1 shrink-0 accent-black" 
+            />
+            <label htmlFor="subscribe-consent" className="text-xs text-black/70 leading-relaxed">
+              구독 버튼을 클릭하시면 IPARTNERS NX에서 새 블로그 게시물에 대한 이메일 소식을 수신하는 데 동의하시는 것입니다. 언제든지 이메일 하단의 수신 거부 버튼을 클릭하여 수신을 거부할 수 있습니다.
+            </label>
+          </div>
+        </div>
+      </div>
       {/* CTA Section */}
       <div className="relative w-full py-32 md:py-40 bg-[#0a0a0a] overflow-hidden">
         {/* Background Image with heavy overlay */}
@@ -158,6 +184,7 @@ export default function InsightsNewsPage() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
