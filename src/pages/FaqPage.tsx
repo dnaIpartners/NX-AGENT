@@ -44,14 +44,14 @@ export default function FaqPage() {
     : faqs.filter(faq => faq.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-[#fcfcfc]">
-      {/* Dark Hero Section with Category Buttons */}
-      <div className="pt-40 pb-20 bg-[#0B0F19] text-center px-8">
-        <div className="max-w-[800px] mx-auto">
-          <h1 className="text-4xl md:text-5xl font-display font-medium text-white mb-6 tracking-tight">
+    <div className="min-h-screen bg-white">
+      {/* Light Hero Section matching Insights News */}
+      <div className="bg-[#F5F5F7] pt-40 pb-24 px-8 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             Frequently Asked Questions
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-12">
+          <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
             Find answers to common questions about our services, process, and how we can help improve your digital experience.
           </p>
           
@@ -66,8 +66,8 @@ export default function FaqPage() {
                 }}
                 className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category
-                    ? 'bg-[#2962FF] text-white shadow-[0_0_20px_rgba(41,98,255,0.5)]'
-                    : 'bg-[#1A1D24] text-gray-300 border border-gray-800 hover:bg-[#242830]'
+                    ? 'bg-[#2962FF] text-white shadow-[0_8px_16px_rgba(41,98,255,0.2)]'
+                    : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 hover:text-gray-900'
                 }`}
               >
                 {category}

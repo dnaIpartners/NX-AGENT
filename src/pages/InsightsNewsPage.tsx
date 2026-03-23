@@ -153,8 +153,7 @@ export default function InsightsNewsPage() {
             Start your project now by booking a one-on-one consultation with our expert.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white font-medium">
-            <Link to="#" className="hover:text-[#FF5722] transition-colors border-b border-white/30 hover:border-[#FF5722] pb-1">book a call</Link>
-            <Link to="#" className="hover:text-[#FF5722] transition-colors border-b border-white/30 hover:border-[#FF5722] pb-1">chat on whatsapp</Link>
+            <Link to="http://prdipa.ipartners.co.kr/contact" className="hover:text-[#FF5722] transition-colors border-b border-white/30 hover:border-[#FF5722] pb-1">CONTACT</Link>
           </div>
         </div>
       </div>

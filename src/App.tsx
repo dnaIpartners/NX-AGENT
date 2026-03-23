@@ -7,7 +7,6 @@ import Recipe from './components/Recipe';
 import HowItWorks from './components/HowItWorks';
 import InsightsNews from './components/InsightsNews';
 import Knowledge from './components/Knowledge';
-import Abouts from './components/Abouts';
 import Footer from './components/Footer';
 import FloatingBadge from './components/FloatingBadge';
 import KnowledgeCategory from './pages/KnowledgeCategory';
@@ -24,7 +23,6 @@ function Home() {
       <HowItWorks />
       <InsightsNews />
       <Knowledge />
-      <Abouts />
     </>
   );
 }

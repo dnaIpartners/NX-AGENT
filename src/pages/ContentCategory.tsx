@@ -95,37 +95,6 @@ const categoryData: Record<string, any> = {
         tag: 'Research'
       }
     ]
-  },
-  'abouts': {
-    title: 'Abouts',
-    description: 'Learn more about IPARTNERS NX, our mission, our team, and our commitment to pioneering the future of AI-UX design.',
-    icon: Info,
-    articles: [
-      {
-        id: 1,
-        title: 'Our Vision for the Future of Design',
-        excerpt: 'Why we believe AI is not just a tool, but a fundamental shift in how we interact with technology.',
-        date: 'Jan 15, 2026',
-        readTime: '4 min read',
-        tag: 'Vision'
-      },
-      {
-        id: 2,
-        title: 'Meet the Leadership Team',
-        excerpt: 'Get to know the experts driving innovation at the IPARTNERS NX AI Strategy Lab.',
-        date: 'Jan 10, 2026',
-        readTime: '5 min read',
-        tag: 'Team'
-      },
-      {
-        id: 3,
-        title: 'Careers at IPARTNERS NX',
-        excerpt: 'Join us in shaping the next generation of intelligent interfaces. View our open positions.',
-        date: 'Ongoing',
-        readTime: '2 min read',
-        tag: 'Careers'
-      }
-    ]
   }
 };
 

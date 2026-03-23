@@ -67,7 +67,6 @@ export default function Navbar() {
           >
             KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}
           </button>
-          <Link to="/content/abouts" className="hover:text-black transition-colors">ABOUTS</Link>
           <Link to="/faq" className="hover:text-black transition-colors">FAQ</Link>
         </div>
         
@@ -167,7 +166,6 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link to="/content/abouts" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">ABOUTS</Link>
           <Link to="/faq" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">FAQ</Link>
         </div>
       )}
