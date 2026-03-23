@@ -46,12 +46,12 @@ export default function FaqPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Light Hero Section matching Insights News */}
-      <div className="bg-[#F5F5F7] pt-40 pb-24 px-8 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
+      <div className="bg-[#F5F5F7] pt-32 pb-16 px-8 min-h-[400px] md:min-h-[480px] flex flex-col items-center justify-center text-center">
+        <div className="max-w-5xl mx-auto w-full">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             Frequently Asked Questions
           </h1>
-          <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
+          <p className="text-lg md:text-xl text-gray-500 font-sans max-w-3xl mx-auto mb-10">
             Find answers to common questions about our services, process, and how we can help improve your digital experience.
           </p>
           

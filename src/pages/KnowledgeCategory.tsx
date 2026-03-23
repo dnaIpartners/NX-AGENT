@@ -130,12 +130,12 @@ export default function KnowledgeCategory() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-[#F5F5F7] pt-40 pb-24 px-8 text-center mb-16">
-        <div className="max-w-3xl mx-auto">     
-          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
+      <div className="bg-[#F5F5F7] pt-32 pb-16 px-8 min-h-[400px] md:min-h-[480px] flex flex-col items-center justify-center text-center mb-16">
+        <div className="max-w-5xl mx-auto w-full">     
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             {data.title}
           </h1>
-          <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
+          <p className="text-lg md:text-xl text-gray-500 font-sans max-w-3xl mx-auto">
             {data.description}
           </p>
         </div>
