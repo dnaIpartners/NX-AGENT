@@ -153,23 +153,14 @@ export default function ContentCategory() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="w-full bg-[#F5F5F7] pt-40 pb-24 border-b border-gray-200 mb-16 text-center">
-        <div className="max-w-3xl mx-auto px-8">
-          <Link to="/" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-xs font-semibold tracking-widest uppercase mb-10 text-gray-500 hover:text-black hover:border-gray-300 hover:shadow-sm transition-all">
-            <ArrowLeft size={14} /> Back
-          </Link>
-          
-          <div className="flex flex-col items-center">
-            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm border border-gray-100 mb-8">
-              <Icon size={28} strokeWidth={1.5} />
-            </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-gray-900 tracking-tight mb-6">
-              {data.title}
-            </h1>
-            <p className="text-lg md:text-xl text-gray-500 font-sans leading-relaxed">
-              {data.description}
-            </p>
-          </div>
+      <div className="bg-[#F5F5F7] pt-40 pb-24 px-8 text-center mb-16">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
+            {data.title}
+          </h1>
+          <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
+            {data.description}
+          </p>
         </div>
       </div>
 

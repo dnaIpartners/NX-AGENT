@@ -87,52 +87,50 @@ export default function InsightsNewsPage() {
         </div>
       </div>
 
-      {/* Full-Bleed Wide Cinematic Section */}
-      <div className="w-full pb-32 bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2">
+      {/* Clean Grid Section */}
+      <div className="max-w-[1200px] mx-auto px-6 md:px-8 pb-32 bg-white mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
           {articles.map((article, index) => {
             const isFeatured = index === 0;
             return (
               <Link 
                 key={article.id} 
                 to="#" 
-                className={`group relative overflow-hidden bg-gray-900 block w-full ${
-                  isFeatured ? 'md:col-span-2 aspect-[4/3] md:aspect-[21/9] lg:aspect-[24/7]' : 'aspect-[4/3] md:aspect-[16/9]'
-                }`}
+                className={`group flex flex-col ${isFeatured ? 'md:col-span-2' : ''}`}
               >
-                {/* Background Image */}
-                <img 
-                  src={article.image} 
-                  alt={article.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 opacity-80 group-hover:opacity-100"
-                  referrerPolicy="no-referrer"
-                />
-                
-                {/* Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 transition-opacity duration-500"></div>
-                
-                {/* Content (Bottom Aligned for Cinematic Feel) */}
-                <div className={`absolute bottom-0 left-0 w-full flex flex-col justify-end h-full ${
-                  isFeatured ? 'p-6 md:p-12 lg:p-20' : 'p-6 md:p-10'
+                {/* Thumbnail Image */}
+                <div className={`relative overflow-hidden rounded-2xl mb-6 bg-gray-100 ${
+                  isFeatured ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'
                 }`}>
-                  <div className={`${isFeatured ? 'max-w-7xl mx-auto w-full' : 'w-full'}`}>
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase bg-white/20 backdrop-blur-md rounded-full">
-                        {article.tag}
-                      </span>
-                      <span className="text-sm text-white/70 font-mono">{article.date}</span>
-                    </div>
-                    <h2 className={`text-white font-display font-medium mb-4 leading-tight ${
-                      isFeatured ? 'text-3xl md:text-5xl lg:text-6xl max-w-4xl' : 'text-2xl md:text-3xl lg:text-4xl max-w-2xl'
-                    }`}>
-                      {article.title}
-                    </h2>
-                    <p className={`text-white/80 font-sans line-clamp-2 ${
-                      isFeatured ? 'text-base md:text-xl max-w-2xl md:line-clamp-none' : 'text-sm md:text-base max-w-xl'
-                    }`}>
-                      {article.excerpt}
-                    </p>
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                
+                {/* Content */}
+                <div className="flex flex-col flex-grow">
+                  <div className="flex items-center gap-3 mb-4 text-sm font-medium">
+                    <span className="text-blue-600 uppercase tracking-wider text-xs">
+                      {article.tag}
+                    </span>
+                    <span className="text-gray-300">•</span>
+                    <span className="text-gray-500 font-mono text-xs">{article.date}</span>
                   </div>
+                  
+                  <h2 className={`font-display font-medium text-gray-900 mb-3 transition-colors group-hover:text-blue-600 ${
+                    isFeatured ? 'text-3xl md:text-5xl lg:text-5xl max-w-4xl leading-tight' : 'text-2xl md:text-3xl leading-snug'
+                  }`}>
+                    {article.title}
+                  </h2>
+                  
+                  <p className={`text-gray-500 font-sans ${
+                    isFeatured ? 'text-lg md:text-xl max-w-3xl' : 'text-base line-clamp-2'
+                  }`}>
+                    {article.excerpt}
+                  </p>
                 </div>
               </Link>
             );
@@ -140,9 +138,9 @@ export default function InsightsNewsPage() {
         </div>
         
         {/* Read More Button */}
-        <div className="mt-16 flex justify-center pb-16">
-          <button className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
-            Read More
+        <div className="mt-24 flex justify-center">
+          <button className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-medium tracking-wide hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
+            Load More Articles
           </button>
         </div>
       </div>
