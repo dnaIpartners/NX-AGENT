@@ -1,13 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronRight, Sparkles, Layout, BookOpen } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isKnowledgeOpen, setIsKnowledgeOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsKnowledgeOpen(false);
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    function handleOutside(event: MouseEvent | FocusEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsKnowledgeOpen(false);
+        setIsMobileMenuOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener('focusin', handleOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener('focusin', handleOutside);
+    };
+  }, []);
 
   return (
-    <div className="relative z-50 w-full">
+    <div ref={navRef} className="relative z-50 w-full">
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1100px] mx-auto">
         <div className="flex items-center gap-1">
           <Link to="/">
@@ -26,6 +49,7 @@ export default function Navbar() {
             KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}
           </button>
           <Link to="/content/abouts" className="hover:text-black transition-colors">ABOUTS</Link>
+          <Link to="/faq" className="hover:text-black transition-colors">FAQ</Link>
         </div>
         
         <div className="flex items-center gap-4 md:gap-6 text-[13px] font-medium">   
@@ -128,6 +152,7 @@ export default function Navbar() {
           </div>
 
           <Link to="/content/abouts" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">ABOUTS</Link>
+          <Link to="/faq" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">FAQ</Link>
           <button className="sm:hidden bg-black text-white px-5 py-3 rounded-full hover:bg-gray-800 transition-colors w-full mt-4">
             IPARTNES CO.
           </button>

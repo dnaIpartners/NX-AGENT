@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import KnowledgeCategory from './pages/KnowledgeCategory';
 import ContentCategory from './pages/ContentCategory';
 import InsightsNewsPage from './pages/InsightsNewsPage';
+import FaqPage from './pages/FaqPage';
 
 function Home() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
           <Route path="/knowledge/:category" element={<KnowledgeCategory />} />
           <Route path="/content/:category" element={<ContentCategory />} />
           <Route path="/insights-news" element={<InsightsNewsPage />} />
+          <Route path="/faq" element={<FaqPage />} />
         </Routes>
         <Footer />
       </div>
