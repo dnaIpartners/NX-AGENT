@@ -90,51 +90,43 @@ export default function Navbar() {
           <div className="max-w-[1100px] mx-auto px-8 flex gap-12">
             {/* Left Column */}
             <div className="w-1/4 flex flex-col justify-center">
-              <h2 className="text-3xl font-display font-medium text-gray-900 mb-4">Knowledge</h2>
+              <h2 className="text-3xl font-display font-bold text-gray-900 mb-2">Knowledge</h2>            
             </div>
             
             {/* Divider */}
             <div className="w-px bg-gray-200"></div>
 
             {/* Right Column */}
-            <div className="w-3/4">
-              <h3 className="text-[11px] font-bold text-gray-400 tracking-widest uppercase mb-6">AI Resources</h3>
-              <div className="grid grid-cols-3 gap-6">
-                {/* Card 1 */}
+            <div className="w-3/4 flex flex-col justify-center pl-4">
+              <h3 className="text-[11px] font-bold text-gray-400 tracking-widest uppercase mb-4">AI Resources</h3>
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
                 <Link 
-                  to="/knowledge/contextual-prompt-engineering" 
+                  to="/knowledge/ai-prompt-library" 
                   onClick={() => setIsKnowledgeOpen(false)}
-                  className="group block bg-[#F5F5F7] p-6 rounded-2xl hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-gray-200"
+                  className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                    <Sparkles size={22} strokeWidth={1.5} />
-                  </div>
-                  <h4 className="font-serif text-lg font-medium text-gray-900 mb-2 leading-tight">Contextual Prompt Engineering</h4>
-                  <p className="text-xs text-gray-500 font-sans leading-relaxed">Master the art of crafting precise AI prompts for optimal UX outcomes.</p>
+                  AI Prompt Library
                 </Link>
-                {/* Card 2 */}
                 <Link 
                   to="/knowledge/ai-ux-heuristic-evaluation" 
                   onClick={() => setIsKnowledgeOpen(false)}
-                  className="group block bg-[#F5F5F7] p-6 rounded-2xl hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-gray-200"
+                  className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                    <Layout size={22} strokeWidth={1.5} />
-                  </div>
-                  <h4 className="font-serif text-lg font-medium text-gray-900 mb-2 leading-tight">AI-UX Heuristic Evaluation</h4>
-                  <p className="text-xs text-gray-500 font-sans leading-relaxed">Evaluate AI interfaces using specialized usability heuristics.</p>
+                 AI-UX Heuristic Evaluation
                 </Link>
-                {/* Card 3 */}
+                <Link 
+                  to="/knowledge/contextual-prompt-engineering" 
+                  onClick={() => setIsKnowledgeOpen(false)}
+                  className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
+                >
+                 Contextual Prompt Engineering
+                </Link>
                 <Link 
                   to="/knowledge/glossary-of-ai-ux-interaction" 
                   onClick={() => setIsKnowledgeOpen(false)}
-                  className="group block bg-[#F5F5F7] p-6 rounded-2xl hover:shadow-md hover:-translate-y-1 transition-all duration-300 border border-transparent hover:border-gray-200"
+                  className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                    <BookOpen size={22} strokeWidth={1.5} />
-                  </div>
-                  <h4 className="font-serif text-lg font-medium text-gray-900 mb-2 leading-tight">Glossary of AI-UX Interaction</h4>
-                  <p className="text-xs text-gray-500 font-sans leading-relaxed">Comprehensive definitions of key terms in AI and user experience.</p>
+               Glossary of AI-UX Interaction
                 </Link>
               </div>
             </div>
@@ -158,9 +150,10 @@ export default function Navbar() {
             </button>
             {isKnowledgeOpen && (
               <div className="flex flex-col gap-3 pl-4 py-2 border-l-2 border-gray-100 ml-2 mt-1">
-                <Link to="/knowledge/contextual-prompt-engineering" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">Contextual Prompt Engineering</Link>
-                <Link to="/knowledge/ai-ux-heuristic-evaluation" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">AI-UX Heuristic Evaluation</Link>
-                <Link to="/knowledge/glossary-of-ai-ux-interaction" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">Glossary of AI-UX Interaction</Link>
+                <Link to="/knowledge/ai-prompt-library" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">Prompt Library</Link>
+                <Link to="/knowledge/ai-ux-heuristic-evaluation" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">AI Training</Link>
+                <Link to="/knowledge/contextual-prompt-engineering" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">UI/UX Prompt</Link>
+                <Link to="/knowledge/glossary-of-ai-ux-interaction" onClick={() => setIsMobileMenuOpen(false)} className="text-xs text-gray-500 hover:text-black transition-colors">Glossary</Link>
               </div>
             )}
           </div>

@@ -13,6 +13,7 @@ import ContentCategory from './pages/ContentCategory';
 import InsightsNewsPage from './pages/InsightsNewsPage';
 import FaqPage from './pages/FaqPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import AIPromptLibrary from './pages/AIPromptLibrary';
 
 function Home() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
         <FloatingBadge />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/knowledge/ai-prompt-library" element={<AIPromptLibrary />} />
           <Route path="/knowledge/:category" element={<KnowledgeCategory />} />
           <Route path="/content/:category" element={<ContentCategory />} />
           <Route path="/insights-news" element={<InsightsNewsPage />} />

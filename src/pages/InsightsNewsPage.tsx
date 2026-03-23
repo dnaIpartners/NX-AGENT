@@ -76,7 +76,7 @@ export default function InsightsNewsPage() {
     <div className="min-h-screen bg-white">
       
       {/* Minimal Centered Hero Section with Gray Tone */}
-      <div className="bg-[#F5F5F7] pt-32 pb-16 px-8 min-h-[400px] md:min-h-[480px] flex flex-col items-center justify-center text-center">
+      <div className="bg-[#F5F5F7] pt-28 pb-12 px-8 min-h-[320px] md:min-h-[384px] flex flex-col items-center justify-center text-center">
         <div className="max-w-5xl mx-auto w-full">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             Insights & News
