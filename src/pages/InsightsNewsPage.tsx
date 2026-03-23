@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Search } from 'lucide-react';
 
 const articles = [
   {
@@ -85,16 +84,6 @@ export default function InsightsNewsPage() {
           <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
             Insights and perspectives from the team
           </p>
-          
-          {/* Search Input */}
-          <div className="max-w-md mx-auto flex items-center border-b border-gray-300 pb-3 px-2 group focus-within:border-black transition-colors">
-            <Search size={16} className="text-gray-400 group-focus-within:text-black transition-colors mr-3" />
-            <input 
-              type="text" 
-              placeholder="Search Articles" 
-              className="w-full outline-none text-sm bg-transparent placeholder:text-gray-400 text-gray-900" 
-            />
-          </div>
         </div>
       </div>
 

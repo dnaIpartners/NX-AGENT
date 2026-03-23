@@ -138,16 +138,6 @@ export default function KnowledgeCategory() {
           <p className="text-lg md:text-xl text-gray-500 font-sans mb-12">
             {data.description}
           </p>
-
-          {/* Search Input */}
-          <div className="max-w-md mx-auto flex items-center border-b border-gray-300 pb-3 px-2 group focus-within:border-black transition-colors">
-            <Search size={16} className="text-gray-400 group-focus-within:text-black transition-colors mr-3" />
-            <input 
-              type="text" 
-              placeholder={`Search ${data.title}`} 
-              className="w-full outline-none text-sm bg-transparent placeholder:text-gray-400 text-gray-900" 
-            />
-          </div>
         </div>
       </div>
 
