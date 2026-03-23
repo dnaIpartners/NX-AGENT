@@ -87,61 +87,75 @@ export default function InsightsNewsPage() {
         </div>
       </div>
 
-      {/* Clean Grid Section */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 pb-32 bg-white mt-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
+      {/* Article Grid Section */}
+      <div className="w-full bg-white px-2 md:px-4 pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
           {articles.map((article, index) => {
             const isFeatured = index === 0;
             return (
               <Link 
                 key={article.id} 
                 to="#" 
-                className={`group flex flex-col ${isFeatured ? 'md:col-span-2' : ''}`}
+                className={`group relative overflow-hidden bg-gray-900 block w-full ${
+                  isFeatured ? 'md:col-span-2 aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3] md:aspect-[16/11]'
+                }`}
               >
-                {/* Thumbnail Image */}
-                <div className={`relative overflow-hidden rounded-2xl mb-6 bg-gray-100 ${
-                  isFeatured ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'
-                }`}>
-                  <img 
-                    src={article.image} 
-                    alt={article.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
+                {/* Background Image */}
+                <img 
+                  src={article.image} 
+                  alt={article.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 opacity-80 group-hover:opacity-100"
+                  referrerPolicy="no-referrer"
+                />
                 
-                {/* Content */}
-                <div className="flex flex-col flex-grow">
-                  <div className="flex items-center gap-3 mb-4 text-sm font-medium">
-                    <span className="text-blue-600 uppercase tracking-wider text-xs">
-                      {article.tag}
-                    </span>
-                    <span className="text-gray-300">•</span>
-                    <span className="text-gray-500 font-mono text-xs">{article.date}</span>
+                {/* Gradient Overlay for Text Readability (Top to Bottom) */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent opacity-80 transition-opacity duration-500"></div>
+                
+                {/* Content (Top Aligned) */}
+                <div className={`absolute top-0 left-0 w-full flex flex-col justify-start h-full ${
+                  isFeatured ? 'p-8 md:p-16' : 'p-8 md:p-12'
+                }`}>
+                  <div className="max-w-3xl">
+                    <h2 className={`text-white font-display font-medium mb-3 leading-tight ${
+                      isFeatured ? 'text-3xl md:text-5xl lg:text-6xl' : 'text-2xl md:text-3xl'
+                    }`}>
+                      {article.title}
+                    </h2>
+                    <p className={`text-white/80 font-sans ${
+                      isFeatured ? 'text-base md:text-xl' : 'text-sm md:text-base'
+                    }`}>
+                      {article.excerpt}
+                    </p>
                   </div>
-                  
-                  <h2 className={`font-display font-medium text-gray-900 mb-3 transition-colors group-hover:text-blue-600 ${
-                    isFeatured ? 'text-3xl md:text-5xl lg:text-5xl max-w-4xl leading-tight' : 'text-2xl md:text-3xl leading-snug'
-                  }`}>
-                    {article.title}
-                  </h2>
-                  
-                  <p className={`text-gray-500 font-sans ${
-                    isFeatured ? 'text-lg md:text-xl max-w-3xl' : 'text-base line-clamp-2'
-                  }`}>
-                    {article.excerpt}
-                  </p>
                 </div>
               </Link>
             );
           })}
         </div>
-        
-        {/* Read More Button */}
-        <div className="mt-24 flex justify-center">
-          <button className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-medium tracking-wide hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
-            Load More Articles
-          </button>
+      </div>
+
+      {/* CTA Section */}
+      <div className="relative w-full py-32 md:py-40 bg-[#0a0a0a] overflow-hidden">
+        {/* Background Image with heavy overlay */}
+        <img 
+          src="https://picsum.photos/seed/meeting/1920/1080" 
+          alt="Meeting"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale"
+          referrerPolicy="no-referrer"
+        />
+        <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
+          <div className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-[#FF5722] mb-8 ring-4 ring-[#FF5722]/20"></div>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-4 tracking-tight">
+            We transform brands.<br />
+            <span className="text-[#FF5722]">Your success is next.</span>
+          </h2>
+          <p className="text-gray-400 text-sm md:text-base mb-12 max-w-xl mx-auto">
+            Start your project now by booking a one-on-one consultation with our expert.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-white font-medium">
+            <Link to="#" className="hover:text-[#FF5722] transition-colors border-b border-white/30 hover:border-[#FF5722] pb-1">book a call</Link>
+            <Link to="#" className="hover:text-[#FF5722] transition-colors border-b border-white/30 hover:border-[#FF5722] pb-1">chat on whatsapp</Link>
+          </div>
         </div>
       </div>
     </div>
