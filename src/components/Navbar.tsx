@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isKnowledgeOpen, setIsKnowledgeOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -21,16 +22,34 @@ export default function Navbar() {
       }
     }
 
+    function handleScroll() {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+
     document.addEventListener('mousedown', handleOutside);
     document.addEventListener('focusin', handleOutside);
+    window.addEventListener('scroll', handleScroll);
+    
     return () => {
       document.removeEventListener('mousedown', handleOutside);
       document.removeEventListener('focusin', handleOutside);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
-    <div ref={navRef} className="relative z-50 w-full">
+    <div 
+      ref={navRef} 
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm' 
+          : 'bg-white border-b border-transparent'
+      }`}
+    >
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1100px] mx-auto">
         <div className="flex items-center gap-1">
           <Link to="/">
@@ -52,10 +71,7 @@ export default function Navbar() {
           <Link to="/faq" className="hover:text-black transition-colors">FAQ</Link>
         </div>
         
-        <div className="flex items-center gap-4 md:gap-6 text-[13px] font-medium">   
-          <button className="hidden sm:block bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors">
-           IPARTNES CO.
-          </button>
+        <div className="flex items-center gap-4 md:gap-6 text-[13px] font-medium">          
           <button 
             className="md:hidden p-2 -mr-2 text-gray-600 hover:text-black transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -153,9 +169,6 @@ export default function Navbar() {
 
           <Link to="/content/abouts" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">ABOUTS</Link>
           <Link to="/faq" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">FAQ</Link>
-          <button className="sm:hidden bg-black text-white px-5 py-3 rounded-full hover:bg-gray-800 transition-colors w-full mt-4">
-            IPARTNES CO.
-          </button>
         </div>
       )}
     </div>

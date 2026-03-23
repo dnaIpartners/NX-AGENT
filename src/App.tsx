@@ -32,7 +32,7 @@ function Home() {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#fcfcfc] text-[#111] relative overflow-hidden font-sans selection:bg-black selection:text-white">
+      <div className="min-h-screen bg-[#fcfcfc] text-[#111] relative overflow-x-hidden font-sans selection:bg-black selection:text-white">
         {/* Background Grid - Very faint and large */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:120px_120px] pointer-events-none"></div>
         
