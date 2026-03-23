@@ -94,26 +94,30 @@ export default function CaseStudiesPage() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-8 py-16">
+      <div className="w-full bg-white px-2 md:px-4 pt-4">
         {/* Featured Case Study */}
-        <div className="relative rounded-2xl overflow-hidden aspect-[16/9] md:aspect-[21/9] mb-12 group cursor-pointer">
+        <div className="relative overflow-hidden aspect-[16/9] md:aspect-[21/9] group cursor-pointer bg-gray-900">
           <img 
-            src="https://picsum.photos/seed/featured-case/1600/800" 
+            src="https://picsum.photos/seed/featured-case/1920/1080" 
             alt="Featured Case Study" 
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 opacity-80 group-hover:opacity-100" 
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
-          <div className="absolute bottom-0 left-0 p-8 md:p-12 w-full md:w-3/4 lg:w-2/3">
-            <div className="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded text-xs font-bold tracking-wider text-white mb-4 uppercase">
-              Social Media
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-transparent opacity-80 transition-opacity duration-500"></div>
+          <div className="absolute top-0 left-0 w-full flex flex-col justify-start h-full p-8 md:p-16">
+            <div className="max-w-3xl">
+              <div className="inline-block bg-white/20 backdrop-blur-md px-3 py-1 rounded text-xs font-bold tracking-wider text-white mb-4 uppercase">
+                Social Media
+              </div>
+              <h2 className="text-white font-display font-medium mb-3 leading-tight text-3xl md:text-5xl lg:text-6xl">
+                Instagram Best Practices: Enhance Your Brand with Smart Strategies
+              </h2>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-              Instagram Best Practices: Enhance Your Brand with Smart Strategies
-            </h2>
           </div>
         </div>
+      </div>
 
+      <div className="max-w-[1200px] mx-auto px-8 py-12">
         {/* Filter Navigation */}
         <div className="mb-12 overflow-x-auto hide-scrollbar">
           <div className="flex items-center justify-between bg-black rounded-full p-1.5 w-full min-w-max">
