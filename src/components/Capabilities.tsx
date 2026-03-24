@@ -46,13 +46,29 @@ export default function Capabilities() {
       });
 
       tl.fromTo(".white-bg-reveal",
-        { clipPath: "circle(0% at 50% 250px)" },
-        { clipPath: "circle(150% at 50% 250px)", ease: "none" }
+        { clipPath: "circle(0% at 50% 50%)" },
+        { clipPath: "circle(150% at 50% 50%)", ease: "none" }
       )
       .fromTo(".scale-text",
         { scale: 0.4, opacity: 0 },
         { scale: 1, opacity: 1, ease: "none" },
         "<"
+      );
+
+      // List items animation
+      gsap.fromTo(".capability-item",
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".capabilities-list",
+            start: "top 80%",
+          }
+        }
       );
     }, containerRef);
 
@@ -60,7 +76,7 @@ export default function Capabilities() {
   }, []);
 
   return (
-    <section ref={containerRef} className="bg-[#0a0a0a] relative z-10">
+    <section ref={containerRef} className="bg-[#001641] relative z-10">
       <div className="white-bg-reveal bg-white py-24 lg:py-40">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           {/* Header */}
@@ -74,23 +90,23 @@ export default function Capabilities() {
           </div>
 
         {/* List */}
-        <div className="flex flex-col">
+        <div className="flex flex-col capabilities-list">
           {capabilities.map((item, index) => (
             <div 
               key={index} 
-              className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 md:py-16 border-t border-gray-200 group hover:bg-gray-50 transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4 rounded-xl"
+              className="capability-item grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 md:py-16 border-t border-gray-200 group hover:bg-gray-50 transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4 rounded-xl"
             >
               {/* Title Column */}
               <div className="md:col-span-4 flex items-start gap-3">
                 <span className="text-[#FF5722] font-mono text-sm md:text-base mt-1 md:mt-2">({item.id})</span>
                 <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-[#0a0a0a] tracking-tight">
-                  {item.title} —
+                  {item.title}
                 </h3>
               </div>
 
               {/* Description Column */}
               <div className="md:col-span-5 flex items-start">
-                <p className="text-base md:text-lg text-gray-500 leading-relaxed break-keep">
+                <p className="text-base md:text-lg text-gray-500 leading-relaxed break-keep font-medium">
                   {item.description}
                 </p>
               </div>

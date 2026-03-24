@@ -6,7 +6,7 @@ import Capabilities from './components/Capabilities';
 import HowItWorks from './components/HowItWorks';
 import InsightsNews from './components/InsightsNews';
 import Knowledge from './components/Knowledge';
-import FaqSection from './components/FaqSection';
+import NextExperience from './components/NextExperience';
 import Footer from './components/Footer';
 import FloatingBadge from './components/FloatingBadge';
 import KnowledgeCategory from './pages/KnowledgeCategory';
@@ -25,7 +25,7 @@ function Home() {
       <HowItWorks />
       <InsightsNews />
       <Knowledge />
-      <FaqSection />
+      <NextExperience />
     </>
   );
 }
