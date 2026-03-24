@@ -152,6 +152,7 @@ export default function ParticleSphere() {
   const particleCount = 20000;
   const baseRadius = 4.5 * 0.75; // Reduced by 15% initially
   const radius = isMobile ? baseRadius * 0.5 : baseRadius; // Reduced by 40% on mobile
+  const spherePositionY = isMobile ? -0.2 : -0.3;
 
   const [positions, originalPositions, randoms] = useMemo(() => {
     const positions = new Float32Array(particleCount * 3);
@@ -198,6 +199,9 @@ export default function ParticleSphere() {
       const distance = -camera.position.z / vec.z;
       const pos = camera.position.clone().add(vec.multiplyScalar(distance));
 
+      // Convert world mouse position to local space
+      pos.y -= spherePositionY;
+
       // Smooth mouse movement
       targetMouse.current.lerp(pos, 0.1);
       materialRef.current.uniforms.uMouse.value.copy(targetMouse.current);
@@ -205,7 +209,7 @@ export default function ParticleSphere() {
   });
 
   return (
-    <points ref={pointsRef}>
+    <points ref={pointsRef} position={[0, spherePositionY, 0]}>
       <bufferGeometry>
         <bufferAttribute
           attach="attributes-position"

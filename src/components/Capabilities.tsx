@@ -77,15 +77,15 @@ export default function Capabilities() {
 
   return (
     <section ref={containerRef} className="bg-[#001641] relative z-10">
-      <div className="white-bg-reveal bg-white py-24 lg:py-40">
+      <div className="white-bg-reveal bg-white py-24 lg:py-30">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           {/* Header */}
           <div className="scale-text text-center mb-24 md:mb-40">
-            <h2 className="text-[5rem] md:text-[9rem] lg:text-[11rem] font-display font-bold tracking-tighter leading-[0.9] text-[#0a0a0a] lowercase">
+            <h2 className="text-[4rem] md:text-[8rem] lg:text-[11rem] font-display font-bold tracking-tighter leading-[0.9] text-[#0a0a0a] lowercase">
               Capabilities
             </h2>
             <p className="mt-8 text-2xl md:text-4xl text-gray-500 max-w-3xl mx-auto font-light tracking-tight">
-              Perfectly aligned intelligent workflows and AI expertise to increase digital impact.
+              Perfectly aligned intelligent workflows and <br className="hidden md:block" />AI expertise to increase digital impact.
             </p>
           </div>
 
