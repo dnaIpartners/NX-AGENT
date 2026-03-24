@@ -8,6 +8,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const isMainPage = location.pathname === '/';
 
   useEffect(() => {
     setIsKnowledgeOpen(false);
@@ -47,7 +48,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm text-gray-900' 
-          : 'bg-transparent border-b border-transparent text-white'
+          : `bg-transparent border-b border-transparent ${isMainPage ? 'text-white' : 'text-[#001641]'}`
       }`}
     >
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1100px] mx-auto">
@@ -57,17 +58,17 @@ export default function Navbar() {
           </Link>
         </div>
         
-        <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : 'text-white/80'}`}>
-          <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>HOW IT WORKS</Link>
-          <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>INSIGHTS NEWS</Link>
-          <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>CASE STUDIES</Link>
+        <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : (isMainPage ? 'text-white/80' : 'text-[#001641]/80')}`}>
+          <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')}`}>HOW IT WORKS</Link>
+          <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')}`}>INSIGHTS NEWS</Link>
+          <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')}`}>CASE STUDIES</Link>
           <button 
             onClick={() => setIsKnowledgeOpen(!isKnowledgeOpen)}
-            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : 'text-white') : (isScrolled ? 'hover:text-black' : 'hover:text-white')}`}
+            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : (isMainPage ? 'text-white' : 'text-[#001641]')) : (isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]'))}`}
           >
             KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}
           </button>
-          <Link to="/faq" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>FAQ</Link>
+          <Link to="/faq" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')}`}>FAQ</Link>
         </div>
         
         <div className="flex items-center gap-4 md:gap-6">
@@ -75,7 +76,7 @@ export default function Navbar() {
             AI Partners
           </span>
           <button 
-            className={`md:hidden p-2 -mr-2 transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : 'text-white/80 hover:text-white'}`}
+            className={`md:hidden p-2 -mr-2 transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : (isMainPage ? 'text-white/80 hover:text-white' : 'text-[#001641]/80 hover:text-[#001641]')}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >

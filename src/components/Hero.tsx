@@ -25,12 +25,12 @@ export default function Hero() {
       </div>
 
       {/* UI Overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none flex flex-col justify-end p-8 md:p-16 lg:p-24">
+      <div className="absolute inset-0 z-10 pointer-events-none">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          className="max-w-3xl pointer-events-auto relative left-[50px] bottom-[20px]"
+          className="absolute top-[30%] left-[20%] max-w-3xl pointer-events-auto pr-8"
         >
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-bold text-white tracking-tight mb-6 leading-[1.1]">
         NX AGENT <br />
