@@ -31,7 +31,7 @@ const categories = [
 
 export default function Knowledge() {
   return (
-    <section className="relative z-10 max-w-[1300px] mx-auto px-6 md:px-8 py-24 lg:py-32 border-t border-gray-100">
+    <section className="relative z-10 max-w-[1300px] mx-auto px-6 md:px-8 pt-24 pb-12 lg:pt-32 lg:pb-16 border-t border-gray-100">
       <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div>
           <div className="flex items-center gap-4 mb-6">
@@ -43,9 +43,6 @@ export default function Knowledge() {
             <span className="text-gray-400">Expert insights.</span>
           </h2>
         </div>
-        <Link to="/knowledge/contextual-prompt-engineering" className="hidden md:flex items-center gap-2 text-sm font-semibold text-gray-900 hover:text-blue-600 transition-colors">
-          View all knowledge <ArrowRight className="w-4 h-4" />
-        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -87,11 +84,6 @@ export default function Knowledge() {
         })}
       </div>
       
-      <div className="mt-12 md:hidden flex justify-center">
-        <Link to="/knowledge/contextual-prompt-engineering" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-semibold tracking-wide hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
-          View all knowledge
-        </Link>
-      </div>
     </section>
   );
 }

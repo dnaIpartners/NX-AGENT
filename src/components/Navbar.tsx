@@ -54,7 +54,7 @@ export default function Navbar() {
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1300px] mx-auto">
         <div className="flex items-center gap-1">
           <Link to="/" className="font-display font-bold text-xl tracking-tight">
-            Next Experience
+            Next eXperience
           </Link>
         </div>
         

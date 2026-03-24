@@ -52,9 +52,8 @@ export default function Hero() {
           </span>
         </span>
       </h1>
-          <p className="text-white/80 text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl font-medium leading-relaxed">
-           아이파트너즈의 NX AGENT는 기획, 디자인, 개발의 선형적 경계를 허물.
-고 지능형 워크플로우를 완벽하게 통합합니다. 파편화되어 사라지던 개인 의 노하우는 더 이상 유실되지 않으며, 플랫폼을 통해 조직의 영구적인 지 능(경험 자산)으로 시스템화(내재화)됩니다.
+          <p className="text-white/80 text-lg md:text-xl lg:text-2xl mb-10 max-w-4xl font-medium leading-relaxed">
+           아이파트너즈의 NX AGENT는 기획, 디자인, 개발의 선형적 경계를 허물고 지능형 워크플로우를 완벽하게 통합합니다. 파편화되어 사라지던 개인 의 노하우는 더 이상 유실되지 않으며, 플랫폼을 통해 조직의 영구적인 지 능(경험 자산)으로 시스템화(내재화)됩니다.
           </p>
         </motion.div>
       </div>

@@ -18,7 +18,7 @@ export default function HowItWorksPage() {
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-display font-medium tracking-tight mb-8 leading-[1.1] text-black">
             Empowering Brands to Work Smarter with AI
           </h1>
-          <div className="space-y-6 text-[17px] text-gray-700 leading-[1.7] max-w-[890px]">
+          <div className="space-y-6 text-[17px] text-gray-700 leading-[1.7] max-w-1100px]">
             <p>
               아이파트너즈에게 AI는 단순한 트렌드나 수동적인 보조 도구가 아닙니다. 확실한 비즈니스 성과를 창출하는 실질적인 '능동형 에이전트(AI Agent)'입니다. 우리의 목표는 명확합니다. 비즈니스에 진짜 변화를 일으킬 수 있는 곳에 AI를 완벽하게 통합하는 것입니다. 반복적이고 소모적인 수작업을 자동화하여 프로젝트 리드타임을 30% 이상 혁신적으로 단축하고, 방대한 데이터를 분석하여 차별화된 사용자 경험(UX)을 설계합니다.
             </p>
@@ -36,7 +36,7 @@ export default function HowItWorksPage() {
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-display font-medium tracking-tight mb-8 leading-[1.1] text-black">
             AI That Drives Impact
           </h1>
-          <div className="space-y-6 text-[17px] text-gray-700 leading-[1.7] max-w-[890px]">
+          <div className="space-y-6 text-[17px] text-gray-700 leading-[1.7] max-w-[1200px]">
             <p>
               AI는 비즈니스의 패러다임을 혁신하고 있으며, 그 속도는 점차 가속화되고 있습니다. 아이파트너즈는 고객사의 비즈니스가 각기 다른 고유한 목표와 과제를 안고 있음을 이해합니다. 그렇기 때문에 누구나 쓰는 뻔한 범용 솔루션에 의존하지 않습니다.
             </p>
@@ -57,7 +57,7 @@ export default function HowItWorksPage() {
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-display font-medium tracking-tight mb-8 leading-[1.1] text-black">
             How We Implement AI
           </h1>
-          <div className="space-y-6 text-[17px] text-gray-700 leading-[1.7] max-w-[890px]">
+          <div className="space-y-6 text-[17px] text-gray-700 leading-[1.7] max-w-[1200px]">
             <p>
               우리는 단순한 '시스템 구축'을 넘어 고객사의 비즈니스 본질을 탐구합니다. 실무 전문가가 고객사의 페인포인트(Pain Point)를 깊이 있게 진단하고, AI가 가장 강력한 임팩트를 낼 수 있는 영역에 'i-AX Solution(6대 핵심 에이전트)'을 유기적으로 매핑합니다.
             </p>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function InsightsNews() {
   return (
-    <section className="relative z-10 max-w-[1300px] mx-auto px-8 py-24 lg:py-32 border-t border-gray-100">
+    <section className="relative z-10 max-w-[1300px] mx-auto px-8 py-24 lg:py-25 border-t border-gray-100">
       <div className="mb-24">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-6 h-[1px] bg-gray-300"></div>
@@ -49,12 +49,6 @@ export default function InsightsNews() {
         </Link>
       </div>
       
-      {/* Read More Button */}
-      <div className="mt-16 flex justify-center">
-        <Link to="/insights-news" className="px-8 py-4 bg-white border border-gray-200 text-gray-900 rounded-full text-sm font-semibold tracking-wide uppercase hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2">
-          Read More
-        </Link>
-      </div>
     </section>
   );
 }
