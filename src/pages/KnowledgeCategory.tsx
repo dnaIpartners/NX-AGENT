@@ -14,15 +14,15 @@ const categoryData: Record<string, any> = {
     description: <>단순한 기계적 입력을 넘어, 실무 전문가가 고객사 고유의 비즈니스 맥락을 완벽히 해석하여<br />AI가 최상의 산출물을 내도록 조율합니다.</>,
     icon: Sparkles,
     articles: [
-      { id: 1, title: 'The Anatomy of a Perfect UX Prompt', excerpt: 'Discover the core components that make up an effective prompt for generating UI layouts and user flows.', date: 'Mar 15, 2026', readTime: '5 min read', tag: 'Analytics' },
-      { id: 2, title: 'Context Windows and Memory Management', excerpt: 'How to effectively utilize large context windows to maintain design consistency across complex AI interactions.', date: 'Mar 10, 2026', readTime: '8 min read', tag: 'Technical' },
-      { id: 3, title: 'Zero-shot vs Few-shot Prompting in UX Design', excerpt: 'Comparing different prompting strategies and when to use them for generating design systems and components.', date: 'Mar 02, 2026', readTime: '6 min read', tag: 'Research' },
-      { id: 4, title: 'Handling Hallucinations in UI Generation', excerpt: 'Strategies to prevent and mitigate AI hallucinations when generating structural UI code and layouts.', date: 'Feb 24, 2026', readTime: '7 min read', tag: 'Best Practices' },
-      { id: 5, title: 'Prompt Chaining for Complex User Flows', excerpt: 'Learn how to link multiple prompts together to handle multi-step user journeys and complex logic.', date: 'Feb 18, 2026', readTime: '9 min read', tag: 'Analytics' },
-      { id: 6, title: 'System Prompts: Setting the AI Persona', excerpt: 'Best practices for defining the core behavior, tone, and constraints of your AI agent through system prompts.', date: 'Feb 10, 2026', readTime: '6 min read', tag: 'Analytics' },
-      { id: 7, title: 'Evaluating Prompt Effectiveness in UX', excerpt: 'Metrics and frameworks for measuring how well your prompts are performing in real-world user scenarios.', date: 'Feb 05, 2026', readTime: '7 min read', tag: 'Analytics' },
-      { id: 8, title: 'The Role of Temperature in Creative UI Generation', excerpt: 'Understanding how the temperature parameter affects the creativity and reliability of generated interfaces.', date: 'Jan 28, 2026', readTime: '5 min read', tag: 'Analytics' },
-      { id: 9, title: 'Security and Safety in Prompt Engineering', excerpt: 'Protecting your AI interfaces from prompt injection attacks and ensuring safe, predictable outputs.', date: 'Jan 20, 2026', readTime: '8 min read', tag: 'Analytics' }
+      { id: 1, title: '비즈니스 맥락을 이해하는 프롬프트 설계의 시작', excerpt: '단순한 명령어 입력을 넘어, 고객사의 산업 특성과 비즈니스 목표를 AI에게 정확히 인지시키는 맥락 설계 방법론을 알아봅니다.', date: 'Mar 22, 2026', readTime: '5 min read', tag: 'Strategy' },
+      { id: 2, title: '도메인 지식과 AI의 결합: 실무 전문가의 역할', excerpt: 'AI가 최상의 산출물을 내기 위해 필수적인 실무 전문가의 개입 포인트와 도메인 지식 주입 노하우를 공유합니다.', date: 'Mar 18, 2026', readTime: '6 min read', tag: 'Expertise' },
+      { id: 3, title: '고객사 맞춤형 페르소나 및 톤앤매너 최적화', excerpt: '브랜드 아이덴티티에 부합하는 AI 페르소나를 구축하고, 일관된 톤앤매너를 유지하도록 프롬프트를 조율하는 기법.', date: 'Mar 15, 2026', readTime: '4 min read', tag: 'Branding' },
+      { id: 4, title: '복잡한 비즈니스 로직을 AI에게 학습시키는 방법론', excerpt: '예외 처리, 정책, 제약 조건 등 까다로운 비즈니스 룰을 프롬프트 내에 구조화하여 오류를 방지하는 설계 팁.', date: 'Mar 10, 2026', readTime: '7 min read', tag: 'Architecture' },
+      { id: 5, title: '모호한 요구사항을 명확한 AI 지시어로 번역하기', excerpt: '고객의 추상적인 니즈를 AI가 완벽히 이해하고 실행할 수 있는 구체적이고 실행 가능한 프롬프트로 변환하는 과정.', date: 'Mar 05, 2026', readTime: '5 min read', tag: 'Communication' },
+      { id: 6, title: '프롬프트 체이닝을 활용한 다단계 문제 해결', excerpt: '단일 프롬프트의 한계를 극복하고, 여러 단계의 프롬프트를 연결하여 복잡한 비즈니스 시나리오를 해결하는 전략.', date: 'Feb 28, 2026', readTime: '8 min read', tag: 'Advanced' },
+      { id: 7, title: 'AI 산출물의 품질을 높이는 제약 조건(Constraint) 설계', excerpt: 'AI의 환각(Hallucination)을 줄이고 실무에 즉시 적용 가능한 결과물을 얻기 위한 정교한 제약 조건 설정법.', date: 'Feb 20, 2026', readTime: '6 min read', tag: 'Quality Control' },
+      { id: 8, title: '산업군별 특성을 반영한 프롬프트 엔지니어링 사례', excerpt: '금융, 커머스, 헬스케어 등 다양한 산업군의 실제 프로젝트에서 활용된 맥락 맞춤형 프롬프트 설계 케이스 스터디.', date: 'Feb 12, 2026', readTime: '7 min read', tag: 'Case Study' },
+      { id: 9, title: '지속 가능한 프롬프트 자산화 및 버전 관리', excerpt: '성공적으로 설계된 프롬프트를 조직의 자산으로 내재화하고, 모델 업데이트에 대응하여 지속적으로 관리하는 방법.', date: 'Feb 05, 2026', readTime: '5 min read', tag: 'Management' }
     ]
   },
   'ai-ux-heuristic-evaluation': {
@@ -30,15 +30,15 @@ const categoryData: Record<string, any> = {
     description: <>전문가의 통찰과 AI 에이전트를 결합하여 기존 서비스의 사용자 경험(UX)을 빠르고 정교하게 진단하고, <br />실질적인 개선안을 도출합니다.</>,
     icon: Layout,
     articles: [
-      { id: 1, title: 'Nielsen\'s Heuristics Adapted for AI', excerpt: 'How the classic 10 usability heuristics apply to modern generative AI interfaces and conversational agents.', date: 'Mar 18, 2026', readTime: '10 min read', tag: 'Analytics' },
-      { id: 2, title: 'Evaluating AI Transparency and Explainability', excerpt: 'Methods for assessing how well an AI system communicates its capabilities, limitations, and reasoning to users.', date: 'Mar 12, 2026', readTime: '7 min read', tag: 'Analytics' },
-      { id: 3, title: 'The Trust Heuristic: Designing for Confidence', excerpt: 'Measuring and improving user trust in AI systems through interface cues and feedback loops.', date: 'Feb 28, 2026', readTime: '6 min read', tag: 'Research' },
-      { id: 4, title: 'Measuring Cognitive Load in AI Interactions', excerpt: 'Techniques to ensure your AI features reduce, rather than increase, the user\'s cognitive burden.', date: 'Feb 20, 2026', readTime: '8 min read', tag: 'UX Research' },
-      { id: 5, title: 'Heuristics for Voice and Multimodal Interfaces', excerpt: 'Expanding evaluation criteria beyond screens to include voice, gesture, and spatial AI interactions.', date: 'Feb 14, 2026', readTime: '9 min read', tag: 'Analytics' },
-      { id: 6, title: 'Error Recovery in Generative AI Systems', excerpt: 'Evaluating how gracefully an AI system handles misunderstandings, bad outputs, and user corrections.', date: 'Feb 05, 2026', readTime: '7 min read', tag: 'Analytics' },
-      { id: 7, title: 'Assessing Bias and Fairness in UX', excerpt: 'A heuristic approach to identifying and mitigating algorithmic bias within the user interface.', date: 'Jan 29, 2026', readTime: '11 min read', tag: 'Analytics' },
-      { id: 8, title: 'The Control Heuristic: User Override in AI', excerpt: 'Why users need the ability to override AI decisions, and how to evaluate the effectiveness of these controls.', date: 'Jan 22, 2026', readTime: '6 min read', tag: 'Framework' },
-      { id: 9, title: 'Evaluating the "Magic" vs. "Utility" Balance', excerpt: 'Finding the sweet spot between impressive generative capabilities and practical, predictable utility.', date: 'Jan 15, 2026', readTime: '5 min read', tag: 'Strategy' }
+      { id: 1, title: 'AI 에이전트를 활용한 휴리스틱 평가의 패러다임 전환', excerpt: '전통적인 전문가 평가 방식에 AI의 데이터 처리 능력을 결합하여, 더 빠르고 객관적인 UX 진단을 수행하는 방법론.', date: 'Mar 21, 2026', readTime: '5 min read', tag: 'Innovation' },
+      { id: 2, title: '전문가의 직관과 AI 분석의 시너지 창출하기', excerpt: 'AI가 놓치기 쉬운 감성적, 맥락적 사용성 문제를 전문가의 통찰로 보완하여 완벽한 진단 리포트를 완성하는 과정.', date: 'Mar 17, 2026', readTime: '6 min read', tag: 'Synergy' },
+      { id: 3, title: '기존 서비스 UX 진단을 위한 AI 프롬프트 설계법', excerpt: '화면 구조, 사용자 플로우, 인터랙션 요소를 AI가 정확히 분석할 수 있도록 지시하는 UX 진단 특화 프롬프팅.', date: 'Mar 12, 2026', readTime: '7 min read', tag: 'Methodology' },
+      { id: 4, title: '닐슨의 10가지 휴리스틱 원칙, AI 환경에 맞게 재해석하다', excerpt: '제이콥 닐슨의 고전적인 사용성 원칙을 현대의 복잡한 디지털 프로덕트와 AI 인터페이스 진단에 적용하는 가이드.', date: 'Mar 08, 2026', readTime: '5 min read', tag: 'Foundation' },
+      { id: 5, title: '정성적 UX 문제를 정량적 데이터로 변환하는 AI 기법', excerpt: '모호한 사용성 이슈를 AI를 통해 수치화하고 우선순위를 매겨, 객관적인 의사결정을 지원하는 진단 프레임워크.', date: 'Mar 01, 2026', readTime: '6 min read', tag: 'Analytics' },
+      { id: 6, title: 'AI 기반 UX 진단 리포트: 실질적인 액션 아이템 도출', excerpt: '단순한 문제 지적을 넘어, 즉시 개발 및 디자인에 적용 가능한 구체적인 UX/UI 개선안을 AI와 함께 도출하는 방법.', date: 'Feb 24, 2026', readTime: '5 min read', tag: 'Actionable' },
+      { id: 7, title: '다크 패턴(Dark Patterns) 탐지를 위한 AI 에이전트 활용', excerpt: '사용자를 기만하거나 불편하게 만드는 숨겨진 다크 패턴을 AI로 스캐닝하고 윤리적인 UX로 개선하는 전략.', date: 'Feb 15, 2026', readTime: '4 min read', tag: 'Ethics' },
+      { id: 8, title: '접근성(Accessibility) 및 포용성 진단을 위한 AI 자동화', excerpt: 'WCAG 가이드라인을 기반으로 시각, 청각, 인지적 접근성 문제를 AI로 빠르게 진단하고 개선 방향을 수립하는 팁.', date: 'Feb 08, 2026', readTime: '6 min read', tag: 'Accessibility' },
+      { id: 9, title: '신속한 사용성 테스트를 위한 AI 유저 시뮬레이션', excerpt: '실제 사용자 테스트(UT) 전, 다양한 페르소나를 가진 AI 에이전트를 활용해 예상되는 사용성 병목 구간을 미리 찾아내기.', date: 'Feb 02, 2026', readTime: '7 min read', tag: 'Simulation' }
     ]
   },
   'glossary-of-ai-ux-interaction': {
