@@ -23,18 +23,32 @@ export default function Hero() {
           className="max-w-3xl pointer-events-auto"
         >
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-bold text-white tracking-tight mb-6 leading-[1.1]">
-            Interactive <br />
-            <span className="text-white/80">Particle Sphere</span>
+            NX AGENT <br />
+            <span className="text-white/80">to integrate</span>
           </h1>
           <p className="text-white/80 text-lg md:text-xl lg:text-2xl mb-10 max-w-xl font-medium leading-relaxed">
-            Explore 20,000 particles reacting to your presence in real-time. Powered by Three.js and React.
+           아이파트너즈의 NX AGENT는 기획, 디자인, 개발의 선형적 경계를 허물.
+고 지능형 워크플로우를 완벽하게 통합합니다. 파편화되어 사라지던 개인 의 노하우는 더 이상 유실되지 않으며, 플랫폼을 통해 조직의 영구적인 지 능(경험 자산)으로 시스템화(내재화)됩니다.
           </p>
-          <button className="group flex items-center gap-3 bg-white text-[#FF4500] px-8 py-4 rounded-full font-bold text-lg transition-all hover:bg-white/90 hover:scale-105 active:scale-95 shadow-xl">
-            Start Exploring
-            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-          </button>
         </motion.div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        className="absolute bottom-8 right-8 md:bottom-12 md:right-12 lg:bottom-16 lg:right-16 z-20 flex flex-col items-center gap-3 text-white/60 pointer-events-none"
+      >
+        <span className="text-[10px] font-medium tracking-[0.25em] uppercase" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+        <div className="w-[1px] h-16 bg-white/20 relative overflow-hidden">
+          <motion.div 
+            className="absolute top-0 left-0 w-full h-1/3 bg-white"
+            animate={{ y: ['-100%', '300%'] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+          />
+        </div>
+      </motion.div>
     </main>
   );
 }

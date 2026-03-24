@@ -146,10 +146,12 @@ const fragmentShader = `
 export default function ParticleSphere() {
   const pointsRef = useRef<THREE.Points>(null);
   const materialRef = useRef<THREE.ShaderMaterial>(null);
-  const { camera, pointer } = useThree();
+  const { camera, pointer, size } = useThree();
 
+  const isMobile = size.width < 768;
   const particleCount = 20000;
-  const radius = 4.5 * 0.75; // Reduced by 15%
+  const baseRadius = 4.5 * 0.75; // Reduced by 15% initially
+  const radius = isMobile ? baseRadius * 0.5 : baseRadius; // Reduced by 40% on mobile
 
   const [positions, originalPositions, randoms] = useMemo(() => {
     const positions = new Float32Array(particleCount * 3);
@@ -176,7 +178,7 @@ export default function ParticleSphere() {
     }
 
     return [positions, originalPositions, randoms];
-  }, []);
+  }, [radius]);
 
   const uniforms = useMemo(() => ({
     uTime: { value: 0 },
