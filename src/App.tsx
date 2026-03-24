@@ -38,7 +38,6 @@ export default function App() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:120px_120px] pointer-events-none"></div>
         
         <Navbar />
-        <FloatingBadge />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/knowledge/ai-prompt-library" element={<AIPromptLibrary />} />

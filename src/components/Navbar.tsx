@@ -72,9 +72,22 @@ export default function Navbar() {
         </div>
         
         <div className="flex items-center gap-4 md:gap-6">
-          <span className="font-display font-bold text-base md:text-lg tracking-tight">
-            AI Partners
-          </span>
+          <a 
+            href="https://www.ipartners.co.kr" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <img 
+              src="/asset/ipartners-ci.svg" 
+              alt="AI Partners" 
+              className={`h-3 md:h-4 w-auto transition-all duration-300 ${
+                isScrolled 
+                  ? 'brightness-0 opacity-80 hover:opacity-100' 
+                  : (isMainPage ? 'brightness-0 invert opacity-90 hover:opacity-100' : 'brightness-0 opacity-80 hover:opacity-100')
+              }`}
+            />
+          </a>
           <button 
             className={`md:hidden p-2 -mr-2 transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : (isMainPage ? 'text-white/80 hover:text-white' : 'text-[#001641]/80 hover:text-[#001641]')}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
