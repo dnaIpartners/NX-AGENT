@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          className="absolute top-[30%] left-[15%] max-w-3xl pointer-events-auto pr-7"
+          className="absolute top-[30%] left-[15%] max-w-5xl pointer-events-auto pr-7"
         >
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-bold text-white tracking-tight mb-6 leading-[1.1]">
         NX AGENT <br />
@@ -52,8 +52,9 @@ export default function Hero() {
           </span>
         </span>
       </h1>
-          <p className="text-white/80 text-lg md:text-xl lg:text-2xl mb-10 max-w-4xl font-medium leading-relaxed">
-           아이파트너즈의 NX AGENT는 기획, 디자인, 개발의 선형적 경계를 허물고 지능형 워크플로우를 완벽하게 통합합니다. 파편화되어 사라지던 개인 의 노하우는 더 이상 유실되지 않으며, 플랫폼을 통해 조직의 영구적인 지 능(경험 자산)으로 시스템화(내재화)됩니다.
+          <p className="text-white text-lg md:text-xl lg:text-2xl mb-10 max-w-5xl font-medium leading-relaxed">
+          IPARTNERS NX는 기존의 파편화된 선형적 프로세스(Linear)를 탈피하여, <br />기획과 동시에 프로토타입이 시각화되는 지능형 동시 구현 체계를 완성합니다.<br />
+          파편화되던 노하우를 플랫폼에 축적하여 조직의 흔들림 없는 경험 자산으로 내재화합니다.
           </p>
         </motion.div>
       </div>
