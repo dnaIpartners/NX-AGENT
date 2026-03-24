@@ -46,36 +46,36 @@ export default function Navbar() {
       ref={navRef} 
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm' 
-          : 'bg-white border-b border-transparent'
+          ? 'bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm text-gray-900' 
+          : 'bg-transparent border-b border-transparent text-white'
       }`}
     >
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1100px] mx-auto">
         <div className="flex items-center gap-1">
-          <Link to="/">
-            <img src="/asset/ipartners-ci.svg" alt="IPARTNERS NX" className="h-5 sm:h-6 w-auto" referrerPolicy="no-referrer" />
+          <Link to="/" className="font-display font-bold text-xl tracking-tight">
+            Next Experience
           </Link>
         </div>
         
-        <div className="hidden md:flex items-center gap-10 text-[13px] text-gray-500 font-medium">
-          <Link to="/content/how-it-works" className="hover:text-black transition-colors">HOW IT WORKS</Link>
-          <Link to="/insights-news" className="hover:text-black transition-colors">INSIGHTS NEWS</Link>
-          <Link to="/case-studies" className="hover:text-black transition-colors">CASE STUDIES</Link>
+        <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : 'text-white/80'}`}>
+          <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>HOW IT WORKS</Link>
+          <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>INSIGHTS NEWS</Link>
+          <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>CASE STUDIES</Link>
           <button 
             onClick={() => setIsKnowledgeOpen(!isKnowledgeOpen)}
-            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? 'text-black' : 'hover:text-black'}`}
+            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : 'text-white') : (isScrolled ? 'hover:text-black' : 'hover:text-white')}`}
           >
             KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}
           </button>
-          <Link to="/faq" className="hover:text-black transition-colors">FAQ</Link>
+          <Link to="/faq" className={`transition-colors ${isScrolled ? 'hover:text-black' : 'hover:text-white'}`}>FAQ</Link>
         </div>
         
         <div className="flex items-center gap-4 md:gap-6">
-          <span className="font-display font-bold text-base md:text-lg tracking-tight text-gray-900">
+          <span className="font-display font-bold text-base md:text-lg tracking-tight">
             AI Partners
           </span>
           <button 
-            className="md:hidden p-2 -mr-2 text-gray-600 hover:text-black transition-colors"
+            className={`md:hidden p-2 -mr-2 transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : 'text-white/80 hover:text-white'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -86,7 +86,7 @@ export default function Navbar() {
 
       {/* Desktop Mega Menu */}
       {isKnowledgeOpen && (
-        <div className="hidden md:block absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl pb-12 pt-10">
+        <div className="hidden md:block absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl pb-12 pt-10 text-gray-900">
           <div className="max-w-[1100px] mx-auto px-8 flex gap-12">
             {/* Left Column */}
             <div className="w-1/4 flex flex-col justify-center">
@@ -136,7 +136,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4">
+        <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4 text-gray-900">
           <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">How it works</Link>
           <Link to="/insights-news" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-gray-600 hover:text-black transition-colors py-2">INSIGHTS NEWS</Link>
           
