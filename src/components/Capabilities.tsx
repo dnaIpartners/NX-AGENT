@@ -82,7 +82,7 @@ export default function Capabilities() {
           {/* Header */}
           <div className="scale-text text-center mb-24 md:mb-40">
             <h2 className="text-[5rem] md:text-[9rem] lg:text-[11rem] font-display font-bold tracking-tighter leading-[0.9] text-[#0a0a0a] lowercase">
-              capabilities
+              Capabilities
             </h2>
             <p className="mt-8 text-2xl md:text-4xl text-gray-500 max-w-3xl mx-auto font-light tracking-tight">
               Perfectly aligned intelligent workflows and AI expertise to increase digital impact.
@@ -98,7 +98,7 @@ export default function Capabilities() {
             >
               {/* Title Column */}
               <div className="md:col-span-4 flex items-start gap-3">
-                <span className="text-[#FF5722] font-mono text-sm md:text-base mt-1 md:mt-2">({item.id})</span>
+                <span className="text-[#0033FF] font-mono text-sm md:text-base mt-1 md:mt-2">({item.id})</span>
                 <h3 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-[#0a0a0a] tracking-tight">
                   {item.title}
                 </h3>
