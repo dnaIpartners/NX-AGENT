@@ -2,16 +2,40 @@ import React, { useRef } from 'react';
 import { Layers, Network, Users, ShieldCheck } from 'lucide-react';
 import { motion, useScroll, useTransform, MotionValue } from 'motion/react';
 
-const textLines = [
-  "Integrate the process,",
-  "Systemize the knowledge.",
-  "Elevate your brand,",
-  "and Scale your future."
+type TextSegment = { text: string; highlight?: boolean };
+const textLines: TextSegment[][] = [
+  [
+    { text: "Integrate", highlight: true },
+    { text: " the process," }
+  ],
+  [
+    { text: "Systemize", highlight: true },
+    { text: " the knowledge." }
+  ],
+  [
+    { text: "Elevate", highlight: true },
+    { text: " your brand," }
+  ],
+  [
+    { text: "and Scale your " },
+    { text: "Future", highlight: true },
+    { text: "." }
+  ]
 ];
 
 const Character = ({ children, progress, range }: { children: string, progress: MotionValue<number>, range: [number, number] }) => {
   const color = useTransform(progress, range, ["#E2E2E2", "#0a0a0a"]);
   return <motion.span style={{ color }}>{children}</motion.span>;
+};
+
+const AnimatedUnderline = ({ progress, range }: { progress: MotionValue<number>, range: [number, number] }) => {
+  const scaleX = useTransform(progress, range, [0, 1]);
+  return (
+    <motion.span 
+      style={{ scaleX, transformOrigin: "left" }}
+      className="absolute left-0 -bottom-1 md:-bottom-2 w-full h-[4px] md:h-[6px] bg-[#E2E2E2] rounded-full opacity-80" 
+    />
+  );
 };
 
 export default function Capabilities() {
@@ -21,7 +45,7 @@ export default function Capabilities() {
     offset: ["start 80%", "end 40%"]
   });
   
-  const totalChars = textLines.join("").length;
+  const totalChars = textLines.flat().reduce((acc, segment) => acc + segment.text.length, 0);
   let charCount = 0;
 
   return (
@@ -37,14 +61,28 @@ export default function Capabilities() {
         >
           {textLines.map((line, lineIndex) => (
             <span key={lineIndex} className="block">
-              {line.split("").map((char, charIndex) => {
-                const start = charCount / totalChars;
-                const end = start + (1 / totalChars);
-                charCount++;
+              {line.map((segment, segmentIndex) => {
+                const segmentStartCharCount = charCount;
+                const renderedChars = segment.text.split("").map((char, charIndex) => {
+                  const start = charCount / totalChars;
+                  const end = start + (1 / totalChars);
+                  charCount++;
+                  return (
+                    <Character key={charIndex} progress={scrollYProgress} range={[start, end]}>
+                      {char === " " ? "\u00A0" : char}
+                    </Character>
+                  );
+                });
+                const segmentStart = segmentStartCharCount / totalChars;
+                const segmentEnd = charCount / totalChars;
+
                 return (
-                  <Character key={charIndex} progress={scrollYProgress} range={[start, end]}>
-                    {char === " " ? "\u00A0" : char}
-                  </Character>
+                  <span key={segmentIndex} className={segment.highlight ? "relative inline-block" : ""}>
+                    {renderedChars}
+                    {segment.highlight && (
+                      <AnimatedUnderline progress={scrollYProgress} range={[segmentStart, segmentEnd]} />
+                    )}
+                  </span>
                 );
               })}
             </span>
