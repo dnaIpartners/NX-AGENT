@@ -8,7 +8,7 @@ export default function HowItWorksPage() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900">
-      <div className="max-w-[1000px] mx-auto px-6 md:px-12 pt-32 pb-32">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-12 pt-32 pb-32">
         
         {/* Section 1 */}
         <section className="mb-28">
@@ -74,7 +74,7 @@ export default function HowItWorksPage() {
       </div>
 
       <section className="bg-[#F5F5F7] py-32">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1300px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             {/* Left Column - Sticky Heading */}
             <div className="lg:col-span-5 lg:sticky lg:top-32">

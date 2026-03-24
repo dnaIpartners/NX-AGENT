@@ -96,17 +96,16 @@ export default function AIPromptLibrary() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-[#F5F5F7] pt-28 pb-12 px-8 min-h-[320px] md:min-h-[384px] flex flex-col items-center justify-center text-center mb-8">
-        <div className="max-w-5xl mx-auto w-full">     
+        <div className="max-w-[1300px] mx-auto w-full">     
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             AI Prompt Library
           </h1>
           <p className="text-lg md:text-xl text-gray-500 font-sans max-w-3xl mx-auto">
-            A curated collection of effective AI prompts for various use cases. Discover, copy, and adapt these prompts to accelerate your workflow and achieve better results.
+            개인에게 파편화되어 사라지던 노하우를 조직 전체의 영구적인 경험 자산으로 내재화하여, 실무에 즉시 투입 가능한 최적화된 프롬프트 킷을 제공합니다.
           </p>
         </div>
       </div>
-
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 pb-32">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-8 pb-32">
         {/* Filters and Search */}
         <div className="flex flex-col gap-6 mb-10">
           {/* Categories */}

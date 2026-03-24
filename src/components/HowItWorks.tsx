@@ -23,7 +23,7 @@ export default function HowItWorks() {
         </div>
       </div>
 
-      <div className="w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center relative z-10">
+      <div className="w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center relative z-10">
         
         {/* Left Side: Content */}
         <div className="w-full lg:w-1/2 px-8 md:px-12 lg:px-24 flex flex-col items-start">

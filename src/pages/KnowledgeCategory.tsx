@@ -1,11 +1,17 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search, User } from 'lucide-react';
+
+const AvatarIcon = ({ className }: { className?: string }) => (
+  <div className={`bg-gray-100 flex items-center justify-center rounded-full border border-gray-200 ${className}`}>
+    <User className="w-1/2 h-1/2 text-gray-400" />
+  </div>
+);
 
 const categoryData: Record<string, any> = {
   'contextual-prompt-engineering': {
-    title: 'Contextual Prompt Engineering',
-    description: 'Master the art of crafting precise AI prompts for optimal UX outcomes. Learn how to structure context, define constraints, and guide AI models to generate user-centric interfaces and content.',
+    title: 'Prompt Engineering',
+    description: <>단순한 기계적 입력을 넘어, 실무 전문가가 고객사 고유의 비즈니스 맥락을 완벽히 해석하여<br />AI가 최상의 산출물을 내도록 조율합니다.</>,
     icon: Sparkles,
     articles: [
       { id: 1, title: 'The Anatomy of a Perfect UX Prompt', excerpt: 'Discover the core components that make up an effective prompt for generating UI layouts and user flows.', date: 'Mar 15, 2026', readTime: '5 min read', tag: 'Analytics' },
@@ -20,8 +26,8 @@ const categoryData: Record<string, any> = {
     ]
   },
   'ai-ux-heuristic-evaluation': {
-    title: 'AI-UX Heuristic Evaluation',
-    description: 'Evaluate AI interfaces using specialized usability heuristics. A framework for assessing the usability, transparency, and trustworthiness of AI-powered products.',
+    title: 'UX Heuristic Evaluation',
+    description: <>전문가의 통찰과 AI 에이전트를 결합하여 기존 서비스의 사용자 경험(UX)을 빠르고 정교하게 진단하고, <br />실질적인 개선안을 도출합니다.</>,
     icon: Layout,
     articles: [
       { id: 1, title: 'Nielsen\'s Heuristics Adapted for AI', excerpt: 'How the classic 10 usability heuristics apply to modern generative AI interfaces and conversational agents.', date: 'Mar 18, 2026', readTime: '10 min read', tag: 'Analytics' },
@@ -36,19 +42,19 @@ const categoryData: Record<string, any> = {
     ]
   },
   'glossary-of-ai-ux-interaction': {
-    title: 'Glossary of AI-UX Interaction',
-    description: 'Comprehensive definitions of key terms in AI and user experience. Your definitive reference guide for the intersection of artificial intelligence and human-centered design.',
+    title: 'Glossary of UX Interaction',
+    description: <>전 구성원이 혼선 없이 소통하고 지능형 워크플로우에 적응할 수 있도록, <br />표준화된 공통 언어와 가이드를 제공하는 지식 생태계입니다.</>,
     icon: BookOpen,
     articles: [
-      { id: 1, title: 'A-C: From Agentic UI to Context Window', excerpt: 'Essential terms starting with A through C, including Agentic UI, Anthropomorphism, and Context Window.', date: 'Mar 20, 2026', readTime: '4 min read', tag: 'Reference' },
-      { id: 2, title: 'D-L: From Diffusion Models to LLMs', excerpt: 'Key concepts including Diffusion Models, Hallucination, Heuristics, and Large Language Models.', date: 'Mar 19, 2026', readTime: '5 min read', tag: 'Reference' },
-      { id: 3, title: 'M-Z: From Multimodal to Zero-shot', excerpt: 'Advanced terminology including Multimodal Interfaces, Prompt Chaining, System Prompts, and Zero-shot Learning.', date: 'Mar 18, 2026', readTime: '6 min read', tag: 'Reference' },
-      { id: 4, title: 'Understanding \'Temperature\' and \'Top-P\'', excerpt: 'A designer\'s guide to the parameters that control the randomness and creativity of AI model outputs.', date: 'Mar 10, 2026', readTime: '5 min read', tag: 'Deep Dive' },
-      { id: 5, title: 'What is \'Prompt Chaining\'?', excerpt: 'Defining the process of linking multiple AI prompts to accomplish complex, multi-step tasks.', date: 'Mar 05, 2026', readTime: '4 min read', tag: 'Concept' },
-      { id: 6, title: 'Decoding \'Retrieval-Augmented Generation (RAG)\'', excerpt: 'How RAG works and why it\'s crucial for designing AI systems that rely on proprietary or real-time data.', date: 'Feb 28, 2026', readTime: '7 min read', tag: 'Architecture' },
-      { id: 7, title: 'The Definition of \'Hallucination\' in UX', excerpt: 'What it means when an AI hallucinates, and the design patterns used to mitigate its impact on users.', date: 'Feb 20, 2026', readTime: '5 min read', tag: 'Concept' },
-      { id: 8, title: '\'Few-Shot Learning\' Explained for Designers', excerpt: 'How providing a few examples in a prompt can drastically improve the quality and consistency of AI outputs.', date: 'Feb 12, 2026', readTime: '6 min read', tag: 'Deep Dive' },
-      { id: 9, title: '\'Tokenization\' and Its Impact on UI', excerpt: 'Understanding how AI models process text into tokens, and why it matters for input limits and cost.', date: 'Feb 05, 2026', readTime: '5 min read', tag: 'Technical' }
+      { id: 1, title: '프로덕트 디자인의 본질: 비즈니스와 UX의 교차점', excerpt: '단순히 심미적인 디자인을 넘어, 비즈니스 목표를 달성하고 사용자 문제를 해결하는 프로덕트 디자인의 핵심 역할을 탐구합니다.', date: 'Mar 20, 2026', readTime: '4 min read', tag: 'Foundation' },
+      { id: 2, title: '정보 구조(IA)와 내비게이션 설계의 원칙', excerpt: '복잡한 정보와 기능을 사용자가 직관적으로 탐색할 수 있도록 돕는 탄탄한 뼈대와 내비게이션 설계 방법을 알아봅니다.', date: 'Mar 19, 2026', readTime: '5 min read', tag: 'Architecture' },
+      { id: 3, title: '사용자를 이끄는 인터랙션 디자인', excerpt: '사용자의 행동을 유도하고 피드백을 제공하여 매끄러운 경험을 완성하는 마이크로 인터랙션과 디테일 설계.', date: 'Mar 18, 2026', readTime: '6 min read', tag: 'Interaction' },
+      { id: 4, title: '멘탈 모델과 어포던스: 직관적인 UI의 비밀', excerpt: '사용자의 기존 경험과 심리적 기대치를 바탕으로, 설명서 없이도 자연스럽게 사용할 수 있는 화면을 설계하는 방법.', date: 'Mar 10, 2026', readTime: '5 min read', tag: 'Psychology' },
+      { id: 5, title: 'UX 라이팅과 마이크로카피의 힘', excerpt: '단어 하나가 사용자의 행동을 바꿉니다. 명확하고 일관된 보이스앤톤으로 프로덕트의 완성도를 높이는 텍스트 설계.', date: 'Mar 05, 2026', readTime: '4 min read', tag: 'UX Writing' },
+      { id: 6, title: '확장성을 고려한 디자인 시스템 구축', excerpt: '파편화된 UI를 통합하고, 디자인과 개발의 효율성을 극대화하는 컴포넌트 기반의 시스템 설계 가이드.', date: 'Feb 28, 2026', readTime: '7 min read', tag: 'System' },
+      { id: 7, title: '데이터 기반의 사용성 테스트와 개선', excerpt: '정성적 관찰과 정량적 데이터를 결합하여 디자인 가설을 검증하고 프로덕트를 지속적으로 발전시키는 방법.', date: 'Feb 20, 2026', readTime: '5 min read', tag: 'Research' },
+      { id: 8, title: '모두를 위한 포용적 디자인과 접근성', excerpt: '다양한 환경과 능력을 가진 모든 사용자가 장벽 없이 사용할 수 있는 보편적이고 포용적인 프로덕트 만들기.', date: 'Feb 12, 2026', readTime: '6 min read', tag: 'Accessibility' },
+      { id: 9, title: '온보딩: 첫인상에서 충성 고객으로', excerpt: '신규 사용자가 프로덕트의 핵심 가치를 빠르게 경험하고 정착할 수 있도록 돕는 전략적인 온보딩 여정 설계.', date: 'Feb 05, 2026', readTime: '5 min read', tag: 'Strategy' }
     ]
   }
 };
@@ -78,7 +84,7 @@ export default function KnowledgeCategory() {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-[#F5F5F7] pt-28 pb-12 px-8 min-h-[320px] md:min-h-[384px] flex flex-col items-center justify-center text-center mb-16">
-        <div className="max-w-5xl mx-auto w-full">     
+        <div className="max-w-[1300px] mx-auto w-full">     
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             {data.title}
           </h1>
@@ -89,15 +95,14 @@ export default function KnowledgeCategory() {
       </div>
 
       {/* Content List Section */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-8 pb-32">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-8 pb-32">
         
         {data.articles.length > 0 && (() => {
           const articlesWithMeta = data.articles.map((article: any) => ({
             ...article,
             image: `https://picsum.photos/seed/${category}-${article.id}/800/400`,
             author: 'Yun Geun Sik',
-            authorRole: 'AI ORCHESTRATOR',
-            authorAvatar: `https://i.pravatar.cc/150?u=${category}-${article.id}`,
+            authorRole: 'AI ORCHESTRATOR'
           }));
 
           const featuredArticle = articlesWithMeta[0];
@@ -121,7 +126,7 @@ export default function KnowledgeCategory() {
                   </h2>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div className="flex items-center gap-3">
-                      <img src={featuredArticle.authorAvatar} alt={featuredArticle.author} className="w-10 h-10 rounded-full" referrerPolicy="no-referrer" />
+                      <AvatarIcon className="w-10 h-10 shrink-0" />
                       <div>
                         <div className="text-sm font-bold text-gray-900">{featuredArticle.author}</div>
                         <div className="text-xs text-gray-500">{featuredArticle.authorRole}</div>
@@ -157,7 +162,7 @@ export default function KnowledgeCategory() {
                         </p>
                         <div className="flex items-center justify-between mt-auto pt-4">
                           <div className="flex items-center gap-2">
-                            <img src={article.authorAvatar} alt={article.author} className="w-6 h-6 rounded-full" referrerPolicy="no-referrer" />
+                            <AvatarIcon className="w-6 h-6 shrink-0" />
                             <span className="text-xs font-bold text-gray-900">{article.author}</span>
                           </div>
                           <div className="flex items-center gap-3 text-[11px] text-gray-500 font-medium">

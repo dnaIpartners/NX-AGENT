@@ -84,7 +84,7 @@ export default function CaseStudiesPage() {
     <div className="min-h-screen bg-white">
       {/* Consistent Hero Section */}
       <div className="bg-[#F5F5F7] pt-28 pb-12 px-8 min-h-[320px] md:min-h-[384px] flex flex-col items-center justify-center text-center">
-        <div className="max-w-5xl mx-auto w-full">
+        <div className="max-w-[1300px] mx-auto w-full">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             Case Studies
           </h1>
@@ -117,7 +117,7 @@ export default function CaseStudiesPage() {
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-8 py-12">
+      <div className="max-w-[1300px] mx-auto px-8 py-12">
         {/* Filter Navigation */}
         <div className="mb-12 overflow-x-auto hide-scrollbar">
           <div className="flex items-center justify-between bg-black rounded-full p-1.5 w-full min-w-max">

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function Knowledge() {
   return (
-    <section className="relative z-10 max-w-[1100px] mx-auto px-8 py-24 lg:py-32 border-t border-gray-100">
+    <section className="relative z-10 max-w-[1300px] mx-auto px-8 py-24 lg:py-32 border-t border-gray-100">
       <div className="mb-24">
         <div className="flex items-center gap-4 mb-6">
           <div className="w-6 h-[1px] bg-gray-300"></div>

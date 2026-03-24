@@ -47,7 +47,7 @@ export default function FaqPage() {
     <div className="min-h-screen bg-white">
       {/* Light Hero Section matching Insights News */}
       <div className="bg-[#F5F5F7] pt-32 pb-16 px-8 min-h-[400px] md:min-h-[480px] flex flex-col items-center justify-center text-center">
-        <div className="max-w-5xl mx-auto w-full">
+        <div className="max-w-[1300px] mx-auto w-full">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
             Frequently Asked Questions
           </h1>
@@ -78,7 +78,7 @@ export default function FaqPage() {
       </div>
 
       {/* FAQ List */}
-      <div className="max-w-[800px] mx-auto px-8 py-16">
+      <div className="max-w-[1300px] mx-auto px-8 py-16">
         <div className="space-y-4">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (

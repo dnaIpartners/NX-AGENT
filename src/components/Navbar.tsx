@@ -51,7 +51,7 @@ export default function Navbar() {
           : `bg-transparent border-b border-transparent ${isMainPage ? 'text-white' : 'text-[#001641]'}`
       }`}
     >
-      <nav className="flex items-center justify-between px-8 py-6 max-w-[1100px] mx-auto">
+      <nav className="flex items-center justify-between px-8 py-6 max-w-[1300px] mx-auto">
         <div className="flex items-center gap-1">
           <Link to="/" className="font-display font-bold text-xl tracking-tight">
             Next Experience
@@ -88,7 +88,7 @@ export default function Navbar() {
       {/* Desktop Mega Menu */}
       {isKnowledgeOpen && (
         <div className="hidden md:block absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-xl pb-12 pt-10 text-gray-900">
-          <div className="max-w-[1100px] mx-auto px-8 flex gap-12">
+          <div className="max-w-[1300px] mx-auto px-8 flex gap-12">
             {/* Left Column */}
             <div className="w-1/4 flex flex-col justify-center">
               <h2 className="text-3xl font-display font-bold text-gray-900 mb-2">Knowledge</h2>            
@@ -106,14 +106,14 @@ export default function Navbar() {
                   onClick={() => setIsKnowledgeOpen(false)}
                   className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                  AI Prompt Library
+                  Prompt Library
                 </Link>
                 <Link 
                   to="/knowledge/ai-ux-heuristic-evaluation" 
                   onClick={() => setIsKnowledgeOpen(false)}
                   className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 >
-                 AI-UX Heuristic Evaluation
+                 UX Heuristic Evaluation
                 </Link>
                 <Link 
                   to="/knowledge/contextual-prompt-engineering" 
@@ -127,7 +127,7 @@ export default function Navbar() {
                   onClick={() => setIsKnowledgeOpen(false)}
                   className="text-[22px] font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 >
-               Glossary of AI-UX Interaction
+               Glossary of UX Interaction
                 </Link>
               </div>
             </div>
