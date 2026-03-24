@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, Layout, BookOpen, ArrowUpRight, Terminal } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const categories = [
   {
@@ -39,11 +40,32 @@ const categories = [
 ];
 
 export default function Knowledge() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  };
+
   return (
     <section className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 py-24 lg:py-40 border-t border-gray-100">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
         {/* Left: Sticky Header */}
-        <div className="lg:col-span-4">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="lg:col-span-4"
+        >
           <div className="sticky top-32">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-6 h-[1px] bg-gray-300"></div>
@@ -57,62 +79,69 @@ export default function Knowledge() {
               AI와 UX의 결합을 통해 도출된 전문적인 방법론과 인사이트를 탐구해보세요.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Right: List */}
-        <div className="lg:col-span-8 flex flex-col gap-6">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="lg:col-span-8 flex flex-col gap-6"
+        >
           {categories.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Link 
-                key={category.id} 
-                to={`/knowledge/${category.id}`} 
-                className="group relative flex flex-col md:flex-row items-stretch bg-white border border-gray-200 hover:border-gray-900 rounded-3xl overflow-hidden transition-all duration-500"
-              >
-                {/* Image Section */}
-                <div className="w-full md:w-[300px] shrink-0 overflow-hidden bg-gray-100">
-                  <img 
-                    src={category.image} 
-                    alt={category.title}
-                    className="w-full h-full object-cover aspect-[4/3] md:aspect-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                
-                {/* Content Section */}
-                <div className="flex flex-col justify-between p-8 md:p-10 flex-1 bg-white group-hover:bg-[#0a0a0a] transition-colors duration-500">
-                  <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-500 group-hover:text-gray-400 transition-colors">
-                        <Icon className="w-4 h-4" />
-                        <span>{category.tag}</span>
-                      </div>
-                      <span className="text-4xl font-display font-light text-gray-200 group-hover:text-white/20 transition-colors">
-                        0{index + 1}
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-2xl md:text-3xl font-display font-medium text-gray-900 group-hover:text-white mb-4 tracking-tight transition-colors">
-                      {category.title}
-                    </h3>
-                    <p className="text-base text-gray-500 group-hover:text-gray-400 leading-relaxed break-keep transition-colors">
-                      {category.description}
-                    </p>
+              <motion.div key={category.id} variants={itemVariants}>
+                <Link 
+                  to={`/knowledge/${category.id}`} 
+                  className="group relative flex flex-col md:flex-row items-stretch bg-white border border-gray-200 hover:border-gray-900 rounded-3xl overflow-hidden transition-all duration-500"
+                >
+                  {/* Image Section */}
+                  <div className="w-full md:w-[300px] shrink-0 overflow-hidden bg-gray-100">
+                    <img 
+                      src={category.image} 
+                      alt={category.title}
+                      className="w-full h-full object-cover aspect-[4/3] md:aspect-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                   
-                  <div className="mt-8 flex items-center justify-between">
-                    <span className="text-sm font-medium text-gray-900 group-hover:text-white transition-colors">
-                      Read Article
-                    </span>
-                    <div className="w-10 h-10 rounded-full border border-gray-200 group-hover:border-gray-700 flex items-center justify-center group-hover:bg-white transition-all duration-500">
-                      <ArrowUpRight className="w-5 h-5 text-gray-900 group-hover:text-[#0a0a0a]" />
+                  {/* Content Section */}
+                  <div className="flex flex-col justify-between p-8 md:p-10 flex-1 bg-white group-hover:bg-[#0a0a0a] transition-colors duration-500">
+                    <div>
+                      <div className="flex items-center justify-between mb-6">
+                        <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-gray-500 group-hover:text-gray-400 transition-colors">
+                          <Icon className="w-4 h-4" />
+                          <span>{category.tag}</span>
+                        </div>
+                        <span className="text-4xl font-display font-light text-gray-200 group-hover:text-white/20 transition-colors">
+                          0{index + 1}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-2xl md:text-3xl font-display font-medium text-gray-900 group-hover:text-white mb-4 tracking-tight transition-colors">
+                        {category.title}
+                      </h3>
+                      <p className="text-base text-gray-500 group-hover:text-gray-400 leading-relaxed break-keep transition-colors">
+                        {category.description}
+                      </p>
+                    </div>
+                    
+                    <div className="mt-8 flex items-center justify-between">
+                      <span className="text-sm font-medium text-gray-900 group-hover:text-white transition-colors">
+                        Read Article
+                      </span>
+                      <div className="w-10 h-10 rounded-full border border-gray-200 group-hover:border-gray-700 flex items-center justify-center group-hover:bg-white transition-all duration-500">
+                        <ArrowUpRight className="w-5 h-5 text-gray-900 group-hover:text-[#0a0a0a]" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
+                </Link>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

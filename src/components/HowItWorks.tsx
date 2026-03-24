@@ -53,7 +53,7 @@ export default function HowItWorks() {
           <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-display font-medium leading-[1.1] tracking-tight text-gray-900 mb-8">
             How We Implement<br />AI
           </h2>
-          <p className="text-lg text-gray-500 leading-relaxed mb-12 max-w-[480px] break-keep tracking-[-0.03em]">
+          <p className="text-lg text-gray-500 leading-relaxed mb-12 max-w-[450px] break-keep tracking-[-0.03em]">
             기존의 기획, 디자인, 개발로 단절되었던 선형적(Linear) 프로세스를 탈피하여, 자연어 기반의 AI 코딩과 고속 프로토타이핑을 결합한 '지능형 동시 구현 체계'를 가동합니다. 기획과 동시에 직관적인 프로토타입을 시각화함으로써 불필요한 의사소통 비용을 지우고 프로젝트 리드타임을 혁신적으로 단축합니다. 이 모든 과정은 대외비 마스킹 및 실무자 최종 검수 등을 명시한 아이파트너즈의 엄격한 보안 원칙 아래 가장 안전하게 통제됩니다. 결과적으로 전문가의 통찰과 AI의 압도적인 실행력이 결합한 'AI-휴먼 지능형 워크플로우(Intelligent Workflow)'를 통해, 고객사의 비즈니스가 무한히 확장(Scale further)할 수 있도록 이끄는 최고의 파트너가 되겠습니다.
           </p>
         </motion.div>
