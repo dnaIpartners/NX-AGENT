@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          className="absolute top-[30%] left-[30%] max-w-3xl pointer-events-auto pr-8"
+          className="absolute top-[30%] left-[15%] max-w-3xl pointer-events-auto pr-7"
         >
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[6.5rem] font-bold text-white tracking-tight mb-6 leading-[1.1]">
         NX AGENT <br />
