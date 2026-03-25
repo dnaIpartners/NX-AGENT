@@ -69,10 +69,10 @@ export default function Hero() {
         </span>
       </h1>
           <p className="text-white text-lg md:text-xl lg:text-2xl mb-10 max-w-5xl font-medium leading-relaxed">
-            IPARTNERS NX는 <Highlight delay={1.5}>기획, 디자인, 개발로 단절되었던 선형적 프로세스를 허물고,</Highlight><br className="hidden md:block" />
-            <Highlight delay={2.0}>구상과 동시에 프로토타입이 시각화되는 '경계의 붕괴'를 이끕니다.</Highlight><br className="hidden md:block" />
-            <Highlight delay={2.5}>개인에게 흩어지던 노하우는 플랫폼의 시스템 지능으로 축적되어,</Highlight><br className="hidden md:block" />
-            <Highlight delay={3.0}>인력 변동에도 흔들림 없는 조직의 영구적인 자산으로 내재화됩니다.</Highlight>
+            IPARTNERS NX는 기획, 디자인, 개발로 단절되었던 선형적 프로세스를 허물고,<br className="hidden md:block" />
+          구상과 동시에 프로토타입이 시각화되는 '경계의 붕괴'를 이끕니다.<br className="hidden md:block" />
+            개인에게 흩어지던 노하우는 플랫폼의 시스템 지능으로 축적되어,<br className="hidden md:block" />
+           인력 변동에도 흔들림 없는 조직의 영구적인 자산으로 내재화됩니다.
           </p>
         </motion.div>
       </div>
