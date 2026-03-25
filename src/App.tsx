@@ -9,6 +9,7 @@ import Knowledge from './components/Knowledge';
 import NextExperience from './components/NextExperience';
 import Footer from './components/Footer';
 import FloatingBadge from './components/FloatingBadge';
+import MenuGuidePopup from './components/MenuGuidePopup';
 import KnowledgeCategory from './pages/KnowledgeCategory';
 import ContentCategory from './pages/ContentCategory';
 import InsightsNewsPage from './pages/InsightsNewsPage';
@@ -20,6 +21,7 @@ import HowItWorksPage from './pages/HowItWorksPage';
 function Home() {
   return (
     <>
+      <MenuGuidePopup />
       <Hero />
       <Capabilities />
       <HowItWorks />
