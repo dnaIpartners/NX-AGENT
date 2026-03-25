@@ -22,6 +22,11 @@ export default function MenuGuidePopup() {
       desc: 'AI 도입 및 지능형 동시 구현 프로세스',
     },
     {
+      icon: Layers,
+      title: 'INFINITE STRATEGIES',
+      desc: 'One Portfolio. Infinite Strategies.',
+    },
+    {
       icon: Newspaper,
       title: 'INSIGHTS NEWS',
       desc: '최신 트렌드, 심층 분석 및 기업 소식',

@@ -17,6 +17,7 @@ import FaqPage from './pages/FaqPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import AIPromptLibrary from './pages/AIPromptLibrary';
 import HowItWorksPage from './pages/HowItWorksPage';
+import InfiniteStrategiesPage from './pages/InfiniteStrategiesPage';
 
 function Home() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
           <Route path="/knowledge/ai-prompt-library" element={<AIPromptLibrary />} />
           <Route path="/knowledge/:category" element={<KnowledgeCategory />} />
           <Route path="/content/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/infinite-strategies" element={<InfiniteStrategiesPage />} />
           <Route path="/content/:category" element={<ContentCategory />} />
           <Route path="/insights-news" element={<InsightsNewsPage />} />
           <Route path="/faq" element={<FaqPage />} />
