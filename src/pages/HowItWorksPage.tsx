@@ -47,7 +47,7 @@ export default function InfiniteStrategiesPage() {
     <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-blue-100 selection:text-blue-900">
       {/* Node Convergence Section */}
       <section className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
-        <div className="text-center z-10 mb-16 md:mb-24 px-6">
+        <div className="text-center z-10 mb-4 md:mb-8 px-6">
           <h2 className="text-5xl md:text-6xl lg:text-[64px] font-display font-medium tracking-tight leading-[1.1] text-[#1a202c]">
            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">Empowering Brands to <br className="hidden md:block" />Work Smarter with AI</span>
            
