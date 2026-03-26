@@ -54,7 +54,7 @@ export default function InfiniteStrategiesPage() {
           </h2>
         </div>
 
-        <div className="relative w-full max-w-[1400px] h-[200px] md:h-[300px] flex items-center justify-center">
+        <div className="relative w-full max-w-[1800px] h-[250px] md:h-[350px] lg:h-[450px] flex items-center justify-center px-4">
           {/* SVG Lines and Nodes */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1400 400" preserveAspectRatio="xMidYMid meet">
             <defs>
