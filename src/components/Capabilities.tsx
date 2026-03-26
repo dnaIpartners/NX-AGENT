@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'motion/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,22 +55,6 @@ export default function Capabilities() {
         { scale: 1, opacity: 1, ease: "none" },
         "<"
       );
-
-      // List items animation
-      gsap.fromTo(".capability-item",
-        { y: 100, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: ".capabilities-list",
-            start: "top 80%",
-          }
-        }
-      );
     }, containerRef);
 
     return () => ctx.revert();
@@ -90,10 +75,23 @@ export default function Capabilities() {
           </div>
 
         {/* List */}
-        <div className="flex flex-col capabilities-list">
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.2 } }
+          }}
+          className="flex flex-col capabilities-list"
+        >
           {capabilities.map((item, index) => (
-            <div 
+            <motion.div 
               key={index} 
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+              }}
               className="capability-item grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 py-12 md:py-16 border-t border-gray-200 group hover:bg-gray-50 transition-colors duration-300 -mx-6 px-6 md:mx-0 md:px-4 rounded-xl"
             >
               {/* Title Column */}
@@ -119,9 +117,9 @@ export default function Capabilities() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
       </div>
     </section>
