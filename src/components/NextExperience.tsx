@@ -21,7 +21,6 @@ export default function NextExperience() {
       opacity: 1, 
       rotate: 0,
       transition: { 
-        type: "spring", 
         stiffness: 50, 
         damping: 20,
         mass: 1
@@ -64,7 +63,7 @@ export default function NextExperience() {
                 opacity: 1, 
                 y: 0, 
                 filter: "blur(0px)",
-                transition: { delay: 0.8, duration: 1, ease: "easeOut" } 
+                transition: { delay: 0.8, duration: 1 } 
               }
             }}
             className="mt-4 md:mt-8 text-sm md:text-base font-medium tracking-wide text-gray-200"
@@ -72,25 +71,7 @@ export default function NextExperience() {
             우리의 기준은 언제나 ‘다음(Next)’에 있습니다.
           </motion.p>
 
-          {/* CTA Button */}
-          <motion.div
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              show: { 
-                opacity: 1, 
-                y: 0, 
-                transition: { delay: 1.2, duration: 0.8, ease: "easeOut" } 
-              }
-            }}
-            className="mt-8 md:mt-12"
-          >
-            <Link 
-              to="/content/how-it-works" 
-              className="inline-flex items-center justify-center px-8 py-4 text-sm font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(37,99,235,0.4)]"
-            >
-              HOW IT WORKS
-            </Link>
-          </motion.div>
+        
         </motion.div>
       </div>
     </section>

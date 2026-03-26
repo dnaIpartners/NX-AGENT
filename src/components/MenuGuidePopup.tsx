@@ -22,11 +22,6 @@ export default function MenuGuidePopup() {
       desc: 'AI 도입 및 지능형 동시 구현 프로세스',
     },
     {
-      icon: Layers,
-      title: 'INFINITE STRATEGIES',
-      desc: 'One Portfolio. Infinite Strategies.',
-    },
-    {
       icon: Newspaper,
       title: 'INSIGHTS NEWS',
       desc: '최신 트렌드, 심층 분석 및 기업 소식',
@@ -80,9 +75,6 @@ export default function MenuGuidePopup() {
             <div className="p-6 flex-1 overflow-y-auto scrollbar-hide">
               <div className="flex items-center justify-between mb-5">
                 <div>
-                  <h2 className="text-2xl font-display font-medium text-gray-900">
-                    Site Map
-                  </h2>
                   <p className="text-sm text-gray-500 mt-1">
                     아이파트너즈 NX의 전체 메뉴 구조입니다.
                   </p>
