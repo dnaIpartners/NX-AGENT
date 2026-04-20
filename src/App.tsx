@@ -9,7 +9,6 @@ import Knowledge from './components/Knowledge';
 import NextExperience from './components/NextExperience';
 import Footer from './components/Footer';
 import FloatingBadge from './components/FloatingBadge';
-import MenuGuidePopup from './components/MenuGuidePopup';
 import KnowledgeCategory from './pages/KnowledgeCategory';
 import ContentCategory from './pages/ContentCategory';
 import InsightsNewsPage from './pages/InsightsNewsPage';
@@ -17,11 +16,11 @@ import FaqPage from './pages/FaqPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import AIPromptLibrary from './pages/AIPromptLibrary';
 import HowItWorksPage from './pages/HowItWorksPage';
+import ObservabilityPage from './pages/ObservabilityPage';
 
 function Home() {
   return (
     <>
-      <MenuGuidePopup />
       <Hero />
       <Capabilities />
       <HowItWorks />
@@ -45,6 +44,7 @@ export default function App() {
           <Route path="/knowledge/ai-prompt-library" element={<AIPromptLibrary />} />
           <Route path="/knowledge/:category" element={<KnowledgeCategory />} />
           <Route path="/content/how-it-works" element={<HowItWorksPage />} />
+          <Route path="/observability" element={<ObservabilityPage />} />
           <Route path="/content/:category" element={<ContentCategory />} />
           <Route path="/insights-news" element={<InsightsNewsPage />} />
           <Route path="/faq" element={<FaqPage />} />

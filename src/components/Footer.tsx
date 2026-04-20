@@ -13,6 +13,7 @@ export default function Footer() {
               <div className="flex flex-col space-y-4">
                 <Link to="/" className="text-gray-300 hover:text-white transition-colors">HOME</Link>
                 <Link to="/content/how-it-works" className="text-gray-300 hover:text-white transition-colors">HOW IT WORKS</Link>
+                <Link to="/observability" className="text-gray-300 hover:text-white transition-colors">OBSERVABILITY</Link>
                 <Link to="/insights-news" className="text-gray-300 hover:text-white transition-colors">INSIGHTS NEWS</Link>
                 <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">CASE STUDIES</Link>
               </div>

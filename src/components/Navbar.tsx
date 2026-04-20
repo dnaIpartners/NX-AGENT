@@ -62,6 +62,7 @@ export default function Navbar() {
         
         <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : (isMainPage ? 'text-white/80' : 'text-[#001641]/80')}`}>
           <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/content/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>HOW IT WORKS</Link>
+          <Link to="/observability" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/observability') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>OBSERVABILITY</Link>
           <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/insights-news') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>INSIGHTS NEWS</Link>
           <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/case-studies') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>CASE STUDIES</Link>
           <button 
@@ -154,6 +155,7 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4 text-gray-900">
           <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/content/how-it-works') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>How it works</Link>
+          <Link to="/observability" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/observability') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>OBSERVABILITY</Link>
           <Link to="/insights-news" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/insights-news') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>INSIGHTS NEWS</Link>
           <Link to="/case-studies" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/case-studies') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>CASE STUDIES</Link>
           
