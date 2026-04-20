@@ -11,9 +11,8 @@ import Footer from './components/Footer';
 import FloatingBadge from './components/FloatingBadge';
 import KnowledgeCategory from './pages/KnowledgeCategory';
 import ContentCategory from './pages/ContentCategory';
-import InsightsNewsPage from './pages/InsightsNewsPage';
 import FaqPage from './pages/FaqPage';
-import CaseStudiesPage from './pages/CaseStudiesPage';
+import BlogPage from './pages/BlogPage';
 import AIPromptLibrary from './pages/AIPromptLibrary';
 import HowItWorksPage from './pages/HowItWorksPage';
 import NxAgentArchitecturePage from './pages/NxAgentArchitecturePage';
@@ -46,9 +45,8 @@ export default function App() {
           <Route path="/content/how-it-works" element={<HowItWorksPage />} />
           <Route path="/nx-agent-architecture" element={<NxAgentArchitecturePage />} />
           <Route path="/content/:category" element={<ContentCategory />} />
-          <Route path="/insights-news" element={<InsightsNewsPage />} />
           <Route path="/faq" element={<FaqPage />} />
-          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
         <Footer />
       </div>

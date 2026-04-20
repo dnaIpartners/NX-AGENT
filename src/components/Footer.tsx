@@ -14,8 +14,7 @@ export default function Footer() {
                 <Link to="/" className="text-gray-300 hover:text-white transition-colors">HOME</Link>
                 <Link to="/content/how-it-works" className="text-gray-300 hover:text-white transition-colors">HOW IT WORKS</Link>
                 <Link to="/nx-agent-architecture" className="text-gray-300 hover:text-white transition-colors">NX AGENT ARCHITECTURE</Link>
-                <Link to="/insights-news" className="text-gray-300 hover:text-white transition-colors">INSIGHTS NEWS</Link>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">CASE STUDIES</Link>
+                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">BLOG</Link>
               </div>
               <div className="flex flex-col space-y-4">
                 <span className="text-gray-300 cursor-default">KNOWLEDGE</span>

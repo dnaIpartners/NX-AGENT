@@ -4,95 +4,146 @@ import { motion } from 'motion/react';
 export default function HowItWorks() {
   return (
     <>
-    <section className="relative w-full bg-white overflow-hidden py-24 lg:py-32 lg:min-h-[800px] flex items-center border-t border-gray-100">
-      {/* Right Side Background Image (Full Bleed on Desktop) */}
-      <motion.div 
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="hidden lg:block absolute right-0 top-0 w-1/2 h-full"
-      >
-        <img 
-          src="https://picsum.photos/seed/cyber-ai/1200/1500" 
-          alt="AI Implementation Process" 
-          className="w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-        />
-        {/* Floating Box Content for Desktop */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute bottom-32 -left-24 bg-white p-12 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] max-w-[420px] z-20"
-        >
-          <h3 className="text-2xl font-display font-medium text-gray-900 mb-4">
-            Intelligent Workflow
-          </h3>
-          <p className="text-base text-gray-500 leading-relaxed break-keep">
-            반복적이고 소모적인 수작업을 자동화하여 프로젝트 리드타임을 단축하고, 방대한 데이터를 분석하여 차별화된 사용자 경험(UX)을 설계합니다.
-          </p>
-        </motion.div>
-      </motion.div>
-
-      <div className="w-full max-w-[1300px] mx-auto flex flex-col lg:flex-row items-center relative z-10">
-        
-        {/* Left Side: Content */}
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full lg:w-1/2 px-8 md:px-12 lg:px-24 flex flex-col items-start"
-        >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-6 h-[1px] bg-gray-300"></div>
-            <span className="text-[11px] font-mono text-gray-500 uppercase tracking-[0.15em]">How it works</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-display font-medium leading-[1.1] tracking-tight text-gray-900 mb-8">
-            How We Implement<br />AI
+      {/* Node Convergence Section */}
+      <section className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
+        <div className="text-center z-10 mb-4 md:mb-8 px-6">
+          <h2 className="text-5xl md:text-6xl lg:text-[64px] font-display font-medium tracking-tight leading-[1.1] text-[#1a202c]">
+           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">Empowering Brands to <br className="hidden md:block" />Work Smarter with AI</span>
+           
           </h2>
-          <p className="text-lg text-gray-500 leading-relaxed mb-12 max-w-[450px] break-keep tracking-[-0.03em]">
-            기존의 기획, 디자인, 개발로 단절되었던 선형적(Linear) 프로세스를 탈피하여, 자연어 기반의 AI 코딩과 고속 프로토타이핑을 결합한 '지능형 동시 구현 체계'를 가동합니다. 기획과 동시에 직관적인 프로토타입을 시각화함으로써 불필요한 의사소통 비용을 지우고 프로젝트 리드타임을 혁신적으로 단축합니다. 이 모든 과정은 대외비 마스킹 및 실무자 최종 검수 등을 명시한 아이파트너즈의 엄격한 보안 원칙 아래 가장 안전하게 통제됩니다. 결과적으로 전문가의 통찰과 AI의 압도적인 실행력이 결합한 'AI-휴먼 지능형 워크플로우(Intelligent Workflow)'를 통해, 고객사의 비즈니스가 무한히 확장(Scale further)할 수 있도록 이끄는 최고의 파트너가 되겠습니다.
-          </p>
-        </motion.div>
-
-        {/* Mobile/Tablet Image & Box (Hidden on Desktop) */}
-        <div className="w-full lg:hidden relative mt-8 px-8 md:px-12">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden"
-          >
-            <img 
-              src="https://picsum.photos/seed/cyber-ai/1200/1500" 
-              alt="AI Implementation Process" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-          </motion.div>
-          {/* Floating Box Content for Mobile */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="relative -mt-25 mx-4 md:-mt-35 md:mx-12 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-20"
-          >
-            <h3 className="text-xl font-display font-medium text-gray-900 mb-3">
-              Intelligent Workflow
-            </h3>
-            <p className="text-sm text-gray-500 leading-relaxed break-keep">
-              반복적이고 소모적인 수작업을 자동화하여 프로젝트 리드타임을 혁신적으로 단축하고, 방대한 데이터를 분석하여 차별화된 사용자 경험(UX)을 설계합니다.
-            </p>
-          </motion.div>
         </div>
 
-      </div>
-    </section>
+        <div className="relative w-full max-w-[1800px] h-[250px] md:h-[350px] lg:h-[450px] flex items-center justify-center px-4">
+          {/* SVG Lines and Nodes */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1400 400" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              {/* Left Side Paths */}
+              <path id="left-top-solid" d="M 0 50 C 300 50, 450 200, 640 200" fill="none" stroke="#d1d5db" strokeWidth="1" />
+              <path id="left-top-dotted" d="M 0 120 C 250 120, 400 200, 640 200" fill="none" stroke="#d1d5db" strokeWidth="1" strokeDasharray="4 6" />
+              <path id="left-middle-solid" d="M 0 200 L 640 200" fill="none" stroke="#d1d5db" strokeWidth="1" />
+              <path id="left-bottom-dotted" d="M 0 280 C 250 280, 400 200, 640 200" fill="none" stroke="#d1d5db" strokeWidth="1" strokeDasharray="4 6" />
+              <path id="left-bottom-solid" d="M 0 350 C 300 350, 450 200, 640 200" fill="none" stroke="#d1d5db" strokeWidth="1" />
+
+              {/* Right Side Paths */}
+              <path id="right-top-solid" d="M 1400 50 C 1100 50, 950 200, 760 200" fill="none" stroke="#d1d5db" strokeWidth="1" />
+              <path id="right-top-dotted" d="M 1400 120 C 1150 120, 1000 200, 760 200" fill="none" stroke="#d1d5db" strokeWidth="1" strokeDasharray="4 6" />
+              <path id="right-middle-solid" d="M 1400 200 L 760 200" fill="none" stroke="#d1d5db" strokeWidth="1" />
+              <path id="right-bottom-dotted" d="M 1400 280 C 1150 280, 1000 200, 760 200" fill="none" stroke="#d1d5db" strokeWidth="1" strokeDasharray="4 6" />
+              <path id="right-bottom-solid" d="M 1400 350 C 1100 350, 950 200, 760 200" fill="none" stroke="#d1d5db" strokeWidth="1" />
+            </defs>
+
+            {/* Draw paths */}
+            <use href="#left-top-solid" />
+            <use href="#left-top-dotted" />
+            <use href="#left-middle-solid" />
+            <use href="#left-bottom-dotted" />
+            <use href="#left-bottom-solid" />
+
+            <use href="#right-top-solid" />
+            <use href="#right-top-dotted" />
+            <use href="#right-middle-solid" />
+            <use href="#right-bottom-dotted" />
+            <use href="#right-bottom-solid" />
+
+            {/* Nodes */}
+            {/* Left Top Solid Node (Circle) */}
+            <g className="text-gray-400">
+              <circle cx="0" cy="0" r="8" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="4s" repeatCount="indefinite" calcMode="linear">
+                <mpath href="#left-top-solid" />
+              </animateMotion>
+            </g>
+
+            {/* Left Top Dotted Node (Square) */}
+            <g className="text-gray-400">
+              <rect x="-7" y="-7" width="14" height="14" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear" begin="1s">
+                <mpath href="#left-top-dotted" />
+              </animateMotion>
+            </g>
+
+            {/* Left Middle Solid Node (Circle) */}
+            <g className="text-gray-400">
+              <circle cx="0" cy="0" r="8" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="3.5s" repeatCount="indefinite" calcMode="linear" begin="2s">
+                <mpath href="#left-middle-solid" />
+              </animateMotion>
+            </g>
+
+            {/* Left Bottom Dotted Node (Triangle) */}
+            <g className="text-gray-400">
+              <polygon points="0,-8 8,6 -8,6" fill="white" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+              <circle cx="0" cy="2" r="2.5" fill="currentColor" />
+              <animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" begin="0.5s">
+                <mpath href="#left-bottom-dotted" />
+              </animateMotion>
+            </g>
+
+            {/* Left Bottom Solid Node (Square) */}
+            <g className="text-gray-400">
+              <rect x="-7" y="-7" width="14" height="14" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="4.5s" repeatCount="indefinite" calcMode="linear" begin="1.5s">
+                <mpath href="#left-bottom-solid" />
+              </animateMotion>
+            </g>
+
+            {/* Right Top Solid Node (Square) */}
+            <g className="text-gray-400">
+              <rect x="-7" y="-7" width="14" height="14" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="5s" repeatCount="indefinite" calcMode="linear" begin="0s">
+                <mpath href="#right-top-solid" />
+              </animateMotion>
+            </g>
+
+            {/* Right Top Dotted Node (Circle) */}
+            <g className="text-gray-400">
+              <circle cx="0" cy="0" r="8" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="4.5s" repeatCount="indefinite" calcMode="linear" begin="2s">
+                <mpath href="#right-top-dotted" />
+              </animateMotion>
+            </g>
+
+            {/* Right Middle Solid Node (Square) */}
+            <g className="text-gray-400">
+              <rect x="-7" y="-7" width="14" height="14" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="4s" repeatCount="indefinite" calcMode="linear" begin="2.5s">
+                <mpath href="#right-middle-solid" />
+              </animateMotion>
+            </g>
+
+            {/* Right Bottom Dotted Node (Triangle) */}
+            <g className="text-gray-400">
+              <polygon points="0,-8 8,6 -8,6" fill="white" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+              <circle cx="0" cy="2" r="2.5" fill="currentColor" />
+              <animateMotion dur="5.5s" repeatCount="indefinite" calcMode="linear" begin="1s">
+                <mpath href="#right-bottom-dotted" />
+              </animateMotion>
+            </g>
+
+            {/* Right Bottom Solid Node (Circle) */}
+            <g className="text-gray-400">
+              <circle cx="0" cy="0" r="8" fill="white" stroke="currentColor" strokeWidth="1.5" />
+              <circle cx="0" cy="0" r="3" fill="currentColor" />
+              <animateMotion dur="5.5s" repeatCount="indefinite" calcMode="linear" begin="3s">
+                <mpath href="#right-bottom-solid" />
+              </animateMotion>
+            </g>
+          </svg>
+
+          {/* Center Button */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+            <button className="bg-black text-white text-[10px] md:text-xs font-bold tracking-widest uppercase px-6 py-3 md:px-8 md:py-4 rounded-sm hover:bg-gray-800 transition-colors whitespace-nowrap shadow-lg">
+IPARTNERS NX            </button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

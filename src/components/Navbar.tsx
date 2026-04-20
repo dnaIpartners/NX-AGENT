@@ -61,17 +61,39 @@ export default function Navbar() {
         </div>
         
         <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : (isDarkBgPage ? 'text-white/80' : 'text-[#001641]/80')}`}>
-          <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/content/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>HOW IT WORKS</Link>
-          <Link to="/nx-agent-architecture" className={`transition-colors whitespace-nowrap ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/nx-agent-architecture') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>NX AGENT ARCHITECTURE</Link>
-          <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/insights-news') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>INSIGHTS NEWS</Link>
-          <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/case-studies') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>CASE STUDIES</Link>
+          <Link to="/content/how-it-works" className={`group transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/content/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>
+            <span className="relative block overflow-hidden">
+              <span className="block transition-transform duration-500 group-hover:-translate-y-full">HOW IT WORKS</span>
+              <span className="absolute inset-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0" aria-hidden="true">HOW IT WORKS</span>
+            </span>
+          </Link>
+          <Link to="/nx-agent-architecture" className={`group transition-colors whitespace-nowrap ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/nx-agent-architecture') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>
+            <span className="relative block overflow-hidden">
+              <span className="block transition-transform duration-500 group-hover:-translate-y-full">NX AGENT ARCHITECTURE</span>
+              <span className="absolute inset-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0" aria-hidden="true">NX AGENT ARCHITECTURE</span>
+            </span>
+          </Link>
+          <Link to="/blog" className={`group transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/blog') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>
+            <span className="relative block overflow-hidden">
+              <span className="block transition-transform duration-500 group-hover:-translate-y-full">BLOG</span>
+              <span className="absolute inset-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0" aria-hidden="true">BLOG</span>
+            </span>
+          </Link>
           <button 
             onClick={() => setIsKnowledgeOpen(!isKnowledgeOpen)}
-            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : (isDarkBgPage ? 'text-white' : 'text-[#001641]')) : (isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]'))} ${isActive('/knowledge') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}
+            className={`group transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : (isDarkBgPage ? 'text-white' : 'text-[#001641]')) : (isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]'))} ${isActive('/knowledge') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}
           >
-            KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}
+            <span className="relative block overflow-hidden">
+              <span className="block transition-transform duration-500 group-hover:-translate-y-full">KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}</span>
+              <span className="absolute inset-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0" aria-hidden="true">KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}</span>
+            </span>
           </button>
-          <Link to="/faq" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/faq') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>FAQ</Link>
+          <Link to="/faq" className={`group transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/faq') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>
+            <span className="relative block overflow-hidden">
+              <span className="block transition-transform duration-500 group-hover:-translate-y-full">FAQ</span>
+              <span className="absolute inset-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0" aria-hidden="true">FAQ</span>
+            </span>
+          </Link>
         </div>
         
         <div className="flex items-center gap-4 md:gap-6">
@@ -156,8 +178,7 @@ export default function Navbar() {
         <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4 text-gray-900">
           <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/content/how-it-works') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>How it works</Link>
           <Link to="/nx-agent-architecture" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/nx-agent-architecture') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>NX AGENT ARCHITECTURE</Link>
-          <Link to="/insights-news" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/insights-news') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>INSIGHTS NEWS</Link>
-          <Link to="/case-studies" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/case-studies') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>CASE STUDIES</Link>
+          <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/blog') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>BLOG</Link>
           
           {/* Mobile Knowledge Accordion */}
           <div className="flex flex-col">
