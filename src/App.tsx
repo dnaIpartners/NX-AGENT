@@ -16,7 +16,7 @@ import FaqPage from './pages/FaqPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 import AIPromptLibrary from './pages/AIPromptLibrary';
 import HowItWorksPage from './pages/HowItWorksPage';
-import ObservabilityPage from './pages/ObservabilityPage';
+import NxAgentArchitecturePage from './pages/NxAgentArchitecturePage';
 
 function Home() {
   return (
@@ -44,7 +44,7 @@ export default function App() {
           <Route path="/knowledge/ai-prompt-library" element={<AIPromptLibrary />} />
           <Route path="/knowledge/:category" element={<KnowledgeCategory />} />
           <Route path="/content/how-it-works" element={<HowItWorksPage />} />
-          <Route path="/observability" element={<ObservabilityPage />} />
+          <Route path="/nx-agent-architecture" element={<NxAgentArchitecturePage />} />
           <Route path="/content/:category" element={<ContentCategory />} />
           <Route path="/insights-news" element={<InsightsNewsPage />} />
           <Route path="/faq" element={<FaqPage />} />

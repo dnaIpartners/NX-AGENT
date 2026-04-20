@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const isMainPage = location.pathname === '/';
+  const isDarkBgPage = location.pathname === '/' || location.pathname === '/nx-agent-architecture';
 
   const isActive = (path: string) => location.pathname.startsWith(path);
 
@@ -45,12 +45,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div 
+      <div 
       ref={navRef} 
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm text-gray-900' 
-          : `bg-transparent border-b border-transparent ${isMainPage ? 'text-white' : 'text-[#001641]'}`
+          : `bg-transparent border-b border-transparent ${isDarkBgPage ? 'text-white' : 'text-[#001641]'}`
       }`}
     >
       <nav className="flex items-center justify-between px-8 py-6 max-w-[1300px] mx-auto">
@@ -60,18 +60,18 @@ export default function Navbar() {
           </Link>
         </div>
         
-        <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : (isMainPage ? 'text-white/80' : 'text-[#001641]/80')}`}>
-          <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/content/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>HOW IT WORKS</Link>
-          <Link to="/observability" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/observability') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>OBSERVABILITY</Link>
-          <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/insights-news') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>INSIGHTS NEWS</Link>
-          <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/case-studies') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>CASE STUDIES</Link>
+        <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : (isDarkBgPage ? 'text-white/80' : 'text-[#001641]/80')}`}>
+          <Link to="/content/how-it-works" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/content/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>HOW IT WORKS</Link>
+          <Link to="/nx-agent-architecture" className={`transition-colors whitespace-nowrap ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/nx-agent-architecture') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>NX AGENT ARCHITECTURE</Link>
+          <Link to="/insights-news" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/insights-news') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>INSIGHTS NEWS</Link>
+          <Link to="/case-studies" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/case-studies') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>CASE STUDIES</Link>
           <button 
             onClick={() => setIsKnowledgeOpen(!isKnowledgeOpen)}
-            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : (isMainPage ? 'text-white' : 'text-[#001641]')) : (isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]'))} ${isActive('/knowledge') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}
+            className={`transition-colors flex items-center gap-1 ${isKnowledgeOpen ? (isScrolled ? 'text-black' : (isDarkBgPage ? 'text-white' : 'text-[#001641]')) : (isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]'))} ${isActive('/knowledge') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}
           >
             KNOWLEDGE {isKnowledgeOpen ? '-' : '+'}
           </button>
-          <Link to="/faq" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isMainPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/faq') ? (isScrolled ? 'text-black font-bold' : (isMainPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>FAQ</Link>
+          <Link to="/faq" className={`transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/faq') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>FAQ</Link>
         </div>
         
         <div className="flex items-center gap-4 md:gap-6">
@@ -87,12 +87,12 @@ export default function Navbar() {
               className={`h-3 md:h-4 w-auto transition-all duration-300 ${
                 isScrolled 
                   ? 'brightness-0 opacity-80 hover:opacity-100' 
-                  : (isMainPage ? 'brightness-0 invert opacity-90 hover:opacity-100' : 'brightness-0 opacity-80 hover:opacity-100')
+                  : (isDarkBgPage ? 'brightness-0 invert opacity-90 hover:opacity-100' : 'brightness-0 opacity-80 hover:opacity-100')
               }`}
             />
           </a>
           <button 
-            className={`md:hidden p-2 -mr-2 transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : (isMainPage ? 'text-white/80 hover:text-white' : 'text-[#001641]/80 hover:text-[#001641]')}`}
+            className={`md:hidden p-2 -mr-2 transition-colors ${isScrolled ? 'text-gray-600 hover:text-black' : (isDarkBgPage ? 'text-white/80 hover:text-white' : 'text-[#001641]/80 hover:text-[#001641]')}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -155,7 +155,7 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4 text-gray-900">
           <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/content/how-it-works') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>How it works</Link>
-          <Link to="/observability" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/observability') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>OBSERVABILITY</Link>
+          <Link to="/nx-agent-architecture" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/nx-agent-architecture') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>NX AGENT ARCHITECTURE</Link>
           <Link to="/insights-news" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/insights-news') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>INSIGHTS NEWS</Link>
           <Link to="/case-studies" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/case-studies') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>CASE STUDIES</Link>
           
