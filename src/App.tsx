@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Capabilities from './components/Capabilities';
 import HowItWorks from './components/HowItWorks';
 import Knowledge from './components/Knowledge';
+import BlogPreview from './components/BlogPreview';
 import NextExperience from './components/NextExperience';
 import Footer from './components/Footer';
 import FloatingBadge from './components/FloatingBadge';
@@ -22,6 +23,7 @@ function Home() {
       <Hero />
       <Capabilities />
       <HowItWorks />
+      <BlogPreview />
       <Knowledge />
       <NextExperience />
     </>

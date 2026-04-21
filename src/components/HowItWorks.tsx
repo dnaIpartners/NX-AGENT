@@ -301,12 +301,14 @@ export default function HowItWorks() {
 
           {/* Center Button */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-            <button 
+            <motion.button 
               onClick={() => navigate('/nx-agent-architecture')}
-              className="bg-black text-white text-[10px] md:text-xs font-bold tracking-widest uppercase px-6 py-3 md:px-8 md:py-4 rounded-sm hover:bg-gray-800 transition-colors whitespace-nowrap shadow-lg cursor-pointer"
+              className="bg-black text-white text-[10px] md:text-xs font-bold tracking-widest uppercase px-6 py-3 md:px-8 md:py-4 rounded-sm hover:bg-gray-800 transition-colors whitespace-nowrap shadow-[0_0_20px_rgba(0,0,0,0.3)] cursor-pointer"
+              animate={{ scale: [1, 1.06, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             >
               IPARTNERS NX
-            </button>
+            </motion.button>
           </div>
         </div>
       </section>
