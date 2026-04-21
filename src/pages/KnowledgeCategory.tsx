@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search, User, Tag } from 'lucide-react';
-
-const AvatarIcon = ({ className }: { className?: string }) => (
-  <div className={`bg-gray-100 flex items-center justify-center rounded-full border border-gray-200 ${className}`}>
-    <User className="w-1/2 h-1/2 text-gray-400" />
-  </div>
-);
+import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search, User, Tag, Calendar } from 'lucide-react';
 
 const categoryData: Record<string, any> = {
   'contextual-prompt-engineering': {
@@ -113,30 +107,53 @@ export default function KnowledgeCategory() {
           return (
             <>
               {/* Featured Article */}
-              <Link to="#" className="block mb-12 bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                <div className="w-full aspect-[16/9] md:aspect-[21/9] bg-gray-900 relative overflow-hidden">
-                  <img 
-                    src={featuredArticle.image} 
-                    alt={featuredArticle.title}
-                    className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="p-8 md:p-10">
-                  <h2 className="text-3xl md:text-4xl font-display font-medium text-gray-900 mb-6 group-hover:text-blue-600 transition-colors">
-                    {featuredArticle.title}
-                  </h2>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <AvatarIcon className="w-10 h-10 shrink-0" />
-                      <div>
-                        <div className="text-sm font-bold text-gray-900">{featuredArticle.author}</div>
-                        <div className="text-xs text-gray-500">{featuredArticle.authorRole}</div>
+              <Link to="#" className="block mb-12 bg-white rounded-[24px] border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 group">
+                <div className="flex flex-col lg:flex-row">
+                  {/* Left: Image */}
+                  <div className="w-full lg:w-3/5 bg-gray-100 relative overflow-hidden aspect-[16/9] lg:aspect-auto">
+                    {/* Featured Badge */}
+                    <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-[#25c481] text-white text-[11px] font-bold tracking-wide rounded-full uppercase">
+                      Featured
+                    </div>
+                    <img 
+                      src={featuredArticle.image} 
+                      alt={featuredArticle.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  
+                  {/* Right: Content */}
+                  <div className="w-full lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">
+                    <div className="flex flex-wrap items-center gap-4 mb-6">
+                      <span className="px-3 py-1 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs font-semibold">
+                        {featuredArticle.tag}
+                      </span>
+                      <div className="flex items-center text-gray-500 text-xs md:text-sm font-medium gap-1.5">
+                        <Calendar size={14} />
+                        <span>{featuredArticle.date}</span>
+                      </div>
+                      <div className="flex items-center text-gray-500 text-xs md:text-sm font-medium gap-1.5">
+                        <Clock size={14} />
+                        <span>{featuredArticle.readTime}</span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4 text-sm text-gray-500 font-medium">
-                      <span>{featuredArticle.date}</span>
-                      <span className="text-xs font-bold text-gray-900">{featuredArticle.tag}</span>
+                    
+                    <h2 className="text-2xl lg:text-[32px] md:leading-[1.25] font-display font-bold text-gray-900 mb-4 group-hover:text-[#1b6e4e] transition-colors leading-tight">
+                      {featuredArticle.title}
+                    </h2>
+                    
+                    <p className="text-gray-500 text-sm md:text-base mb-8 line-clamp-4 leading-relaxed">
+                      {featuredArticle.excerpt}
+                    </p>
+                    
+                    <div className="mt-auto flex items-center justify-between pt-4">
+                      <span className="text-gray-500 text-sm font-medium">
+                        von {featuredArticle.author}
+                      </span>
+                      <span className="text-[#1b6e4e] text-sm font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                        Weiterlesen <ArrowRight size={16} />
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -146,31 +163,33 @@ export default function KnowledgeCategory() {
               {gridArticles.length > 0 && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {gridArticles.map((article: any) => (
-                    <Link key={article.id} to="#" className="flex flex-col bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                      <div className="w-full aspect-[16/9] bg-gray-900 relative overflow-hidden">
+                    <Link key={article.id} to="#" className="flex flex-col bg-white rounded-[24px] border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 group">
+                      <div className="w-full aspect-[4/3] bg-gray-100 relative overflow-hidden">
                         <img 
                           src={article.image} 
                           alt={article.title}
-                          className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" 
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
                           referrerPolicy="no-referrer"
                         />
                       </div>
-                      <div className="p-6 flex flex-col flex-1">
-                        <h3 className="text-xl font-display font-medium text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors">
+                      <div className="p-6 md:p-8 flex flex-col flex-1">
+                        <div className="mb-4">
+                          <span className="inline-block px-2.5 py-1 bg-gray-100 text-gray-600 rounded text-[11px] font-semibold tracking-wide">
+                            {article.tag}
+                          </span>
+                        </div>
+                        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 line-clamp-2 leading-snug group-hover:text-[#1b6e4e] transition-colors">
                           {article.title}
                         </h3>
-                        <p className="text-sm text-gray-500 mb-6 line-clamp-2 flex-1">
+                        <p className="text-sm text-gray-500 mb-6 line-clamp-3 leading-relaxed flex-1">
                           {article.excerpt}
                         </p>
-                        <div className="flex items-center justify-between mt-auto pt-4">
-                          <div className="flex items-center gap-2">
-                            <AvatarIcon className="w-6 h-6 shrink-0" />
-                            <span className="text-xs font-bold text-gray-900">{article.author}</span>
-                          </div>
-                          <div className="flex items-center gap-3 text-[11px] text-gray-500 font-medium">
+                        <div className="flex items-center justify-between text-gray-400 text-xs font-medium pt-4">
+                          <div className="flex items-center gap-1.5">
+                            <Calendar size={14} />
                             <span>{article.date}</span>
-                            <span className="font-bold text-gray-900">{article.tag}</span>
                           </div>
+                          <span>{article.readTime}</span>
                         </div>
                       </div>
                     </Link>

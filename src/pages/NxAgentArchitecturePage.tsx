@@ -134,7 +134,7 @@ export default function NxAgentArchitecturePage() {
           {/* Dark background gradient to mimic the presentation slide */}
           <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] via-[#09112a] to-[#040812] pointer-events-none z-0"></div>
 
-          {/* Glowing Wave SVG (Background overlay) */}
+           {/* Glowing Wave SVG (Background overlay) */}
           <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 flex items-center overflow-visible">
              <svg className="w-[120vw] h-[300px] absolute -left-[10vw]" viewBox="0 0 1200 300" preserveAspectRatio="none">
                 <defs>
@@ -145,41 +145,45 @@ export default function NxAgentArchitecturePage() {
                       <stop offset="100%" stopColor="#f59e0b" />     {/* Gold/Orange */}
                    </linearGradient>
                    <filter id="waveGlow" x="-20%" y="-20%" width="140%" height="140%">
-                      <feGaussianBlur stdDeviation="8" result="blur" />
+                      <feGaussianBlur stdDeviation="10" result="blur" />
                       <feComposite in="SourceGraphic" in2="blur" operator="over" />
                    </filter>
                    <filter id="waveGlowStrong" x="-20%" y="-20%" width="140%" height="140%">
-                      <feGaussianBlur stdDeviation="25" result="blur" />
+                      <feGaussianBlur stdDeviation="35" result="blur" />
                       <feComposite in="SourceGraphic" in2="blur" operator="over" />
                    </filter>
                 </defs>
                 
-                {/* Thick background glow */}
+                {/* Thickest background glow */}
                 <path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
                       fill="none"
                       stroke="url(#waveGradient)"
-                      strokeWidth="12"
+                      strokeWidth="32"
                       filter="url(#waveGlowStrong)"
-                      opacity="0.6" />
+                      opacity="0.75" />
+
+                {/* Medium mid-glow layer */}
+                <path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
+                      fill="none"
+                      stroke="url(#waveGradient)"
+                      strokeWidth="14"
+                      filter="url(#waveGlow)"
+                      opacity="0.9" />
                       
                 {/* Core sharp line */}
                 <path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
                       fill="none"
                       stroke="url(#waveGradient)"
-                      strokeWidth="3"
+                      strokeWidth="5"
                       filter="url(#waveGlow)" />
              </svg>
           </div>
 
-          {/* Three Columns Container - Constrained to alignment */}
-          <div className="max-w-[1200px] mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0 mt-8 mb-4 text-left">
+          {/* Three Columns Container - Glassmorphism */}
+          <div className="max-w-[1200px] mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 mb-4 text-left">
             
-            {/* Vertical Dashed Dividers (Desktop only) */}
-            <div className="hidden md:block absolute left-1/3 top-[-50px] bottom-[-20px] w-px border-l border-dashed border-gray-500/30"></div>
-            <div className="hidden md:block absolute left-2/3 top-[-50px] bottom-[-20px] w-px border-l border-dashed border-gray-500/30"></div>
-
             {/* Col 1 */}
-            <div className="md:p-8">
+            <div className="md:p-8 p-6 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-xl border border-white/10 rounded-[24px] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-colors duration-500">
               <h3 className="text-[20px] md:text-[22px] font-bold text-white mb-0 leading-snug">AI Ownership</h3>
               <p className="text-[16px] md:text-[18px] font-bold text-gray-300 mb-6">(자연어 제작과정)</p>
               <ul className="space-y-3.5 text-sm md:text-[15px] text-gray-300/90 font-medium break-keep">
@@ -199,7 +203,7 @@ export default function NxAgentArchitecturePage() {
             </div>
 
             {/* Col 2 */}
-            <div className="md:p-8 md:pl-12">
+            <div className="md:p-8 p-6 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-xl border border-white/10 rounded-[24px] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-colors duration-500">
               <h3 className="text-[20px] md:text-[22px] font-bold text-white mb-0 leading-snug">Human in the loop</h3>
               <p className="text-[16px] md:text-[18px] font-bold text-gray-300 mb-6">(전문가 참여)</p>
               <ul className="space-y-3.5 text-sm md:text-[15px] text-gray-300/90 font-medium break-keep">
@@ -216,7 +220,7 @@ export default function NxAgentArchitecturePage() {
             </div>
 
             {/* Col 3 */}
-            <div className="md:p-8 md:pl-12">
+            <div className="md:p-8 p-6 bg-white/[0.03] hover:bg-white/[0.06] backdrop-blur-xl border border-white/10 rounded-[24px] shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-colors duration-500">
               <h3 className="text-[20px] md:text-[22px] font-bold text-white mb-0 leading-snug">Expert Ownership</h3>
               <p className="text-[16px] md:text-[18px] font-bold text-gray-300 mb-6">(전문가 주도)</p>
               <ul className="space-y-3.5 text-sm md:text-[15px] text-gray-300/90 font-medium break-keep">
@@ -288,7 +292,7 @@ export default function NxAgentArchitecturePage() {
                 d="M 500 200 C 650 50, 900 50, 900 200 C 900 350, 650 350, 500 200 C 350 50, 100 50, 100 200 C 100 350, 350 350, 500 200 Z" 
                 fill="none" 
                 stroke="url(#infinityGradient)" 
-                strokeWidth="6" 
+                strokeWidth="3" 
                 strokeDasharray="20 40" 
                 animate={{ strokeDashoffset: [0, -120] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
@@ -313,7 +317,7 @@ export default function NxAgentArchitecturePage() {
                  <Cpu className="w-14 h-14 xl:w-16 xl:h-16 text-emerald-400 mb-2 relative z-10" />
                  <div className="text-emerald-400 text-[12px] xl:text-[14px] font-bold tracking-widest mb-2 bg-emerald-900/50 py-1 px-4 rounded-full relative z-10">초고속 생성</div>
                  <h3 className="text-white text-3xl xl:text-4xl font-bold mb-3 relative z-10">2. AI</h3>
-                 <p className="text-emerald-100 text-[16px] xl:text-[18px] text-center leading-snug break-keep relative z-10">초안, 에셋, 코드<br/>자동 구현</p>
+                 <p className="text-emerald-100 text-[16px] xl:text-[18px] text-center leading-snug break-keep relative z-10">, 에셋, 코드<br/> 구현</p>
               </div>
             </motion.div>
 
