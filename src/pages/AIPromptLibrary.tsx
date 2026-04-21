@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Copy, Check, Sparkles } from 'lucide-react';
+import { Search, Copy, Check, Sparkles, Tag } from 'lucide-react';
 
 const prompts = [
   {
@@ -94,30 +94,31 @@ export default function AIPromptLibrary() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-[#F5F5F7] pt-28 pb-12 px-8 min-h-[320px] md:min-h-[384px] flex flex-col items-center justify-center text-center mb-8">
-        <div className="max-w-[1300px] mx-auto w-full">     
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
-            AI Prompt Library
-          </h1>
-          <p className="text-lg md:text-xl text-gray-500 font-sans max-w-3xl mx-auto">
-            개인에게 파편화되어 사라지던 노하우를 조직 전체의 영구적인 경험 자산으로 내재화하여, 실무에 즉시 투입 가능한 최적화된 프롬프트 킷을 제공합니다.
-          </p>
+      {/* Header Section */}
+      <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-8">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">
+          <Tag size={16} className="fill-[#1b6e4e]/20" />
+          <span>The IPARTNERS Knowledge</span>
         </div>
+        <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] mb-8 text-black">
+          AI Prompt Library
+        </h1>
+        <p className="text-gray-500 text-lg md:text-xl font-light max-w-2xl">
+          개인에게 파편화되어 사라지던 노하우를 조직 전체의 영구적인 경험 자산으로 내재화하여, 실무에 즉시 투입 가능한 최적화된 프롬프트 킷을 제공합니다.
+        </p>
       </div>
       <div className="max-w-[1300px] mx-auto px-6 md:px-8 pb-32">
-        {/* Filters and Search */}
-        <div className="flex flex-col gap-6 mb-10">
-          {/* Categories */}
-          <div className="flex flex-wrap items-center gap-2">
+        {/* Filters and Search Container */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 mb-16">
+          <div className="flex flex-wrap gap-2 flex-1">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-full border text-xs md:text-sm transition-all whitespace-nowrap ${
                   activeCategory === category 
-                    ? 'bg-blue-600 text-white shadow-md' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? 'bg-gray-900 text-white border-gray-900 font-medium' 
+                    : 'bg-[#f8fafc] text-gray-600 border-gray-200 hover:border-gray-300'
                 }`}
               >
                 {category}
@@ -125,20 +126,19 @@ export default function AIPromptLibrary() {
             ))}
           </div>
 
-          {/* Search Bar */}
-          <div className="flex items-center justify-between gap-4">
-            <div className="text-sm font-medium text-gray-500">
-              총 <span className="text-gray-900 font-bold">{filteredPrompts.length}</span>개의 프롬프트가 있습니다.
+          <div className="flex items-center gap-4 w-full lg:w-auto shrink-0">
+            <div className="text-xs font-medium text-gray-500 whitespace-nowrap hidden md:block">
+              총 <span className="text-gray-900 font-bold">{filteredPrompts.length}</span>개의 프롬프트
             </div>
-            <div className="relative w-full max-w-md">
+            <div className="relative w-full lg:w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
               <input
                 type="text"
                 placeholder="프롬프트를 검색해보세요..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-4 pr-10 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                className="w-full pl-9 pr-4 py-2 bg-[#f8fafc] border border-gray-200 rounded-full text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-shadow"
               />
-              <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
             </div>
           </div>
         </div>

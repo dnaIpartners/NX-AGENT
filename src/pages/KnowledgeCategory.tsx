@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search, User } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search, User, Tag } from 'lucide-react';
 
 const AvatarIcon = ({ className }: { className?: string }) => (
   <div className={`bg-gray-100 flex items-center justify-center rounded-full border border-gray-200 ${className}`}>
@@ -82,16 +82,18 @@ export default function KnowledgeCategory() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <div className="bg-[#F5F5F7] pt-28 pb-12 px-8 min-h-[320px] md:min-h-[384px] flex flex-col items-center justify-center text-center mb-16">
-        <div className="max-w-[1300px] mx-auto w-full">     
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
-            {data.title}
-          </h1>
-          <p className="text-lg md:text-xl text-gray-500 font-sans max-w-3xl mx-auto">
-            {data.description}
-          </p>
+      {/* Header Section */}
+      <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-16">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">
+          <Tag size={16} className="fill-[#1b6e4e]/20" />
+          <span>The IPARTNERS Knowledge</span>
         </div>
+        <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] mb-8 text-black">
+          {data.title}
+        </h1>
+        <p className="text-gray-500 text-lg md:text-xl font-light max-w-2xl">
+          {data.description}
+        </p>
       </div>
 
       {/* Content List Section */}

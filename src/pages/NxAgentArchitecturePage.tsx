@@ -5,7 +5,7 @@ import {
   LayoutTemplate, MessageSquare, Code2, Paintbrush,
   Workflow, PenTool, Bot, Sparkles,
   CheckCircle2, Users, Layers, ArrowRight, ChevronRight, ChevronDown,
-  Lightbulb, Search
+  Lightbulb, Search, Tag
 } from 'lucide-react';
 
 export default function NxAgentArchitecturePage() {
@@ -15,7 +15,7 @@ export default function NxAgentArchitecturePage() {
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
   };
 
   const stagger = {
@@ -31,15 +31,16 @@ export default function NxAgentArchitecturePage() {
       </div>
       <div className="fixed top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 py-16 md:py-24">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-4 pb-16 md:pt-6 md:pb-24">
         
         {/* Section 1: Hero */}
         <motion.section 
           initial="hidden" animate="visible" variants={fadeIn}
           className="text-center mb-32"
         >
-          <div className="inline-block py-1 px-4 rounded-full bg-blue-900/20 text-blue-400 text-xs font-bold tracking-widest mb-6 uppercase border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-            [개념 설명서] AI 서비스 구축 가이드
+          <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-emerald-500/15 text-emerald-400 text-xs md:text-sm font-semibold tracking-wide mb-6 uppercase border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+            <Tag size={16} className="fill-emerald-400/20" />
+            <span>[개념 설명서] AI 서비스 구축 가이드</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight text-white mb-6 leading-[1.1]">
             NX AGENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Architecture</span>

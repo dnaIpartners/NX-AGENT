@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search } from 'lucide-react';
+import { Search, Tag } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const categories = [
@@ -108,12 +108,13 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-24">
       {/* Header Section */}
-      <div className="pt-40 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center">
-        <p className="text-[#3b82f6] font-bold text-[11px] tracking-widest uppercase mb-6">
-          The IPARTNERS Blog
-        </p>
+      <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">
+          <Tag size={16} className="fill-[#1b6e4e]/20" />
+          <span>The IPARTNERS Blog</span>
+        </div>
         <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] mb-8 text-black">
-          Insights on AI, Automation,<br className="hidden md:block" /> and Business Growth
+          Insights on AI, Automation, <br className="hidden md:block" /> and Business Growth
         </h1>
         <p className="text-gray-500 text-lg md:text-xl font-light max-w-2xl">
           Expert perspectives on AI Agents, customer service automation, lead generation, and building better businesses

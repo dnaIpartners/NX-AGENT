@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Capabilities from './components/Capabilities';
 import HowItWorks from './components/HowItWorks';
-import InsightsNews from './components/InsightsNews';
 import Knowledge from './components/Knowledge';
 import NextExperience from './components/NextExperience';
 import Footer from './components/Footer';
@@ -23,7 +22,6 @@ function Home() {
       <Hero />
       <Capabilities />
       <HowItWorks />
-      <InsightsNews />
       <Knowledge />
       <NextExperience />
     </>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Tag } from 'lucide-react';
 
 const categories = ['전체', 'GEMS', '블로그', '프롬프트', '바이브코딩', '유튜브', 'API'];
 
@@ -45,40 +45,43 @@ export default function FaqPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Light Hero Section matching Insights News */}
-      <div className="bg-[#F5F5F7] pt-32 pb-16 px-8 min-h-[400px] md:min-h-[480px] flex flex-col items-center justify-center text-center">
-        <div className="max-w-[1300px] mx-auto w-full">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-gray-900">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-lg md:text-xl text-gray-500 font-sans max-w-3xl mx-auto mb-10">
-            Find answers to common questions about our services, process, and how we can help improve your digital experience.
-          </p>
-          
-          {/* Category Buttons */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => {
-                  setActiveCategory(category);
-                  setOpenIndex(null); // Reset open accordion on category change
-                }}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeCategory === category
-                    ? 'bg-[#0033FF] text-white shadow-[0_8px_16px_rgba(41,98,255,0.2)]'
-                    : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 hover:text-gray-900'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+      {/* Header Section */}
+      <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-16">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">
+          <Tag size={16} className="fill-[#1b6e4e]/20" />
+          <span>The IPARTNERS FAQ</span>
+        </div>
+        <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] mb-8 text-black">
+          Frequently Asked Questions
+        </h1>
+        <p className="text-gray-500 text-lg md:text-xl font-light max-w-2xl">
+          Find answers to common questions about our services, process, and how we can help improve your digital experience.
+        </p>
+      </div>
+      <div className="max-w-[1280px] mx-auto px-6 mb-16 flex flex-col items-center">
+        {/* Category Buttons */}
+        <div className="flex flex-wrap justify-center gap-2">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => {
+                setActiveCategory(category);
+                setOpenIndex(null); // Reset open accordion on category change
+              }}
+              className={`px-4 py-2 rounded-full border text-xs md:text-sm transition-all whitespace-nowrap ${
+                activeCategory === category
+                  ? 'bg-gray-900 text-white border-gray-900 font-medium'
+                  : 'bg-[#f8fafc] text-gray-600 border-gray-200 hover:border-gray-300'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
       </div>
 
       {/* FAQ List */}
-      <div className="max-w-[1300px] mx-auto px-8 py-16">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-8 pb-32">
         <div className="space-y-4">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
