@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const isDarkBgPage = location.pathname === '/' || location.pathname === '/nx-agent-architecture' || location.pathname === '/how-it-works';
+  const isDarkBgPage = location.pathname === '/' || location.pathname === '/nx-agent-architecture' || location.pathname === '/content/how-it-works';
 
   const isActive = (path: string) => location.pathname.startsWith(path);
 

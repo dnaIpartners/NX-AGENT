@@ -138,14 +138,7 @@ export default function BlogPage() {
             </button>
           ))}
         </div>
-        <div className="relative w-full lg:w-64 shrink-0">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <input 
-            type="text" 
-            placeholder="Search..." 
-            className="w-full pl-9 pr-4 py-2 bg-[#f8fafc] border border-gray-200 rounded-full text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-shadow"
-          />
-        </div>
+       
       </div>
 
       {/* Featured Latest Post */}
