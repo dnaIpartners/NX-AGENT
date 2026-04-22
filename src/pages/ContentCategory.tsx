@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Clock, FileText, Settings, Newspaper, Info, Tag } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const categoryData: Record<string, any> = {
   'how-it-works': {
@@ -90,6 +91,10 @@ export default function ContentCategory() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title={data.title} 
+        description={data.description} 
+      />
       {/* Header Section */}
       <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">

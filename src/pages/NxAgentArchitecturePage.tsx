@@ -7,6 +7,7 @@ import {
   CheckCircle2, Users, Layers, ArrowRight, ChevronRight, ChevronDown,
   Lightbulb, Search, Tag
 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function NxAgentArchitecturePage() {
   useEffect(() => {
@@ -25,6 +26,10 @@ export default function NxAgentArchitecturePage() {
 
   return (
     <div className="min-h-screen bg-[#030303] text-gray-200 font-sans selection:bg-blue-500/30 overflow-x-hidden relative pt-20">
+      <SEO 
+        title="NX Agent Architecture" 
+        description="단순한 기술 도입을 넘어, 복잡한 요구사항을 지능적으로 조율하여 기업 고유의 NX AI를 설계합니다." 
+      />
       {/* Background Elements */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px]"></div>

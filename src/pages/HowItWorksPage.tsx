@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { Network, Database, Layers, CheckCircle, Rocket, ArrowDown, ChevronRight, Zap, Lightbulb } from 'lucide-react';
 import NextExperience from '../components/NextExperience';
+import SEO from '../components/SEO';
 
 const contents = [
   {
@@ -79,6 +80,10 @@ export default function HowItWorksPage() {
 
   return (
     <div className="min-h-screen bg-[#030303] text-gray-200 font-sans selection:bg-blue-500/30 overflow-x-hidden relative">
+      <SEO 
+        title="How We Work" 
+        description="IPARTNERS의 AI-First 구현 방식과 혁신적인 방법론을 알아보세요." 
+      />
       {/* Background Elements */}
       <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:40px_40px]"></div>

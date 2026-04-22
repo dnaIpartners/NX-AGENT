@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Copy, Check, Sparkles, Tag } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const prompts = [
   {
@@ -94,6 +95,10 @@ export default function AIPromptLibrary() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="Prompt Library" 
+        description="실무에 즉시 적용 가능한 검증된 AI 프롬프트 템플릿과 활용 가이드를 제공하여 업무 효율을 극대화합니다." 
+      />
       {/* Header Section */}
       <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-8">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">

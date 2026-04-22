@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Tag } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const categories = ['전체', 'GEMS', '블로그', '프롬프트', '바이브코딩', '유튜브', 'API'];
 
@@ -45,6 +46,10 @@ export default function FaqPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO 
+        title="FAQ" 
+        description="Find answers to common questions about our services, process, and how we can help improve your digital experience." 
+      />
       {/* Header Section */}
       <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">

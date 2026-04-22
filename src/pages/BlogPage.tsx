@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Tag } from 'lucide-react';
 import { motion } from 'motion/react';
+import SEO from '../components/SEO';
 
 const categories = [
   'All (82)', 
@@ -107,6 +108,10 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 pb-24">
+      <SEO 
+        title="Blog" 
+        description="Insights on AI, Automation, and Business Growth - Expert perspectives on AI Agents, customer service automation, lead generation, and building better businesses" 
+      />
       {/* Header Section */}
       <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">
