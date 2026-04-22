@@ -172,11 +172,10 @@ export default function BlogPage() {
           <div className="w-full lg:w-1/2 min-h-[300px] lg:min-h-[500px] relative p-6 lg:p-10">
             <div className="absolute inset-4 lg:inset-8 overflow-hidden rounded-[24px] shadow-sm">
               <img 
-                src="https://picsum.photos/seed/conversational-ai1/1000/800" 
+                src="/asset/blog/hero.jpg" 
                 alt="Conversational AI Graphic" 
                 className="w-full h-full object-cover rounded-[24px]"
                 loading="lazy"
-                referrerPolicy="no-referrer"
               />
             </div>
           </div>
@@ -203,7 +202,6 @@ export default function BlogPage() {
                   alt={post.title} 
                   className="w-full h-full object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105 shadow-sm"
                   loading="lazy"
-                  referrerPolicy="no-referrer"
                 />
               </div>
 

@@ -104,7 +104,6 @@ export default function Knowledge() {
                       src={category.image} 
                       alt={category.title}
                       className="w-full h-full object-cover aspect-[4/3] md:aspect-auto grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                   

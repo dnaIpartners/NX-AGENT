@@ -124,7 +124,6 @@ export default function KnowledgeCategory() {
                       src={featuredArticle.image} 
                       alt={featuredArticle.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                      referrerPolicy="no-referrer"
                     />
                   </div>
                   
@@ -174,7 +173,6 @@ export default function KnowledgeCategory() {
                           src={article.image} 
                           alt={article.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
-                          referrerPolicy="no-referrer"
                         />
                       </div>
                       <div className="p-6 md:p-8 flex flex-col flex-1">
