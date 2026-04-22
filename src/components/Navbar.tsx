@@ -47,13 +47,15 @@ export default function Navbar() {
   return (
       <div 
       ref={navRef} 
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-out ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm text-gray-900' 
           : `bg-transparent border-b border-transparent ${isDarkBgPage ? 'text-white' : 'text-[#001641]'}`
       }`}
     >
-      <nav className="flex items-center justify-between px-8 py-6 max-w-[1300px] mx-auto">
+      <nav className={`mx-auto flex items-center justify-between transition-all duration-500 ease-out ${
+        isScrolled ? 'max-w-[1300px] px-6 md:px-8 py-4 lg:py-4' : 'max-w-[1600px] px-8 md:px-12 py-6 lg:py-8'
+      }`}>
         <div className="flex items-center gap-1">
           <Link to="/" className="font-display font-bold text-xl tracking-tight">
             Next Experience
