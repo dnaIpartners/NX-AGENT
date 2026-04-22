@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { motion } from 'motion/react';
+import React, { useEffect, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import {
   ShieldCheck, Database, Cpu, Hammer,
   LayoutTemplate, MessageSquare, Code2, Paintbrush,
@@ -13,6 +13,12 @@ export default function NxAgentArchitecturePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const spectrumRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress: spectrumScrollY } = useScroll({
+    target: spectrumRef,
+    offset: ["start 80%", "end 50%"]
+  });
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -127,15 +133,21 @@ export default function NxAgentArchitecturePage() {
         initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
         className="mb-32 relative w-full"
       >
-        <motion.div variants={fadeIn} className="mb-14 text-center max-w-[1200px] mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight leading-snug break-keep">
+        <motion.div variants={fadeIn} className="mb-14 text-center max-w-[1200px] mx-auto px-6 hidden md:block">
+          <h2 className="hidden md:block text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-4 tracking-tight leading-snug break-keep">
             지배력의 유연한 전환 (The Spectrum of Control):<br/>
             AI의 속도에서 인간의 깊이로
           </h2>
         </motion.div>
 
         {/* Full width container */}
-        <div className="w-full relative bg-[#06060c] border-y border-white/5 py-12 md:py-20 overflow-hidden shadow-2xl backdrop-blur-sm">
+        <div ref={spectrumRef} className="w-full relative bg-[#06060c] border-y border-white/5 py-12 md:py-20 overflow-hidden shadow-2xl backdrop-blur-sm">
+          {/* Mobile Overlay Title */}
+          <div className="absolute top-8 left-0 z-50 text-white! mix-blend-difference font-pretendard text-2xl leading-snug font-bold w-full text-center md:hidden px-4">
+            지배력의 유연한 전환 (The Spectrum of Control):<br/>
+            AI의 속도에서 인간의 깊이로
+          </div>
+          
           {/* Dark background gradient to mimic the presentation slide */}
           <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] via-[#09112a] to-[#040812] pointer-events-none z-0"></div>
 
@@ -160,27 +172,33 @@ export default function NxAgentArchitecturePage() {
                 </defs>
                 
                 {/* Thickest background glow */}
-                <path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
+                <motion.path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
                       fill="none"
                       stroke="url(#waveGradient)"
                       strokeWidth="32"
                       filter="url(#waveGlowStrong)"
-                      opacity="0.75" />
+                      opacity="0.75" 
+                      style={{ pathLength: spectrumScrollY }}
+                />
 
                 {/* Medium mid-glow layer */}
-                <path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
+                <motion.path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
                       fill="none"
                       stroke="url(#waveGradient)"
                       strokeWidth="14"
                       filter="url(#waveGlow)"
-                      opacity="0.9" />
+                      opacity="0.9" 
+                      style={{ pathLength: spectrumScrollY }}
+                />
                       
                 {/* Core sharp line */}
-                <path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
+                <motion.path d="M -100 180 C 300 80, 500 220, 800 180 C 1000 150, 1100 80, 1300 0"
                       fill="none"
                       stroke="url(#waveGradient)"
                       strokeWidth="5"
-                      filter="url(#waveGlow)" />
+                      filter="url(#waveGlow)" 
+                      style={{ pathLength: spectrumScrollY }}
+                />
              </svg>
           </div>
 
@@ -251,9 +269,14 @@ export default function NxAgentArchitecturePage() {
         className="mb-32 relative w-full max-w-[1200px] mx-auto px-6 mt-12 md:mt-24"
       >
         <motion.div variants={fadeIn} className="mb-16 md:mb-20 text-center md:text-left border-b border-white/10 pb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight leading-snug break-keep">
+          {/* Desktop Title */}
+          <h2 className="hidden md:block text-4xl md:text-5xl lg:text-[52px] font-bold text-white mb-6 tracking-tight leading-snug break-keep">
            인력을 대체하는 AI가 아닌, 역량을 증폭시키는 AI 파트너  협업 프로세스 모델
           </h2>
+          {/* Mobile Title */}
+          <div className="text-white! mix-blend-difference font-pretendard text-2xl leading-snug font-bold w-full text-center mb-6 md:hidden px-4">
+           인력을 대체하는 AI가 아닌, 역량을 증폭시키는 AI 파트너  협업 프로세스 모델
+          </div>
           <p className="text-gray-300 text-base md:text-xl max-w-4xl leading-relaxed break-keep">
           AI는 단순한 도구를 넘어 전 팀원의 역량을 격상시키는 든든한 파트너입니다.  <br className="hidden md:block"/>
           <strong className="text-white">1년 차가 5년 차의 시야를 갖고, 5년 차가 10년 차의 깊이</strong>를 가지게 되는 지능형 워크플로우를 통해
@@ -381,9 +404,14 @@ export default function NxAgentArchitecturePage() {
           className="mb-32"
         >
           <motion.div variants={fadeIn} className="mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
+            {/* Desktop Title */}
+            <h2 className="hidden md:block text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight leading-snug">
              AI의 지능과 전문가의 경험을 조율하다, 자연어 기반의 지능형 워크플로우.
             </h2>
+            {/* Mobile Title */}
+            <div className="text-white! mix-blend-difference font-pretendard text-2xl leading-snug font-bold w-full text-center mb-4 md:hidden px-4">
+             AI의 지능과 전문가의 경험을 조율하다, 자연어 기반의 지능형 워크플로우.
+            </div>
             <p className="text-gray-400 text-lg leading-relaxed max-w-4xl break-keep">
              아이파트너즈의 축적된 컨설팅 노하우와 AI의 압도적 실행력을 결합한 통합 시스템입니다.<br className="hidden md:block"/> 자연어 기반의 소통을 통해 의사결정의 병목을 지워내며,<br className="hidden md:block"/>AI 에이전트와 실무 전문가가 유기적으로 협력하여 전에 없던 속도로 차세대 디지털 서비스를 구축합니다.
 
@@ -806,7 +834,10 @@ export default function NxAgentArchitecturePage() {
           className="max-w-4xl mx-auto mb-20"
         >
           <motion.div variants={fadeIn} className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">NX AGENT 에이전트 시스템 요약</h2>
+            {/* Desktop Title */}
+            <h2 className="hidden md:block text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">NX AGENT 에이전트 시스템 요약</h2>
+            {/* Mobile Title */}
+            <div className="text-white! mix-blend-difference font-pretendard text-2xl leading-snug font-bold w-full text-center mb-4 md:hidden px-4">NX AGENT 에이전트 시스템 요약</div>
             <p className="text-gray-400 text-lg">플랫폼의 핵심 가치를 다시 한 번 확인해 보세요</p>
           </motion.div>
 

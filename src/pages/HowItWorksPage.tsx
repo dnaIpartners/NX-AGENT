@@ -155,38 +155,49 @@ export default function HowItWorksPage() {
                 </defs>
                 
                 {/* Background track */}
-                <line x1="8" y1="0" x2="8" y2="100%" stroke="rgba(255,255,255,0.05)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
+                <line x1="8" y1="0" x2="8" y2="100%" stroke="rgba(255,255,255,0.1)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
                 
-                {/* Scroll based filled line (Base Progress) */}
+                {/* Solid Glow Progress Line Core (Thicker than background line) */}
                 <motion.line 
                   x1="8" y1="0" x2="8" y2="100%" 
-                  stroke="rgba(255,255,255,0.15)" 
-                  strokeWidth="2" 
+                  stroke="url(#scrollGradient)" 
+                  strokeWidth="5" 
                   style={{ pathLength: scrollYProgress }}
                   className="origin-top"
                   vectorEffect="non-scaling-stroke"
                 />
 
-                {/* Glowing Flowing Energy core */}
+                {/* Solid Glow Progress Line Bloom */}
                 <motion.line 
                   x1="8" y1="0" x2="8" y2="100%" 
                   stroke="url(#scrollGradient)" 
-                  strokeWidth="3" 
-                  strokeDasharray="60 140" 
-                  animate={{ strokeDashoffset: [0, -200] }}
-                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  strokeWidth="12" 
+                  style={{ pathLength: scrollYProgress }}
+                  className="origin-top blur-[6px] opacity-60"
                   vectorEffect="non-scaling-stroke"
                 />
 
-                {/* Glowing Flowing Energy bloom */}
+                {/* Flowing Energy Core */}
                 <motion.line 
                   x1="8" y1="0" x2="8" y2="100%" 
                   stroke="url(#scrollGradient)" 
-                  strokeWidth="8" 
-                  strokeDasharray="60 140" 
-                  animate={{ strokeDashoffset: [0, -200] }}
-                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
-                  className="blur-[6px] opacity-60"
+                  strokeWidth="5" 
+                  strokeDasharray="40 200" 
+                  animate={{ strokeDashoffset: [0, -240] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  className="origin-top"
+                  vectorEffect="non-scaling-stroke"
+                />
+
+                {/* Flowing Energy Bloom */}
+                <motion.line 
+                  x1="8" y1="0" x2="8" y2="100%" 
+                  stroke="url(#scrollGradient)" 
+                  strokeWidth="12" 
+                  strokeDasharray="40 200" 
+                  animate={{ strokeDashoffset: [0, -240] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  className="origin-top blur-[8px] opacity-80"
                   vectorEffect="non-scaling-stroke"
                 />
               </svg>
