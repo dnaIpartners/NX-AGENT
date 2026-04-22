@@ -152,25 +152,36 @@ export default function HowItWorksPage() {
                 {/* Background track */}
                 <line x1="8" y1="0" x2="8" y2="100%" stroke="rgba(255,255,255,0.05)" strokeWidth="2" vectorEffect="non-scaling-stroke" />
                 
-                {/* Scroll based filled line */}
+                {/* Scroll based filled line (Base Progress) */}
                 <motion.line 
                   x1="8" y1="0" x2="8" y2="100%" 
-                  stroke="url(#scrollGradient)" 
-                  strokeWidth="3" 
+                  stroke="rgba(255,255,255,0.15)" 
+                  strokeWidth="2" 
                   style={{ pathLength: scrollYProgress }}
                   className="origin-top"
                   vectorEffect="non-scaling-stroke"
                 />
 
-                {/* Infinite Flowing Dashes */}
+                {/* Glowing Flowing Energy core */}
                 <motion.line 
                   x1="8" y1="0" x2="8" y2="100%" 
-                  stroke="rgba(255,255,255,0.8)" 
-                  strokeWidth="2" 
-                  strokeDasharray="2 12" 
-                  animate={{ strokeDashoffset: [0, -14] }}
-                  transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-                  style={{ pathLength: scrollYProgress, opacity: scrollYProgress }}
+                  stroke="url(#scrollGradient)" 
+                  strokeWidth="3" 
+                  strokeDasharray="60 140" 
+                  animate={{ strokeDashoffset: [0, -200] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  vectorEffect="non-scaling-stroke"
+                />
+
+                {/* Glowing Flowing Energy bloom */}
+                <motion.line 
+                  x1="8" y1="0" x2="8" y2="100%" 
+                  stroke="url(#scrollGradient)" 
+                  strokeWidth="8" 
+                  strokeDasharray="60 140" 
+                  animate={{ strokeDashoffset: [0, -200] }}
+                  transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+                  className="blur-[6px] opacity-60"
                   vectorEffect="non-scaling-stroke"
                 />
               </svg>

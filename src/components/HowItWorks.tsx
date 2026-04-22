@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence, useInView } from 'motion/react';
 import { User, Activity, Clock, CheckCircle2, Box, Layers, Component, Circle, Database, Hexagon, Shield, Globe, Sparkles, MessageSquare } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,7 +11,12 @@ export default function HowItWorks() {
   const [isAiThinking, setIsAiThinking] = useState(false);
   const fullText = "웹사이트 리뉴얼 프로젝트를 기획 중인데. AI AGENT를 활용한 단계별 업무 절차를 안내해 줘.";
 
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
   useEffect(() => {
+    if (!isInView) return;
+
     let isMounted = true;
     let timer: NodeJS.Timeout;
 
@@ -56,12 +61,12 @@ export default function HowItWorks() {
       isMounted = false;
       clearTimeout(timer);
     };
-  }, []);
+  }, [isInView]);
 
   return (
     <>
       {/* Node Convergence Section */}
-      <section className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
+      <section ref={sectionRef} className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
         <div className="text-center z-10 mb-4 md:mb-8 px-6 w-full mx-auto">
           <h2 className="text-5xl md:text-6xl lg:text-[64px] font-display font-medium tracking-tight leading-[1.1] text-[#1a202c]">
            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">Empowering Brands to <br className="hidden md:block" />Work Smarter with AI</span>

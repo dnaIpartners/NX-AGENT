@@ -58,12 +58,13 @@ export default function BlogPreview() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold tracking-wider uppercase mb-4 border border-blue-100">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-              Our Blog
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-6 h-[1px] bg-gray-300"></div>
+              <span className="text-[11px] font-mono text-gray-500 uppercase tracking-[0.15em]">Our Blog</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-display font-medium text-gray-900 tracking-tight leading-tight">
-              Latest from <span className="text-gray-400">IPARTNERS</span>
+            <h2 className="text-[3.5rem] lg:text-[5rem] font-display font-medium leading-[1] tracking-[-0.03em] text-[#0a0a0a]">
+              Latest from<br className="hidden md:block" />
+              <span className="text-gray-400"> IPARTNERS.</span>
             </h2>
           </motion.div>
           
