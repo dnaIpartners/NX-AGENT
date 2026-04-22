@@ -64,7 +64,7 @@ export default function Capabilities() {
 
   return (
     <section ref={containerRef} className="bg-[#001641] relative z-10">
-      <div className="white-bg-reveal bg-gray-50 py-24 lg:py-30">
+      <div className="white-bg-reveal bg-gray-50 py-24 md:py-32">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           {/* Header */}
           <div className="scale-text text-center mb-24 md:mb-40">

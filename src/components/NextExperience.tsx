@@ -29,7 +29,7 @@ export default function NextExperience() {
   };
 
   return (
-    <section className="relative bg-[#0a0a0a] text-white py-20 lg:py-30 overflow-hidden flex items-center justify-center min-h-[60vh]">
+    <section className="relative bg-[#0a0a0a] text-white py-24 md:py-32 overflow-hidden flex items-center justify-center min-h-[60vh]">
       {/* Ambient Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[35vw] h-[35vw] max-w-[450px] max-h-[450px] bg-blue-600/30 rounded-full blur-[100px] pointer-events-none"></div>
 

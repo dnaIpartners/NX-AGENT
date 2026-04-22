@@ -104,7 +104,7 @@ export default function HowItWorksPage() {
           <h1 className="text-4xl md:text-5xl lg:text-[56px] font-extrabold tracking-tight leading-[1.1] mb-8 text-white">
             How We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Work</span>
           </h1>
-          <p className="text-gray-400 text-lg md:text-xl font-light max-w-2xl break-keep mx-auto">
+          <p className="text-gray-400 text-lg md:text-xl font-medium max-w-2xl break-keep mx-auto">
             단순한 시스템 구축을 넘어,<br className="md:hidden" /> 비즈니스의 체질을 바꾸는 완벽한 워크플로우를 설계합니다.
           </p>
         </motion.section>

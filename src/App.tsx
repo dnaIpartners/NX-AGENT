@@ -19,6 +19,19 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import NxAgentArchitecturePage from './pages/NxAgentArchitecturePage';
 import SEO from './components/SEO';
 
+import { motion } from 'motion/react';
+
+const FadeSection = ({ children }: { children: React.ReactNode }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-10%" }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    {children}
+  </motion.div>
+);
+
 function Home() {
   return (
     <>
@@ -28,10 +41,10 @@ function Home() {
       />
       <Hero />
       <Capabilities />
-      <HowItWorks />
-      <BlogPreview />
-      <Knowledge />
-      <NextExperience />
+      <FadeSection><HowItWorks /></FadeSection>
+      <FadeSection><BlogPreview /></FadeSection>
+      <FadeSection><Knowledge /></FadeSection>
+      <FadeSection><NextExperience /></FadeSection>
     </>
   );
 }

@@ -56,8 +56,9 @@ export default function Knowledge() {
   };
 
   return (
-    <section className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 py-24 lg:py-40 border-t border-gray-100">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+    <section className="relative z-10 w-full py-24 md:py-32 border-t border-gray-100 bg-white">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
         {/* Left: Sticky Header */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
@@ -142,6 +143,7 @@ export default function Knowledge() {
             );
           })}
         </motion.div>
+      </div>
       </div>
     </section>
   );

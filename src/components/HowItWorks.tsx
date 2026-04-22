@@ -66,14 +66,26 @@ export default function HowItWorks() {
   return (
     <>
       {/* Node Convergence Section */}
-      <section ref={sectionRef} className="relative w-full pt-20 md:pt-32 pb-10 md:pb-16 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
-        <div className="text-center z-10 mb-4 md:mb-8 px-6 w-full mx-auto">
+      <section ref={sectionRef} className="relative w-full py-24 md:py-32 bg-white overflow-hidden flex flex-col items-center justify-center border-t border-gray-100">
+        <motion.div 
+          className="text-center z-10 mb-4 md:mb-8 px-6 w-full mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <h2 className="text-5xl md:text-6xl lg:text-[64px] font-display font-medium tracking-tight leading-[1.1] text-[#1a202c]">
            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">Empowering Brands to <br className="hidden md:block" />Work Smarter with AI</span>
           </h2>
           
           {/* AI Dashboard Background Wrapper */}
-          <div className="mt-12 mx-auto max-w-[1000px] bg-gray-50 rounded-3xl shadow-[0_32px_80px_rgba(0,0,0,0.08)] border border-gray-200 overflow-hidden flex h-[540px] md:h-[600px] relative text-left">
+          <motion.div 
+            className="mt-12 mx-auto max-w-[1000px] bg-gray-50 rounded-3xl shadow-[0_32px_80px_rgba(0,0,0,0.08)] border border-gray-200 overflow-hidden flex h-[540px] md:h-[600px] relative text-left"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
             {/* Background Glows for Dashboard */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
               <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] bg-rose-400/20 blur-[100px] rounded-full"></div>
@@ -83,13 +95,13 @@ export default function HowItWorks() {
             {/* Sidebar */}
             <div className="hidden md:flex flex-col w-[260px] bg-white/60 backdrop-blur-xl border-r border-gray-200/50 p-5 relative z-10">
               {/* Window Controls */}
-              <div className="flex gap-2 mb-8 mt-1">
+              <div className="flex gap-2 mb-4 pointer-events-none">
                 <div className="w-3 h-3 rounded-full bg-[#FF5F56] border border-red-500/20"></div>
                 <div className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-yellow-500/20"></div>
                 <div className="w-3 h-3 rounded-full bg-[#27C93F] border border-green-500/20"></div>
               </div>
               
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex items-center gap-3 mb-5 mt-1">
                 <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-500 flex items-center justify-center shadow-md">
                   <Sparkles className="w-3.5 h-3.5 text-white" />
                 </div>
@@ -177,8 +189,8 @@ export default function HowItWorks() {
                 </motion.div>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <div className="relative w-full max-w-[1800px] h-[250px] md:h-[350px] lg:h-[450px] flex items-center justify-center px-4">
           {/* SVG Lines and Nodes */}

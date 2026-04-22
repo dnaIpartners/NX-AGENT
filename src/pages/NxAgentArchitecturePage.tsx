@@ -47,17 +47,17 @@ export default function NxAgentArchitecturePage() {
             <Tag size={16} className="fill-emerald-400/20" />
             <span>[개념 설명서] AI 서비스 구축 가이드</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold tracking-tight text-white mb-6 leading-[1.1]">
+          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-display font-bold tracking-tight text-white mb-6 leading-[1.1]">
             NX AGENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Architecture</span>
           </h1>
-          <p className="text-lg md:text-2xl text-gray-400 mb-10 font-light max-w-3xl mx-auto break-keep leading-relaxed">
+           <p className="text-gray-400 text-lg md:text-xl font-medium max-w-2xl break-keep mx-auto">
             단순한 기술 도입을 넘어, 복잡한 요구사항을 지능적으로 조율하여 기업 고유의 <strong className="text-white font-medium">NX AI (AI NEXT Experience)</strong>를 설계합니다.
           </p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-8 max-w-4xl mx-auto bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 pointer-events-none"></div>
             <div className="text-left w-full relative z-10">
               <h3 className="text-lg md:text-xl font-bold text-white mb-3 tracking-tight">AI 서비스의 새로운 엔진, IPARTNERS와 NX AGENT</h3>
-              <p className="text-gray-300 text-sm md:text-base leading-relaxed break-keep font-medium">
+              <p className="text-gray-300 text-lg md:text-xl leading-relaxed break-keep font-medium">
                 현대 비즈니스에서 AI 서비스의 성패는 복잡한 요구사항을 얼마나 지능적으로 조율하여 신속하게 해결책을 제시하느냐에 달려 있습니다. 아이파트너즈의 AI 서비스 브랜드 <strong className="text-blue-400">IPARTNERS</strong>는 이 '지능적 조율'을 위해 탄생했으며, 그 중심에는 멀티 에이전트 시스템을 구동하는 <strong className="text-indigo-400">NX AGENT 플랫폼</strong>이 있습니다.
               </p>
             </div>
