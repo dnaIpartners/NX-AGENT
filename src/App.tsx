@@ -62,7 +62,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/knowledge/ai-prompt-library" element={<AIPromptLibrary />} />
             <Route path="/knowledge/:category" element={<KnowledgeCategory />} />
-            <Route path="/content/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/how-it-works" element={<HowItWorksPage />} />
             <Route path="/nx-agent-architecture" element={<NxAgentArchitecturePage />} />
             <Route path="/content/:category" element={<ContentCategory />} />
             <Route path="/faq" element={<FaqPage />} />

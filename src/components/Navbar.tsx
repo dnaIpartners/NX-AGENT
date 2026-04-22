@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const isDarkBgPage = location.pathname === '/' || location.pathname === '/nx-agent-architecture' || location.pathname === '/content/how-it-works';
+  const isDarkBgPage = location.pathname === '/' || location.pathname === '/nx-agent-architecture' || location.pathname === '/how-it-works';
 
   const isActive = (path: string) => location.pathname.startsWith(path);
 
@@ -61,7 +61,7 @@ export default function Navbar() {
         </div>
         
         <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium ${isScrolled ? 'text-gray-500' : (isDarkBgPage ? 'text-white/80' : 'text-[#001641]/80')}`}>
-          <Link to="/content/how-it-works" className={`group transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/content/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>
+          <Link to="/how-it-works" className={`group transition-colors ${isScrolled ? 'hover:text-black' : (isDarkBgPage ? 'hover:text-white' : 'hover:text-[#001641]')} ${isActive('/how-it-works') ? (isScrolled ? 'text-black font-bold' : (isDarkBgPage ? 'text-white font-bold' : 'text-[#001641] font-bold')) : ''}`}>
             <span className="relative block overflow-hidden">
               <span className="block transition-transform duration-500 group-hover:-translate-y-full">HOW IT WORKS</span>
               <span className="absolute inset-0 block translate-y-full transition-transform duration-500 group-hover:translate-y-0" aria-hidden="true">HOW IT WORKS</span>
@@ -176,7 +176,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg md:hidden flex flex-col px-8 py-6 gap-4 text-gray-900">
-          <Link to="/content/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/content/how-it-works') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>How it works</Link>
+          <Link to="/how-it-works" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/how-it-works') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>How it works</Link>
           <Link to="/nx-agent-architecture" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/nx-agent-architecture') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>NX AGENT ARCHITECTURE</Link>
           <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)} className={`text-sm hover:text-black transition-colors py-2 ${isActive('/blog') ? 'font-bold text-black' : 'font-medium text-gray-600'}`}>BLOG</Link>
           

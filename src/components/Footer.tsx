@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-4 text-sm font-medium">
               <div className="flex flex-col space-y-4">
                 <Link to="/" className="text-gray-300 hover:text-white transition-colors">HOME</Link>
-                <Link to="/content/how-it-works" className="text-gray-300 hover:text-white transition-colors">HOW IT WORKS</Link>
+                <Link to="/how-it-works" className="text-gray-300 hover:text-white transition-colors">HOW IT WORKS</Link>
                 <Link to="/nx-agent-architecture" className="text-gray-300 hover:text-white transition-colors">NX AGENT ARCHITECTURE</Link>
                 <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">BLOG</Link>
               </div>
