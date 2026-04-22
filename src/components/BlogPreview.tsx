@@ -10,7 +10,7 @@ const recentPosts = [
     desc: 'How AI chatbots boost ecommerce revenue, recover abandoned carts, reduce support costs with 24/7 automation.',
     category: 'Customer Experience',
     date: 'Apr 16, 2026',
-    image: 'https://picsum.photos/seed/ai-chat1/600/400'
+    image: '/asset/blog/1.jpg'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const recentPosts = [
     desc: 'Automate routine support with AI, keep humans for complex cases, set smooth handoffs, and track key metrics.',
     category: 'Automation & AI Trends',
     date: 'Apr 11, 2026',
-    image: 'https://picsum.photos/seed/human-touch1/600/400'
+    image: '/asset/blog/2.jpg'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const recentPosts = [
     desc: 'Conversational AI cuts support costs, speeds responses, automates routine workflows, and improves customer satisfaction.',
     category: 'AI Agents',
     date: 'Apr 9, 2026',
-    image: 'https://picsum.photos/seed/conv-ai1/600/400'
+    image: '/asset/blog/3.jpg'
   }
 ];
 

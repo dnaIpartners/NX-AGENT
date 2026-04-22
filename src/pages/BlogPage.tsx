@@ -23,7 +23,7 @@ const blogPosts = [
     categories: ['AI Agents', 'Customer Experience'],
     date: 'Apr 16, 2026',
     readTime: '10 min read',
-    image: 'https://picsum.photos/seed/ai-chat1/600/400'
+    image: '/asset/blog/1.jpg'
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const blogPosts = [
     categories: ['Customer Experience', 'Automation & AI Trends'],
     date: 'Apr 11, 2026',
     readTime: '11 min read',
-    image: 'https://picsum.photos/seed/human-touch1/600/400'
+    image: '/asset/blog/2.jpg'
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const blogPosts = [
     categories: ['AI Agents', 'Customer Experience'],
     date: 'Apr 9, 2026',
     readTime: '15 min read',
-    image: 'https://picsum.photos/seed/conv-ai1/600/400'
+    image: '/asset/blog/3.jpg'
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ const blogPosts = [
     categories: ['AI Agents', 'Customer Experience'],
     date: 'Apr 8, 2026',
     readTime: '23 min read',
-    image: 'https://picsum.photos/seed/support-ai1/600/400'
+    image: '/asset/blog/4.jpg'
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const blogPosts = [
     categories: ['AI Agents', 'Customer Experience'],
     date: 'Apr 8, 2026',
     readTime: '11 min read',
-    image: 'https://picsum.photos/seed/cs-bot1/600/400'
+    image: '/asset/blog/5.jpg'
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const blogPosts = [
     categories: ['Customer Experience', 'AI Agents'],
     date: 'Apr 7, 2026',
     readTime: '14 min read',
-    image: 'https://picsum.photos/seed/balance1/600/400'
+    image: '/asset/blog/6.jpg'
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ const blogPosts = [
     categories: ['AI Agents', 'Customer Experience'],
     date: 'Apr 7, 2026',
     readTime: '12 min read',
-    image: 'https://picsum.photos/seed/transform1/600/400'
+    image: '/asset/blog/7.jpg'
   },
   {
     id: 8,
@@ -86,7 +86,7 @@ const blogPosts = [
     categories: ['AI Agents', 'Customer Experience'],
     date: 'Apr 6, 2026',
     readTime: '15 min read',
-    image: 'https://picsum.photos/seed/every-biz1/600/400'
+    image: '/asset/blog/8.jpg'
   },
   {
     id: 9,
@@ -95,7 +95,7 @@ const blogPosts = [
     categories: ['Customer Experience', 'Automation & AI Trends'],
     date: 'Apr 6, 2026',
     readTime: '15 min read',
-    image: 'https://picsum.photos/seed/manual-cost1/600/400'
+    image: '/asset/blog/9.jpg'
   }
 ];
 

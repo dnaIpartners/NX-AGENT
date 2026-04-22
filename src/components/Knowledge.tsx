@@ -9,7 +9,7 @@ const categories = [
     title: 'Prompt Library',
     description: '실무에 즉시 적용 가능한 검증된 AI 프롬프트 템플릿과 활용 가이드를 제공하여 업무 효율을 극대화합니다.',
     icon: Terminal,
-    image: 'https://picsum.photos/seed/prompt-lib/800/400',
+    image: '/asset/prompt-library.jpg',
     tag: 'Resources',
   },
   {
@@ -17,7 +17,7 @@ const categories = [
     title: 'Contextual Prompt Engineering',
     description: '단순한 기계적 입력을 넘어, 실무 전문가가 고객사 고유의 비즈니스 맥락을 완벽히 해석하여 AI가 최상의 산출물을 내도록 조율합니다.',
     icon: Sparkles,
-    image: 'https://picsum.photos/seed/prompt-eng/800/400',
+    image: '/asset/contextual-prompt-engineering.jpg',
     tag: 'Strategy',
   },
   {
@@ -25,7 +25,7 @@ const categories = [
     title: 'UX Heuristic Evaluation',
     description: '전문가의 통찰과 AI 에이전트를 결합하여 기존 서비스의 사용자 경험(UX)을 빠르고 정교하게 진단하고, 실질적인 개선안을 도출합니다.',
     icon: Layout,
-    image: 'https://picsum.photos/seed/heuristic/800/400',
+    image: '/asset/ux-heuristic-evaluation.jpg',
     tag: 'Methodology',
   },
   {
@@ -33,7 +33,7 @@ const categories = [
     title: 'Glossary of UX Interaction',
     description: '전 구성원이 혼선 없이 소통하고 지능형 워크플로우에 적응할 수 있도록, 표준화된 공통 언어와 가이드를 제공하는 지식 생태계입니다.',
     icon: BookOpen,
-    image: 'https://picsum.photos/seed/glossary/800/400',
+    image: '/asset/glossary-of-ai-ux.jpg',
     tag: 'Reference',
   }
   

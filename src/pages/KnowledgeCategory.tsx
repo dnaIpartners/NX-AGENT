@@ -101,7 +101,7 @@ export default function KnowledgeCategory() {
         {data.articles.length > 0 && (() => {
           const articlesWithMeta = data.articles.map((article: any) => ({
             ...article,
-            image: `https://picsum.photos/seed/${category}-${article.id}/800/400`,
+            image: `/asset/${category}/${article.id}.jpg`,
             author: 'Yun Geun Sik',
             authorRole: 'AI ORCHESTRATOR'
           }));
