@@ -31,7 +31,7 @@ export default function NxAgentArchitecturePage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#030303] text-gray-200 font-sans selection:bg-blue-500/30 overflow-x-hidden relative pt-20">
+    <div className="min-h-screen bg-[#030303] text-gray-200 font-sans selection:bg-blue-500/30 overflow-x-hidden relative">
       <SEO 
         title="NX Agent Architecture" 
         description="단순한 기술 도입을 넘어, 복잡한 요구사항을 지능적으로 조율하여 기업 고유의 NX AI를 설계합니다." 
@@ -42,18 +42,18 @@ export default function NxAgentArchitecturePage() {
       </div>
       <div className="fixed top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-4 pb-16 md:pt-6 md:pb-24">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-24 md:pt-28 pb-16 md:pb-24">
         
         {/* Section 1: Hero */}
         <motion.section 
           initial="hidden" animate="visible" variants={fadeIn}
           className="text-center mb-32"
         >
-          <div className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-emerald-500/15 text-emerald-400 text-xs md:text-sm font-semibold tracking-wide mb-6 uppercase border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-emerald-500/15 text-emerald-400 text-xs md:text-sm font-semibold tracking-wide mb-6 uppercase border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.15)]">
             <Tag size={16} className="fill-emerald-400/20" />
             <span>[개념 설명서] AI 서비스 구축 가이드</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-display font-bold tracking-tight text-white mb-6 leading-[1.1]">
+          <h1 className="text-4xl md:text-5xl lg:text-[56px] font-display font-bold tracking-tight text-white mb-8 leading-[1.1]">
             NX AGENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">Architecture</span>
           </h1>
            <p className="text-gray-400 text-lg md:text-xl font-medium max-w-2xl break-keep mx-auto">

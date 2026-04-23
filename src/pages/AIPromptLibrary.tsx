@@ -101,7 +101,7 @@ export default function AIPromptLibrary() {
       />
       {/* Header Section */}
       <div className="pt-24 md:pt-28 pb-16 px-6 max-w-[1280px] mx-auto text-center flex flex-col items-center mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#d1f4e0] text-[#1b6e4e] rounded-full text-xs md:text-sm font-semibold tracking-wide mb-6 border border-transparent">
           <Tag size={16} className="fill-[#1b6e4e]/20" />
           <span>The IPARTNERS Knowledge</span>
         </div>
