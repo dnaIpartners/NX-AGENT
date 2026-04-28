@@ -42,12 +42,12 @@ export default function NxAgentArchitecturePage() {
       </div>
       <div className="fixed top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
       
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-24 md:pt-28 pb-16 md:pb-24">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pt-24 md:pt-28 pb-12 md:pb-16">
         
         {/* Section 1: Hero */}
         <motion.section 
           initial="hidden" animate="visible" variants={fadeIn}
-          className="text-center mb-32"
+          className="text-center mb-16 md:mb-20"
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-emerald-500/15 text-emerald-400 text-xs md:text-sm font-semibold tracking-wide mb-6 uppercase border border-emerald-500/20 shadow-[0_0_15px_rgba(16,185,129,0.15)]">
             <Tag size={16} className="fill-emerald-400/20" />
@@ -73,7 +73,7 @@ export default function NxAgentArchitecturePage() {
         {/* Section 2: Core Layers */}
         <motion.section 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
-          className="mb-32"
+          className="mb-16 md:mb-20"
         >
           <motion.div variants={fadeIn} className="mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">NX AGENT 아키텍처의 핵심 레이어</h2>
@@ -131,7 +131,7 @@ export default function NxAgentArchitecturePage() {
       {/* Section 3: The Spectrum of Control (Full Width) */}
       <motion.section 
         initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
-        className="mb-32 relative w-full"
+        className="mb-16 md:mb-20 relative w-full"
       >
         <motion.div variants={fadeIn} className="mb-14 text-center max-w-[1200px] mx-auto px-6 hidden md:block">
           <h2 className="hidden md:block text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-4 tracking-tight leading-snug break-keep">
@@ -266,7 +266,7 @@ export default function NxAgentArchitecturePage() {
       {/* Section 3.5: Ideal AI Collaboration Process */}
       <motion.section 
         initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
-        className="mb-32 relative w-full max-w-[1200px] mx-auto px-6 mt-12 md:mt-24"
+        className="mb-16 md:mb-20 relative w-full max-w-[1200px] mx-auto px-6 mt-12 md:mt-16"
       >
         <motion.div variants={fadeIn} className="mb-16 md:mb-20 text-center md:text-left border-b border-white/10 pb-8">
           {/* Desktop Title */}
@@ -395,13 +395,12 @@ export default function NxAgentArchitecturePage() {
 
       </motion.section>
 
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pb-16 md:pb-24">
+      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 pb-12 md:pb-16">
   
-
         {/* Section 4-1: BUILD Process Detail */}
         <motion.section 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
-          className="mb-32"
+          className="mb-16 md:mb-20"
         >
           <motion.div variants={fadeIn} className="mb-14">
             {/* Desktop Title */}
@@ -611,7 +610,7 @@ export default function NxAgentArchitecturePage() {
         {/* Section 4-2: CREATE Process Detail */}
         <motion.section 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
-          className="mb-32"
+          className="mb-16 md:mb-20"
         >
           <motion.div variants={fadeIn} className="mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
@@ -775,7 +774,7 @@ export default function NxAgentArchitecturePage() {
         {/* Section 5: Human in the loop */}
         <motion.section 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={stagger}
-          className="mb-32 bg-gradient-to-br from-indigo-950/40 via-[#0a0a0d] to-black border border-indigo-500/20 rounded-[2.5rem] p-8 md:p-12 lg:p-16 overflow-hidden relative shadow-2xl"
+          className="mb-16 md:mb-20 bg-gradient-to-br from-indigo-950/40 via-[#0a0a0d] to-black border border-indigo-500/20 rounded-[2.5rem] p-8 md:p-12 lg:p-16 overflow-hidden relative shadow-2xl"
         >
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
           
@@ -831,7 +830,7 @@ export default function NxAgentArchitecturePage() {
         {/* Section 6: Summary Checklist */}
         <motion.section 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={stagger}
-          className="max-w-4xl mx-auto mb-20"
+          className="max-w-4xl mx-auto mb-12 md:mb-16"
         >
           <motion.div variants={fadeIn} className="text-center mb-12">
             {/* Desktop Title */}
