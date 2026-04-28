@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform, MotionValue } from 'motion/react';
 
 import { Workflow, Database, Rocket, BarChart3, GripHorizontal } from 'lucide-react';
 
@@ -33,6 +33,39 @@ const capabilities = [
     keywords: ["Predictive Analytics", "Business Scaling", "Continuous Operation", "Future Strategy"]
   }
 ];
+
+const AnimatedChar = ({ char, progress, start, end }: { char: string, progress: MotionValue<number>, start: number, end: number }) => {
+  const color = useTransform(progress, [start, end], ["#d1d5db", "#111827"]);
+  return <motion.span style={{ color }}>{char}</motion.span>;
+};
+
+const RevealText = () => {
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: textRef,
+    offset: ["start 90%", "end 60%"]
+  });
+
+  const text1 = "AI 역량은 몇 개의 도구로 완성되지 않습니다.";
+  const text2 = " 브랜드 전략과 워크플로우, 조직 문화가 함께 정렬될 때 비로소 경쟁력이 됩니다.";
+
+  const chars1 = text1.split("");
+  const chars2 = text2.split("");
+  const totalChars = chars1.length + chars2.length;
+
+  return (
+    <p ref={textRef} className="mt-8 text-xl md:text-2xl max-w-4xl mx-auto font-light tracking-tight break-keep leading-relaxed">
+      {chars1.map((char, i) => (
+        <AnimatedChar key={`l1-${i}`} char={char} progress={scrollYProgress} start={i / totalChars} end={(i + 1) / totalChars} />
+      ))}
+      <br className="hidden md:block" />
+      {chars2.map((char, i) => {
+        const globalI = chars1.length + i;
+        return <AnimatedChar key={`l2-${i}`} char={char} progress={scrollYProgress} start={globalI / totalChars} end={(globalI + 1) / totalChars} />
+      })}
+    </p>
+  );
+};
 
 export default function Capabilities() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -71,9 +104,7 @@ export default function Capabilities() {
             <h2 className="text-[4rem] md:text-[8rem] lg:text-[11rem] font-display font-bold tracking-tighter leading-[0.9] text-[#0a0a0a] lowercase">
               Capabilities
             </h2>
-            <p className="mt-8 text-2xl md:text-4xl text-gray-500 max-w-3xl mx-auto font-light tracking-tight">
-              Perfectly aligned intelligent workflows and <br className="hidden md:block" />AI expertise to increase digital impact.
-            </p>
+            <RevealText />
           </div>
 
         {/* List */}
