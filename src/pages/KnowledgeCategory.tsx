@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Sparkles, Layout, BookOpen, Clock, Search, User, Tag, Calendar } from 'lucide-react';
 import SEO from '../components/SEO';
+import NextExperience from '../components/NextExperience';
 
 const categoryData: Record<string, any> = {
   'contextual-prompt-engineering': {
@@ -95,8 +96,21 @@ export default function KnowledgeCategory() {
         </p>
       </div>
 
-      {/* Content List Section */}
-      <div className="max-w-[1300px] mx-auto px-6 md:px-8 pb-32">
+      {/* Preparing Notice */}
+      <div className="max-w-[800px] mx-auto px-6 mb-24">
+        <div className="bg-gray-50 border border-gray-100 rounded-[24px] p-10 md:p-14 text-center shadow-sm">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-sm border border-gray-100 text-gray-400 mb-6">
+            <Clock size={32} />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">콘텐츠를 준비 중입니다</h2>
+          <p className="text-gray-500 text-base md:text-lg leading-relaxed break-keep">
+            더 깊이 있는 인사이트와 전문적인 지식을 전달하기 위해 자료를 꼼꼼히 선별하고 제작하고 있습니다. 조금만 기다려 주시면 유익한 콘텐츠로 찾아뵙겠습니다.
+          </p>
+        </div>
+      </div>
+
+      {/* Content List Section - Hidden for now */}
+      <div className="max-w-[1300px] mx-auto px-6 md:px-8 pb-32 hidden">
         
         {data.articles.length > 0 && (() => {
           const articlesWithMeta = data.articles.map((article: any) => ({
@@ -210,6 +224,7 @@ export default function KnowledgeCategory() {
           </button>
         </div>
       </div>
+      <NextExperience />
     </div>
   );
 }

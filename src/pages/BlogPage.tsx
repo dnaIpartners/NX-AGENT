@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Search, Tag } from 'lucide-react';
+import { Search, Tag, Clock } from 'lucide-react';
 import { motion } from 'motion/react';
 import SEO from '../components/SEO';
+import NextExperience from '../components/NextExperience';
 
 const categories = [
   'All (82)', 
@@ -126,8 +127,21 @@ export default function BlogPage() {
         </p>
       </div>
 
-      {/* Filter and Search Container */}
-      <div className="max-w-[1280px] mx-auto px-6 mb-16 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+      {/* Preparing Notice */}
+      <div className="max-w-[800px] mx-auto px-6 mb-24">
+        <div className="bg-gray-50 border border-gray-100 rounded-[24px] p-10 md:p-14 text-center shadow-sm">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-sm border border-gray-100 text-gray-400 mb-6">
+            <Clock size={32} />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">콘텐츠를 준비 중입니다</h2>
+          <p className="text-gray-500 text-base md:text-lg leading-relaxed break-keep">
+            더 깊이 있는 인사이트와 전문적인 지식을 전달하기 위해 자료를 꼼꼼히 선별하고 제작하고 있습니다. 조금만 기다려 주시면 유익한 콘텐츠로 찾아뵙겠습니다.
+          </p>
+        </div>
+      </div>
+
+      {/* Filter and Search Container - Hidden for now */}
+      <div className="max-w-[1280px] mx-auto px-6 mb-16 hidden flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
         <div className="flex flex-wrap gap-2 flex-1">
           {categories.map((cat) => (
             <button
@@ -146,8 +160,8 @@ export default function BlogPage() {
        
       </div>
 
-      {/* Featured Latest Post */}
-      <div className="max-w-[1280px] mx-auto px-6 mb-12">
+      {/* Featured Latest Post - Hidden for now */}
+      <div className="max-w-[1280px] mx-auto px-6 mb-12 hidden">
         <div className="bg-gradient-to-r from-[#e6f0fd] to-[#d6e8fb] rounded-[32px] overflow-hidden flex flex-col-reverse lg:flex-row items-center border border-blue-50/50">
           <div className="w-full lg:w-1/2 p-10 md:p-16 flex flex-col justify-center">
             <div className="flex items-center gap-2 mb-6">
@@ -182,8 +196,8 @@ export default function BlogPage() {
         </div>
       </div>
 
-      {/* Grid of Posts */}
-      <div className="max-w-[1280px] mx-auto px-6">
+      {/* Grid of Posts - Hidden for now */}
+      <div className="max-w-[1280px] mx-auto px-6 hidden">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
             <motion.a
@@ -258,6 +272,8 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
+       
     </div>
+    
   );
 }
