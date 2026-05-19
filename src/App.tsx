@@ -19,7 +19,6 @@ import AIPromptLibrary from './pages/AIPromptLibrary';
 import HowItWorksPage from './pages/HowItWorksPage';
 import NxAgentArchitecturePage from './pages/NxAgentArchitecturePage';
 import SEO from './components/SEO';
-import CustomChatbot from './components/CustomChatbot';
 
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
@@ -106,7 +105,6 @@ export default function App() {
               <Route path="/blog" element={<BlogPage />} />
             </Routes>
             <Footer />
-            <CustomChatbot />
           </div>
         </Router>
       </HelmetProvider>
