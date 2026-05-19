@@ -3,12 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="http://prdipa.ipartners.co.kr/favicon.ico?favicon.0b3bf435.ico" />
+    <link rel="icon" href="http://www.ipartners.co.kr/favicon.ico?favicon.0b3bf435.ico" />
     <title> Next Experience </title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+     
+     
+    <script src="https://cdn.jsdelivr.net/npm/n8n-widget-bot@latest/dist/n8n-widget-bot.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        FloatingChatWidget.init({
+          themeColor: '#10b981', // 브랜드 컬러인 Emerald 500 적용
+          title: 'IPARTNERS NX Agent', 
+          placeholder: '메시지를 입력하세요...', 
+          welcomeMessage: '안녕하세요! IPARTNERS AI 어시스턴트입니다. 무엇을 도와드릴까요?',
+          position: 'bottom-right',
+          fontFamily: 'Pretendard, "Noto Sans KR", Arial, sans-serif', 
+          resizable: true,
+          minWidth: 300,
+          maxWidth: 600,
+          minHeight: 400,
+          maxHeight: 800,
+          enableFileUpload: false,
+          bubbleIcon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>',
+          apiUrl: 'https://ipart.app.n8n.cloud/webhook/7add635d-b495-453a-8da5-ad62a7040ff9/chat'
+        });
+      });
+    </script>
   </body>
 </html>
 

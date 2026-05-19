@@ -27,3 +27,101 @@
   0% { transform: translateX(-33.333333%); }
   100% { transform: translateX(0); }
 }
+
+/* Customizing n8n-widget-bot for NX AGENT Architecture Theme */
+.fcw-widget {
+  background: #06060c !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(16, 185, 129, 0.1) !important;
+}
+
+.fcw-header {
+  background: rgba(10, 10, 13, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  border-top-left-radius: 24px !important;
+  border-top-right-radius: 24px !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.fcw-messages {
+  background: #030303 !important;
+  background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.05), transparent 70%) !important;
+}
+
+.fcw-message.bot .fcw-bubble-text {
+  background: #0a1128 !important;
+  color: #e5e7eb !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.05) !important;
+  border-radius: 4px 16px 16px 16px !important;
+  line-height: 1.5 !important;
+  font-size: 14px !important;
+}
+
+.fcw-message.user .fcw-bubble-text {
+  background: #061a15 !important;
+  color: #fff !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  box-shadow: inset 0 0 10px rgba(16, 185, 129, 0.1) !important;
+  border-radius: 16px 16px 4px 16px !important;
+  line-height: 1.5 !important;
+  font-size: 14px !important;
+}
+
+.fcw-input-row {
+  background: #0a0a0d !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.fcw-input {
+  background: transparent !important;
+  color: #fff !important;
+  font-size: 14px !important;
+}
+.fcw-input::placeholder {
+  color: #6b7280 !important;
+}
+
+.fcw-input:focus {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.fcw-bubble {
+  background: #061a15 !important;
+  border: 1px solid rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2), inset 0 0 10px rgba(16, 185, 129, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.fcw-bubble:hover {
+  background: #0a2e22 !important;
+  transform: scale(1.05) translateY(-5px) !important;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4), inset 0 0 15px rgba(16, 185, 129, 0.2) !important;
+  border-color: rgba(16, 185, 129, 0.6) !important;
+}
+
+.fcw-bubble i, .fcw-bubble svg {
+  color: #10b981 !important;
+}
+
+.fcw-send-btn {
+  color: #10b981 !important;
+}
+
+.fcw-send-btn:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: #34d399 !important;
+}
+
+.fcw-file-btn {
+  color: #9ca3af !important;
+}
+
+.fcw-file-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #f3f4f6 !important;
+}
