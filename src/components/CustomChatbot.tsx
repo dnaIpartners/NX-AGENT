@@ -110,7 +110,7 @@ export default function CustomChatbot() {
             </div>
             <div>
               <h3 className="text-white font-bold text-sm tracking-wide">IPARTNERS NX Agent</h3>
-              <p className="text-emerald-400/80 text-[10px] font-medium tracking-widest mt-0.5">자체 지식베이스 연결 준비중</p>
+              <p className="text-emerald-400/80 text-[10px] font-medium tracking-widest mt-0.5">자체 지식베이스 연결 중..</p>
             </div>
           </div>
           <button
