@@ -10,7 +10,6 @@ import Knowledge from './components/Knowledge';
 import BlogPreview from './components/BlogPreview';
 import NextExperience from './components/NextExperience';
 import Footer from './components/Footer';
-import FloatingBadge from './components/FloatingBadge';
 import KnowledgeCategory from './pages/KnowledgeCategory';
 import ContentCategory from './pages/ContentCategory';
 import FaqPage from './pages/FaqPage';
